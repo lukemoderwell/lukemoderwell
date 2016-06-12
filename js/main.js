@@ -1,0 +1,1 @@
+(function(){$(".more").click(function(){$(".footerInfo").toggleClass("closed"),$(".less").toggleClass("hide")}),$(".less").click(function(){$(".footerInfo").toggleClass("closed"),$(".less").toggleClass("hide")})}).call(this);

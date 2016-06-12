@@ -1,0 +1,33 @@
+// =Variables
+// ----------------------------------------------
+
+// =Dimensions
+// --------------------------
+
+$spacer: 400px;
+$hundo: 100%; 
+$spacer-2: $spacer / 2;
+$spacer-3: $spacer / 3;
+$spacer-4: $spacer / 4;
+$spacer-6: $spacer / 6;
+$spacer-8: $spacer / 8;
+$spacer-16: $spacer / 16;
+
+// =Colors
+// --------------------------
+
+$dark:      #042323;
+$light:     #ffffff;
+
+$accent-color-1:   #FD987B;
+$accent-color-2:   #5CCECE;
+
+$text:          darken($light, 10%);
+$text-light:    adjust-color($dark, $saturation: -60, $lightness: 20);
+$text-lighter:  adjust-color($dark, $saturation: -54, $lightness: 50);
+
+/* Font Families */
+
+$serif: Georgia, serif; 
+$sans: "nimbus-sans", Helvetica Neue, Helvetica, sans-serif; 
+$mono: "inconsolata", monospace;  

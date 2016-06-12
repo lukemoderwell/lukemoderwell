@@ -1,0 +1,22 @@
+// Typography
+// ----------------------------------------------
+
+body {
+  font-family: $mono;
+  font-size: 16px;
+}
+
+p {
+	color: $text; 
+}
+
+.nametag {
+	color: $accent-color-2; 
+	text-transform: uppercase; 
+	letter-spacing: 1px; 
+	span {
+		opacity: .75;
+		display: block; 
+		margin-bottom: 20px; 
+	}
+}
