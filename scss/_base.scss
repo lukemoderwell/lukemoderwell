@@ -9,7 +9,7 @@
 
 body {
   font-size: 100%;
-  line-height: 140%;
+  line-height: 145%;
   overflow-y: hidden; 
   vertical-align: baseline;
   color: $text-light;
@@ -31,9 +31,9 @@ a {
     content: "";
     position: absolute;
     display: inline-block;
-    width: $hundo + 10%;
+    width: $hundo + 20%;
     height: 1px;
-    left: -5%;
+    left: -10%;
     transform: translateY(18px);
     background: $accent-color-2;
     z-index: -1;
@@ -45,6 +45,18 @@ a {
   &:hover::after {
     transform: translateY(2px);
     height: 18px; 
+  }
+}
+
+.logo {
+  max-width: 60px;
+  margin-bottom: 20px;  
+  img {
+    width: 100%; 
+    &:hover {
+      transform: rotate(45deg);
+      cursor: help;
+    }
   }
 }
 

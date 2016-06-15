@@ -70,6 +70,7 @@ body {
   font-size: 16px; }
 
 p {
+  font-family: "inconsolata", monospace;
   color: #e6e6e6; }
 
 .nametag {
@@ -80,53 +81,9 @@ p {
     opacity: .75;
     display: block;
     margin-bottom: 20px; }
+    .nametag span:hover {
+      cursor: help; }
 
-@media screen and (max-width: 1200px) {
-  .container {
-    width: auto;
-    padding: 0 50px; } }
-header[role="banner"] p {
-  width: 100%; }
-
-@media screen and (max-width: 900px) {
-  .container {
-    width: auto;
-    padding: 0 50px; }
-
-  header[role="banner"] figure,
-  .content h2 {
-    padding-right: 40px; } }
-@media screen and (max-width: 600px) {
-  header[role="banner"] .container {
-    margin-top: 0; }
-
-  header[role="banner"] figure,
-  .content h2 {
-    padding-right: 0; }
-
-  .container {
-    margin: 50px auto;
-    padding: 0 25px; }
-    .container .col-1,
-    .container .col-2 {
-      float: none;
-      width: auto; }
-    .container .col-1 h2 {
-      margin-bottom: 20px;
-      text-align: left; }
-
-  .content ul li span {
-    display: none; }
-
-  header[role="banner"] h1 {
-    margin-bottom: 20px; }
-    header[role="banner"] h1 .container {
-      margin: 50px auto; }
-    header[role="banner"] h1 figure .logo {
-      float: none;
-      width: 33px;
-      height: 24px;
-      margin-bottom: 25px; } }
 .container {
   overflow: hidden;
   width: auto;
@@ -153,11 +110,11 @@ header[role="banner"] {
     z-index: 10;
     margin-top: 200px;
     margin-bottom: 200px; }
+    header[role="banner"] .container p {
+      width: 70%; }
   header[role="banner"] figure {
     overflow: hidden;
     padding-right: 66.66667px; }
-  header[role="banner"] p {
-    width: 70%; }
 
 /* Footer Stuff */
 footer {
@@ -214,7 +171,7 @@ footer {
 
 body {
   font-size: 100%;
-  line-height: 140%;
+  line-height: 145%;
   overflow-y: hidden;
   vertical-align: baseline;
   color: #395454;
@@ -235,9 +192,9 @@ a {
     content: "";
     position: absolute;
     display: inline-block;
-    width: 110%;
+    width: 120%;
     height: 1px;
-    left: -5%;
+    left: -10%;
     transform: translateY(18px);
     background: #5CCECE;
     z-index: -1;
@@ -247,6 +204,15 @@ a {
   a:hover::after {
     transform: translateY(2px);
     height: 18px; }
+
+.logo {
+  max-width: 60px;
+  margin-bottom: 20px; }
+  .logo img {
+    width: 100%; }
+    .logo img:hover {
+      transform: rotate(45deg);
+      cursor: help; }
 
 .center {
   text-align: center; }
@@ -286,3 +252,48 @@ footer {
   100% {
     transform: translateY(0);
     opacity: 1; } }
+@media screen and (max-width: 1200px) {
+  .container {
+    width: auto;
+    padding: 0 50px; }
+    .container header[role="banner"] p {
+      width: 100%; } }
+@media screen and (max-width: 900px) {
+  .container {
+    width: auto;
+    padding: 0 50px; }
+
+  header[role="banner"] figure,
+  .content h2 {
+    padding-right: 40px; } }
+@media screen and (max-width: 600px) {
+  header[role="banner"] .container {
+    margin-top: 0; }
+
+  header[role="banner"] figure,
+  .content h2 {
+    padding-right: 0; }
+
+  .container {
+    margin: 50px auto;
+    padding: 0 25px; }
+    .container .col-1,
+    .container .col-2 {
+      float: none;
+      width: auto; }
+    .container .col-1 h2 {
+      margin-bottom: 20px;
+      text-align: left; }
+
+  .content ul li span {
+    display: none; }
+
+  header[role="banner"] h1 {
+    margin-bottom: 20px; }
+    header[role="banner"] h1 .container {
+      margin: 50px auto; }
+    header[role="banner"] h1 figure .logo {
+      float: none;
+      width: 33px;
+      height: 24px;
+      margin-bottom: 25px; } }

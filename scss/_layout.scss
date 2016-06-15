@@ -33,13 +33,13 @@ header[role="banner"] {
     z-index: 10;
     margin-top: $spacer-2;
     margin-bottom: $spacer-2; 
+    p {
+      width: 70%; 
+    }
   }
   figure {
   	overflow: hidden;
     padding-right: $spacer-6;
-  }
-  p {
-  	width: 70%; 
   }
 }
 
