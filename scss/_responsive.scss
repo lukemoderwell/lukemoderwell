@@ -20,12 +20,18 @@
   .content h2 {
     padding-right: 40px;
   }
+   header[role="banner"] .container {
+    
+   }
 }
 
 @media screen and (max-width: 600px) {
 
   header[role="banner"] .container {
-    margin-top: 0;
+    margin-top: 40px;
+    p {
+      width: 100%; 
+    }
   }
 
   header[role="banner"] figure,

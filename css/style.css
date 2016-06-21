@@ -66,17 +66,16 @@ button, textarea, input {
   box-shadow: none; }
 
 body {
-  font-family: "inconsolata", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px; }
 
 p {
-  font-family: "inconsolata", monospace;
-  color: #e6e6e6; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #e6e6e6;
+  line-height: 1.7; }
 
 .nametag {
-  color: #5CCECE;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  color: #5CCECE; }
   .nametag span {
     opacity: .75;
     display: block;
@@ -131,9 +130,9 @@ footer {
   text-align: center;
   transition: all .35s ease-in-out; }
   .footerInfo ul {
-    margin-top: 25vh; }
+    margin-top: 20vh; }
     .footerInfo ul li {
-      margin: 8px 0; }
+      margin: 16px 0; }
 
 .footerInfo.closed {
   transform: translateY(100%);
@@ -192,18 +191,18 @@ a {
     content: "";
     position: absolute;
     display: inline-block;
-    width: 120%;
+    width: 112%;
     height: 1px;
-    left: -10%;
-    transform: translateY(18px);
+    left: -6%;
+    transform: translateY(22px);
     background: #5CCECE;
     z-index: -1;
     transition: all .15s ease-in-out; }
   a:hover {
     color: #ffffff; }
   a:hover::after {
-    transform: translateY(2px);
-    height: 18px; }
+    transform: translateY(4px);
+    height: 20px; }
 
 .logo {
   max-width: 60px;
@@ -227,8 +226,7 @@ hr {
 header[role="banner"] figure,
 header[role="banner"] h1,
 header[role="banner"] p,
-section[role="main"],
-footer[role="contentinfo"] {
+footer {
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeIn .6s .5s 1 forwards ease-in-out; }
@@ -268,7 +266,9 @@ footer {
     padding-right: 40px; } }
 @media screen and (max-width: 600px) {
   header[role="banner"] .container {
-    margin-top: 0; }
+    margin-top: 40px; }
+    header[role="banner"] .container p {
+      width: 100%; }
 
   header[role="banner"] figure,
   .content h2 {

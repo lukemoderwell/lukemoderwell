@@ -31,10 +31,10 @@ a {
     content: "";
     position: absolute;
     display: inline-block;
-    width: $hundo + 20%;
+    width: $hundo + 12%;
     height: 1px;
-    left: -10%;
-    transform: translateY(18px);
+    left: -6%;
+    transform: translateY(22px);
     background: $accent-color-2;
     z-index: -1;
     transition: all .15s ease-in-out;
@@ -43,8 +43,8 @@ a {
   color: $light; 
   }
   &:hover::after {
-    transform: translateY(2px);
-    height: 18px; 
+    transform: translateY(4px);
+    height: 20px; 
   }
 }
 
