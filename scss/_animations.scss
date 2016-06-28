@@ -3,8 +3,7 @@
 
 header[role="banner"] figure,
 header[role="banner"] h1,
-header[role="banner"] p,
-footer {
+header[role="banner"] p {
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeIn .6s .5s 1 forwards ease-in-out;

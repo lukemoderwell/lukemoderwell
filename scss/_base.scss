@@ -31,9 +31,9 @@ a {
     content: "";
     position: absolute;
     display: inline-block;
-    width: $hundo + 12%;
+    width: $hundo + 8%;
     height: 1px;
-    left: -6%;
+    left: -4%;
     transform: translateY(22px);
     background: $accent-color-2;
     z-index: -1;
@@ -49,12 +49,13 @@ a {
 }
 
 .logo {
-  max-width: 60px;
+  max-width: 100px;
   margin-bottom: 20px;  
   img {
-    width: 100%; 
+    transform: scale(.85);
+    width: 28%;
     &:hover {
-      transform: rotate(45deg);
+      transform: scale(1);
       cursor: help;
     }
   }

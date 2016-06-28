@@ -27,12 +27,11 @@
 header[role="banner"] {
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid transparent;
   .container {
   	position: relative;
     z-index: 10;
-    margin-top: $spacer-2;
-    margin-bottom: $spacer-2; 
+    margin-top: $spacer-3;
+    margin-bottom: $spacer-3; 
     p {
       width: 70%; 
     }

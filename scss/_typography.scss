@@ -7,9 +7,12 @@ body {
 }
 
 p {
-	font-family: $system;
 	color: $text; 
-	line-height: 1.7;
+	line-height: 1.65;
+}
+
+p+p {
+	margin-top: 20px;
 }
 
 .nametag {
