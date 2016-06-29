@@ -1,14 +1,57 @@
 // Typography
 // ----------------------------------------------
 
-body {
-  font-family: $system;
-  font-size: 16px;
+@font-face {
+    font-family: 'PostGrotesk-Bold';
+    src: url("../fonts/PostGrotesk-Bold.eot");
+    src: url("../fonts/PostGrotesk-Bold.woff") format("woff"), url("../fonts/PostGrotesk-Bold.ttf") format("truetype"), url("../fonts/PostGrotesk-Bold.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
-p {
+
+@font-face {
+    font-family: 'PostGrotesk-Book';
+    src: url("../fonts/PostGrotesk-Book.eot");
+    src: url("../fonts/PostGrotesk-Book.woff") format("woff"), url("../fonts/PostGrotesk-Book.ttf") format("truetype"), url("../fonts/PostGrotesk-Book.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'PostGrotesk-Light';
+    src: url("../fonts/PostGrotesk-Light.eot");
+    src: url("../fonts/PostGrotesk-Light.woff") format("woff"), url("../fonts/PostGrotesk-Light.ttf") format("truetype"), url("../fonts/PostGrotesk-Light.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'PostGrotesk-Medium';
+    src: url("../fonts/PostGrotesk-Medium.eot");
+    src: url("../fonts/PostGrotesk-Medium.woff") format("woff"), url("../fonts/PostGrotesk-Medium.ttf") format("truetype"), url("../fonts/PostGrotesk-Medium.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: $grotesk-light;
+}
+
+h1, p {
+	font-size: 18px;
 	color: $text; 
 	line-height: 1.65;
+}
+
+h1 {
+	width: 90%;
+}
+
+p:first-child {
+	margin-top: 56px; 
 }
 
 p+p {
@@ -27,4 +70,11 @@ p+p {
 			cursor: help; 
 		}
 	}
+}
+
+.more, .less {
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: $grotesk-med;	
 }
