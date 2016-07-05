@@ -60,8 +60,17 @@
     }
   }
 
+  .logo {
+    display: none; 
+  }
+  
   .content ul li span {
     display: none;
+  }
+
+  .more, .less { 
+    height: 60px; 
+    padding: 20px 0; 
   }
 
   header[role="banner"] h1 {

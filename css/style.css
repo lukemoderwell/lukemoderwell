@@ -178,17 +178,20 @@ footer {
 
 .footerInfo.closed {
   opacity: 0;
+  z-index: 0;
   transition: all .35s ease-in-out; }
 
 .more, .less {
   display: block;
   position: fixed;
-  top: 90vh;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+  bottom: 0;
   text-align: center;
   width: 100%;
-  height: 10vh;
-  padding: 24px 0;
+  padding: 32px 0;
   margin: 0;
+  height: 80px;
   z-index: 101; }
   .more:hover, .less:hover {
     background: #5CCECE; }
@@ -196,7 +199,7 @@ footer {
     display: none; }
 
 .more {
-  background: rgba(255, 255, 255, 0.05);
+  background: #102D2D;
   color: #ffffff; }
   .more.hide {
     opacity: 0;
@@ -208,6 +211,11 @@ footer {
   .less.hide {
     opacity: 0;
     z-index: -100; }
+
+/* Particles */
+.particles {
+  position: absolute;
+  top: 0; }
 
 * {
   -moz-transition: all .2s ease-in-out;
@@ -270,6 +278,30 @@ hr {
   background: #395454;
   opacity: .2; }
 
+header[role="banner"] figure,
+header[role="banner"] h1,
+header[role="banner"] p,
+.more {
+  opacity: 0;
+  animation: fadeIn .6s .5s 1 forwards ease-in-out; }
+
+header[role="banner"] figure {
+  animation-delay: .8s; }
+
+header[role="banner"] h1 {
+  animation-delay: 1s; }
+
+header[role="banner"] p {
+  animation-delay: 1.2s; }
+
+.more {
+  animation-delay: 1.6s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @media screen and (max-width: 1200px) {
   .container {
     width: auto; }
@@ -308,8 +340,15 @@ hr {
       margin-bottom: 20px;
       text-align: left; }
 
+  .logo {
+    display: none; }
+
   .content ul li span {
     display: none; }
+
+  .more, .less {
+    height: 60px;
+    padding: 20px 0; }
 
   header[role="banner"] h1 {
     margin-bottom: 20px; }

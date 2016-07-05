@@ -74,19 +74,22 @@ footer {
 
 .footerInfo.closed {
   opacity: 0;
+  z-index: 0;
   //transform: translateY(100%);
   transition: all .35s ease-in-out; 
 }
 
 .more, .less {
-    display: block; 
+    display: block;
     position: fixed;
-    top: 90vh; 
-    text-align: center; 
+    moz-box-sizing: border-box;
+    box-sizing: border-box;
+    bottom: 0;
+    text-align: center;
     width: 100%;
-    height: 10vh; 
-    padding: 24px 0; 
+    padding: 32px 0;
     margin: 0;
+    height: 80px;
     z-index: 101;
     &:hover {
       background: $accent-color-2;
@@ -97,7 +100,7 @@ footer {
   }
 
 .more {
-  background: rgba(255,255,255,.05);
+  background: #102D2D;
   color: $light;
    &.hide {
     opacity: 0;
@@ -114,3 +117,10 @@ footer {
   }
 }
 
+/* Particles */
+
+.particles {
+  position: absolute;
+  top: 0;
+  //height: 100vh; made the circles ovals
+}
