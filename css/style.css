@@ -215,7 +215,9 @@ footer {
 /* Particles */
 .particles {
   position: absolute;
-  top: 0; }
+  left: 0;
+  top: 0;
+  width: 100vw; }
 
 * {
   -moz-transition: all .2s ease-in-out;
