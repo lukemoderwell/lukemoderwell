@@ -232,6 +232,7 @@ body {
   color: #395454;
   background: #042323;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
 
 a {
