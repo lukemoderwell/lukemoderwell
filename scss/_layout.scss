@@ -30,8 +30,8 @@ header[role="banner"] {
   .container {
   	position: relative;
     z-index: 10;
-    margin-top: $spacer-3;
-    margin-bottom: $spacer-3; 
+    margin-top: 25vh;
+    margin-bottom: 25vh; 
     p {
       width: 100%; 
     }
@@ -81,15 +81,15 @@ footer {
 
 .more, .less {
     display: block;
-    position: fixed;
+    position: absolute;
     moz-box-sizing: border-box;
     box-sizing: border-box;
-    bottom: 0;
+    top: 40px;
+    right: 40px;
     text-align: center;
-    width: 100%;
-    padding: 32px 0;
+    line-height: 1;
+    padding: 14px 14px 10px;
     margin: 0;
-    height: 80px;
     z-index: 101;
     &:hover {
       background: $accent-color-2;
@@ -124,5 +124,5 @@ footer {
   left: 0;
   top: 0;
   width: 100vw; 
-  //height: 100vh; made the circles ovals
+  height: 100vh; //makes the circles ovals
 }

@@ -144,8 +144,8 @@ header[role="banner"] {
   header[role="banner"] .container {
     position: relative;
     z-index: 10;
-    margin-top: 133.33333px;
-    margin-bottom: 133.33333px; }
+    margin-top: 25vh;
+    margin-bottom: 25vh; }
     header[role="banner"] .container p {
       width: 100%; }
   header[role="banner"] figure {
@@ -183,15 +183,15 @@ footer {
 
 .more, .less {
   display: block;
-  position: fixed;
+  position: absolute;
   moz-box-sizing: border-box;
   box-sizing: border-box;
-  bottom: 0;
+  top: 40px;
+  right: 40px;
   text-align: center;
-  width: 100%;
-  padding: 32px 0;
+  line-height: 1;
+  padding: 14px 14px 10px;
   margin: 0;
-  height: 80px;
   z-index: 101; }
   .more:hover, .less:hover {
     background: #5CCECE; }
@@ -217,7 +217,8 @@ footer {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100vw; }
+  width: 100vw;
+  height: 100vh; }
 
 * {
   -moz-transition: all .2s ease-in-out;
@@ -350,13 +351,14 @@ header[role="banner"] p {
     display: none; }
 
   .more, .less {
-    height: 60px;
-    padding: 20px 0; }
+    max-width: 80px;
+    top: 20px;
+    right: 20px; }
 
   header[role="banner"] h1 {
     margin-bottom: 20px; }
     header[role="banner"] h1 .container {
-      margin: 50px auto; }
+      margin: 100px auto; }
     header[role="banner"] h1 figure .logo {
       float: none;
       width: 33px;

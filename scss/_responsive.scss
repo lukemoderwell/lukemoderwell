@@ -69,15 +69,16 @@
   }
 
   .more, .less { 
-    height: 60px; 
-    padding: 20px 0; 
+    max-width: 80px;
+    top: 20px; 
+    right: 20px; 
   }
 
   header[role="banner"] h1 {
       margin-bottom: 20px;
   
     .container {
-      margin: $spacer-8 auto;
+      margin: $spacer-4 auto;
     }
 
     figure .logo {
