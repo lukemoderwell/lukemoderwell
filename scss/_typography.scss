@@ -37,7 +37,7 @@
 }
 
 body {
-  font-family: $grotesk-light;
+  font-family: $font-light;
   color: $text; 
 }
 
@@ -51,7 +51,7 @@ h1 {
 }
 
 p:first-child {
-	margin-top: 56px; 
+	margin-top: 64px;
 }
 
 p+p {
@@ -76,5 +76,5 @@ p+p {
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-family: $grotesk-med;	
+	font-family: $font-med;	
 }

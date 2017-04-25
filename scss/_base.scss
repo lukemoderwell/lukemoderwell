@@ -11,8 +11,6 @@ body {
   font-size: 100%;
   line-height: 145%;
   vertical-align: baseline;
-  color: $text-light;
-  background: $dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -22,8 +20,12 @@ body {
   }
 }
 
-.project {
-  background: $light;
+.dark {
+  background-color: $dark;
+}
+
+.light {
+  background-color: $light;
   color: $text-light;
 }
 
@@ -74,11 +76,14 @@ a {
 }
 
 .logo {
+  display: flex;
+  height: 72px;
   max-width: 100px;
-  margin-bottom: 20px;  
+
   img {
     transform: scale(.85);
-    width: 28%;
+    width: 100%;
+
     &:hover {
       transform: scale(1);
       cursor: help;

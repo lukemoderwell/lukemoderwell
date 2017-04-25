@@ -1,97 +1,96 @@
 // Layout
 // ----------------------------------------------
-
 .container {
-  overflow: hidden;
-  width: auto;
-  margin: $spacer-4 0 $spacer-4;
-  padding: 0 20%;
-
-  p, ul { 
-    font-weight: 300;
-	}
-  
-  .col-1 {
-    float: left;
-    width: 30%;
-	}
-
-  .col-2 {
-    float: right;
-    width: 70%;
-	}
+    overflow: hidden;
+    width: auto;
+    margin: $spacer-4 0 $spacer-4;
+    padding: 0 20%;
+    p,
+    ul {
+        font-weight: 300;
+    }
+    .col-1 {
+        float: left;
+        width: 30%;
+    }
+    .col-2 {
+        float: right;
+        width: 70%;
+    }
 }
 
-.content {overflow: hidden;}
+.content {
+    overflow: hidden;
+}
 
 header[role="banner"] {
-  position: relative;
-  overflow: hidden;
-  .container {
-  	position: relative;
-    z-index: 10;
-    margin-top: 25vh;
-    margin-bottom: 25vh; 
-    p {
-      width: 100%; 
+    position: relative;
+    overflow: hidden;
+    .container {
+        position: relative;
+        z-index: 10;
+        margin-top: 25vh;
+        margin-bottom: 25vh;
+        p {
+            width: 100%;
+        }
     }
-  }
-  figure {
-  	overflow: hidden;
-    padding-right: $spacer-6;
-  }
+    figure {
+        overflow: hidden;
+        padding-right: $spacer-6;
+    }
 }
+
 
 /* Footer Stuff */
 
 footer {
-  z-index: 100; 
-  width: 100%; 
+    z-index: 100;
+    width: 100%;
 }
 
 .footerInfo {
-  position: absolute; 
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  opacity: 1;
-  top: 0; 
-  width: 100vw; 
-  height: 100vh;
-  background: $light; 
-  z-index: 100; 
-  text-align: center;
-  transition: all .35s ease-in-out; 
-  ul {
-    
-    li {
-      margin: 24px 0; 
-      a {
-        font-size: 18px; 
-        line-height: 1;
-      }
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $light;
+    z-index: 100;
+    text-align: center;
+    transition: all .35s ease-in-out;
+    ul {
+        li {
+            margin: 24px 0;
+            a {
+                font-size: 18px;
+                line-height: 1;
+            }
+        }
     }
-  }
 }
 
 .footerInfo.closed {
-  height: 0;
-  opacity: 0;
-  z-index: 0;
-  transition: all .35s ease-in-out; 
-
-  .container {
-    display: none;
-  }
+    height: 0;
+    opacity: 0;
+    z-index: 0;
+    transition: all .35s ease-in-out;
+    .container {
+        display: none;
+    }
 }
 
-.more, .less {
+.more,
+.less {
     display: block;
     position: absolute;
     moz-box-sizing: border-box;
@@ -104,98 +103,134 @@ footer {
     margin: 0;
     z-index: 101;
     &:hover {
-      background: $accent-color-2;
+        background: $accent-color-2;
+        cursor: pointer;
     }
     &:after {
-      display: none; 
+        display: none;
     }
-  }
+}
 
 .more {
-  background: #102D2D;
-  color: $light;
-   &.hide {
-    opacity: 0;
-    z-index: -100; 
-  }
+    background: #102D2D;
+    color: $light;
+    &.hide {
+        opacity: 0;
+        z-index: -100;
+    }
 }
 
 .less {
-  background:rgba(0,0,0,.05);
-  color: $dark; 
-  &.hide {
-    opacity: 0;
-    z-index: -100; 
-  }
+    background: rgba(0, 0, 0, .05);
+    color: $dark;
+    &.hide {
+        opacity: 0;
+        z-index: -100;
+    }
 }
+
 
 /* Particles */
 
 .particles {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw; 
-  height: 100vh; //makes the circles ovals
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh; //makes the circles ovals
 }
 
 // Portfolio 
-
 .portfolio {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    text-align: center;
 }
 
 .portfolio_header {
-  font-size: 20px;
-  color: $text;
+    font-size: 20px;
+    color: $text;
 }
 
 .portfolio_container {
-  width: 80%;
+    width: 80%;
 }
 
 .portfolio_projects {
-  display: flex;
-  flex-direction: column;
-
-  .portfolio_project {
-    margin: 14px 0;
-  }
-
-  .portfolio_projectLink {
-    display: inline-block;
-    font-size: 18px;
-    line-height: 1;
-  }
+    display: flex;
+    flex-direction: column;
+    .portfolio_project {
+        margin: 14px 0;
+    }
+    .portfolio_projectLink {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 1;
+    }
 }
 
-.project p, 
+.project_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 40px;
+    height: 38px;
+    .back {
+        flex: 1;
+        font-size: 14px;
+        font-family: $font-med;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .project_navTitle {
+        flex: 1;
+        font-size: 18px;
+        text-align: center;
+    }
+    .project_buttonGroup {
+        flex: 1;
+    }
+}
+
+.project_header {
+    margin-bottom: 24px;
+    .project_title {
+        font-size: 24px;
+    }
+}
+
+.project_featuredImg {
+    margin: 64px 0;
+}
+
+.project p,
 .project figcaption {
-  max-width: 36em;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 36em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project p {
-  padding-top: 32px;
-  margin-bottom: 32px;
+    padding-top: 32px;
+    margin-bottom: 32px;
 }
 
 .project figcaption {
-  padding: 8px 0;
-  text-align: center;
-  font-style: italic;
+    padding: 8px 0;
+    text-align: center;
+    font-style: italic;
 }

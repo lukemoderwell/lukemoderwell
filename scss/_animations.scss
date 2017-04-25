@@ -4,7 +4,7 @@
 header[role="banner"] figure,
 header[role="banner"] h1,
 header[role="banner"] p, 
-.more {
+.home.more {
   opacity: 0;
   //transform: translateY(-5px);
   animation: fadeIn .6s .5s 1 forwards ease-in-out;
@@ -22,7 +22,7 @@ header[role="banner"] p {
   animation-delay: 1.2s;
 }
 
-.more {
+.home.more {
   animation-delay: 1.6s;
 }
 

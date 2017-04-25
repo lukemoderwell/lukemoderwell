@@ -1,91 +1,78 @@
 // =Responsive
 // ----------------------------------------------
-
 @media screen and (max-width: 1200px) {
-  .container {
-    width: auto;
-    //padding: 0 50px;
-
-    header[role="banner"] p {
-      width: 100%;
+    .container {
+        width: auto; //padding: 0 50px;
+        header[role="banner"] p {
+            width: 100%;
+        }
     }
-  } 
 }
+
 @media screen and (max-width: 900px) {
-  .container {
-    width: auto;
-    padding: 0 50px;
-}
-  header[role="banner"] figure,
-  .content h2 {
-    padding-right: 40px;
-  }
-   header[role="banner"] .container {
-    
-   }
+    .container {
+        width: auto;
+        padding: 0 50px;
+    }
+    header[role="banner"] figure,
+    .content h2 {
+        padding-right: 40px;
+    }
 }
 
 @media screen and (max-width: 600px) {
-
-  header[role="banner"] .container {
-    margin-top: 40px;
-    p {
-      font-size: 16px; 
-      width: 100%; 
+    header[role="banner"] .container {
+        margin-top: 40px;
+        p {
+            font-size: 16px;
+            width: 100%;
+        }
     }
-  }
-
-  p:first-child {
-    margin-top: 20px;
-  }
-
-  header[role="banner"] figure,
-  .content h2 {
-    padding-right: 0;
-  }
-
-  .container {
-    margin: $spacer-8 auto;
-    padding: 0 25px;
-
-    .col-1,
-    .col-2 {
-      float: none;
-      width: auto;
+    p:first-child {
+        margin-top: 20px;
     }
-
-    .col-1 h2 {
-        margin-bottom: 20px;
-        text-align: left;
+    header[role="banner"] figure,
+    .content h2 {
+        padding-right: 0;
     }
-  }
-
-  .logo {
-    display: none; 
-  }
-  
-  .content ul li span {
-    display: none;
-  }
-
-  .more, .less { 
-    max-width: 80px;
-    top: 20px; 
-    right: 20px; 
-  }
-
-  header[role="banner"] h1 {
-      margin-bottom: 20px;
-  
     .container {
-      margin: $spacer-4 auto;
+        margin: $spacer-8 auto;
+        padding: 0 25px;
+        .col-1,
+        .col-2 {
+            float: none;
+            width: auto;
+        }
+        .col-1 h2 {
+            margin-bottom: 20px;
+            text-align: left;
+        }
     }
-
-    figure .logo {
-      float: none;
-      width: 33px;
-      height: 24px;
-      margin-bottom: 25px;
+    .logo {
+        display: none;
     }
-  }
+    .content ul li span {
+        display: none;
+    }
+    .more,
+    .less {
+        max-width: 80px;
+        top: 20px;
+        right: 20px;
+    }
+    .project_nav {
+        margin: 20px 40px;
+    }
+    header[role="banner"] h1 {
+        margin-bottom: 20px;
+        .container {
+            margin: $spacer-4 auto;
+        }
+        figure .logo {
+            float: none;
+            width: 33px;
+            height: 24px;
+            margin-bottom: 25px;
+        }
+    }
 }
