@@ -23,6 +23,7 @@ $light:     #ffffff;
 
 $accent-color-1:   #FD987B;
 $accent-color-2:   #5CCECE;
+$accent-color-2--dark: darken($accent-color-2, 10);
 
 $text:          darken($light, 10%);
 $text-light:    adjust-color($dark, $saturation: -60, $lightness: 20);

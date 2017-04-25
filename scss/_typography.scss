@@ -38,11 +38,11 @@
 
 body {
   font-family: $grotesk-light;
+  color: $text; 
 }
 
 h1, p {
 	font-size: 18px;
-	color: $text; 
 	line-height: 1.65;
 }
 

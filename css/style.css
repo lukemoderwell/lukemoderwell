@@ -46,23 +46,37 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
+/* =Reset*/
+/* ----------------------------------------------*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+dialog {
   display: block; }
 
 * {
   margin: 0;
   padding: 0;
-  border: 0 none; }
+  border: 0 none;
+  box-sizing: border-box; }
 
 ul {
   list-style: none; }
 
-button, textarea, input {
+button,
+textarea,
+input {
   border: none;
   overflow: auto;
   outline: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none; }
 
 @font-face {
@@ -90,11 +104,11 @@ button, textarea, input {
   font-weight: normal;
   font-style: normal; }
 body {
-  font-family: "PostGrotesk-Light", sans-serif; }
+  font-family: "PostGrotesk-Light", sans-serif;
+  color: #e6e6e6; }
 
 h1, p {
   font-size: 18px;
-  color: #e6e6e6;
   line-height: 1.65; }
 
 h1 {
@@ -159,7 +173,15 @@ footer {
 
 .footerInfo {
   position: absolute;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   opacity: 1;
   top: 0;
   width: 100vw;
@@ -168,18 +190,19 @@ footer {
   z-index: 100;
   text-align: center;
   transition: all .35s ease-in-out; }
-  .footerInfo ul {
-    margin-top: 20vh; }
-    .footerInfo ul li {
-      margin: 16px 0; }
-      .footerInfo ul li a {
-        font-size: 18px;
-        line-height: 1; }
+  .footerInfo ul li {
+    margin: 24px 0; }
+    .footerInfo ul li a {
+      font-size: 18px;
+      line-height: 1; }
 
 .footerInfo.closed {
+  height: 0;
   opacity: 0;
   z-index: 0;
   transition: all .35s ease-in-out; }
+  .footerInfo.closed .container {
+    display: none; }
 
 .more, .less {
   display: block;
@@ -220,6 +243,54 @@ footer {
   width: 100vw;
   height: 100vh; }
 
+.portfolio {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  text-align: center; }
+
+.portfolio_header {
+  font-size: 20px;
+  color: #e6e6e6; }
+
+.portfolio_container {
+  width: 80%; }
+
+.portfolio_projects {
+  display: flex;
+  flex-direction: column; }
+  .portfolio_projects .portfolio_project {
+    margin: 14px 0; }
+  .portfolio_projects .portfolio_projectLink {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1; }
+
+.project p,
+.project figcaption {
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.project p {
+  padding-top: 32px;
+  margin-bottom: 32px; }
+
+.project figcaption {
+  padding: 8px 0;
+  text-align: center;
+  font-style: italic; }
+
 * {
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -228,24 +299,37 @@ footer {
 body {
   font-size: 100%;
   line-height: 145%;
-  overflow-y: hidden;
   vertical-align: baseline;
   color: #395454;
   background: #042323;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
+  body.no-scroll {
+    overflow: hidden; }
+
+.project {
+  background: #ffffff;
+  color: #395454; }
+
+img {
+  max-width: 100%; }
 
 a {
+  color: #39bebe;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.magic {
   display: inline-block;
   position: relative;
   color: #5CCECE;
   cursor: pointer;
   white-space: nowrap;
-  text-decoration: none;
   z-index: 1;
   transition: all .15s ease-in-out; }
-  a:after {
+  .magic:after {
     content: "";
     position: absolute;
     display: inline-block;
@@ -256,11 +340,12 @@ a {
     background: #5CCECE;
     z-index: -1;
     transition: all .15s ease-in-out; }
-  a:hover {
+  .magic:hover {
+    text-decoration: none;
     color: #ffffff; }
-  a:hover::after {
-    transform: translateY(4px);
-    height: 20px; }
+  .magic:hover::after {
+    transform: translateY(-4px);
+    height: 24px; }
 
 .logo {
   max-width: 100px;

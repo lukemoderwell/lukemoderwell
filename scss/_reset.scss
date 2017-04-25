@@ -1,7 +1,20 @@
-// =Reset
-// ----------------------------------------------
+/* =Reset*/
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
+
+/* ----------------------------------------------*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+dialog {
   display: block;
 }
 
@@ -9,17 +22,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin: 0;
   padding: 0;
   border: 0 none;
+  box-sizing: border-box;
 }
 
 ul {
   list-style: none;
 }
 
-button, textarea, input {
+button,
+textarea,
+input {
   border: none;
   overflow: auto;
   outline: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }

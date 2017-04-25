@@ -10,24 +10,45 @@
 body {
   font-size: 100%;
   line-height: 145%;
-  overflow-y: hidden; 
   vertical-align: baseline;
   color: $text-light;
   background: $dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.project {
+  background: $light;
+  color: $text-light;
+}
+
+img {
+  max-width: 100%;
 }
 
 a {
+  color: $accent-color-2--dark;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.magic {
   display: inline-block; 
   position: relative;
   color: $accent-color-2; 
   cursor: pointer;
   white-space: nowrap;
-  text-decoration: none;
   z-index: 1;
   transition: all .15s ease-in-out;
+
   &:after {
     content: "";
     position: absolute;
@@ -40,12 +61,15 @@ a {
     z-index: -1;
     transition: all .15s ease-in-out;
   }
+
   &:hover {
-  color: $light; 
+    text-decoration: none;
+    color: $light; 
   }
+  
   &:hover::after {
-    transform: translateY(4px);
-    height: 20px; 
+    transform: translateY(-4px);
+    height: 24px; 
   }
 }
 
