@@ -348,7 +348,8 @@ body {
   background-color: #ffffff;
   color: #395454; }
 
-img {
+img,
+video {
   max-width: 100%; }
 
 a {
