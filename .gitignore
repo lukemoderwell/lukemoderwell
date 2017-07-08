@@ -1,4 +1,15 @@
-#Codekit Stuff
-*.codekit
-config.rb
+# Build output
+dist
+.next
 
+# Dependencies
+node_modules
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Fonts
+fonts
