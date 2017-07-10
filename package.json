@@ -1,0 +1,28 @@
+{
+  "name": "moderwell",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "main": "pages/index.js",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.1.4",
+    "babel-preset-stage-0": "^6.24.1",
+    "express": "^4.14.0",
+    "next": "^3.0.1-beta.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.0.0"
+  },
+  "description": "Personal website for Luke Moderwell",
+  "repository": "https://github.com/lukemoderwell/lukemoderwell.git",
+  "homepage": "https://lukemoderwell.com/",
+  "author": {
+    "name": "Luke Moderwell",
+    "email": "luke.moderwell@gmail.com",
+    "url": "https://lukemoderwell.com"
+  },
+  "license": "MIT"
+}
