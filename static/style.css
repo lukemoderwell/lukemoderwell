@@ -1,0 +1,70 @@
+/* Reset*/
+
+
+/* ----------------------------------------------*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+dialog {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, 
+               BlinkMacSystemFont, 
+               "Segoe UI", 
+               Roboto, 
+               Helvetica,
+               Arial,
+               sans-serif,
+               "Apple Color Emoji",  /* Emojis*/
+               "Segoe UI Emoji", /* Emojis*/
+               "Segoe UI Symbol"; /* Emojis*/
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+textarea,
+input {
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+}
+
+.idea {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+ul li:before {
+  content: '-';
+  color: #ABABAB;
+  position: absolute;
+  margin-left: -20px;
+}
