@@ -18,7 +18,7 @@
     "react-dom": "^15.6.1",
     "styled-components": "^2.0.0"
   },
-  "description": "Personal website for Luke Moderwell",
+  "description": "personal website — Luke Moderwell",
   "repository": "https://github.com/lukemoderwell/lukemoderwell.git",
   "homepage": "https://lukemoderwell.com/",
   "author": {
