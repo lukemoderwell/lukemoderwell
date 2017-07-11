@@ -23,6 +23,24 @@
       "idea": "Shabbat",
       "notes": "How do we practice sabbath and why",
       "link": ""
-    } 
+    },
+    {
+      "id": "05",
+      "idea": "Binder",
+      "notes": "No funding, how we hired, how we build, presell",
+      "link": ""
+    }, 
+    {
+      "id": "06",
+      "idea": "Getting Real",
+      "notes": "Best bits from 37 signals book",
+      "link": "https://basecamp.com/about/books/Getting%20Real.pdf"
+    },
+    {
+      "id": "07",
+      "idea": "Workout Philosophy",
+      "notes": "why i built my own gym, motivation, effects of working out, community",
+      "link": ""
+    }  
   ]
 }
