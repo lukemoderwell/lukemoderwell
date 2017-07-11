@@ -105,14 +105,11 @@ input {
   font-style: normal; }
 body {
   font-family: "PostGrotesk-Light", sans-serif;
-  color: #e6e6e6; }
+  color: #a0a0a0; }
 
 h1, p {
   font-size: 18px;
   line-height: 1.65; }
-
-h1 {
-  width: 90%; }
 
 p:first-child {
   margin-top: 64px; }
