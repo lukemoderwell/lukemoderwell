@@ -1,5 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import Link from 'next/link';
 
 const HeaderContainer = styled.header`
   display: block;
@@ -11,7 +12,7 @@ const Header = (props) => {
   return(
     <HeaderContainer>
       <h1>
-        <a href="/" rel="home">Luke Moderwell</a>
+        <Link prefetch href="/" rel="home"><a>Luke Moderwell</a></Link>
       </h1>
     </HeaderContainer>
   )
