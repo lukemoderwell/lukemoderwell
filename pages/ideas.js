@@ -1,7 +1,9 @@
 import Marquee from '../components/marquee';
+import Section from '../components/section';
 import Link from 'next/link';
-import { ideas } from '../ideas';
 import Head from 'next/head';
+import { ideas } from '../ideas';
+
 
 const Idea = ({ id, idea, notes, link }) => (
     <li className="idea">
@@ -16,22 +18,25 @@ const Idea = ({ id, idea, notes, link }) => (
 
 export default () => (
   <Marquee>
-    <Head>
-      <title>Idea List</title>
-    </Head>
-    <div className="ideas">
-        <ul>
-            {
-                ideas.map(({ id, idea, notes, link }) => (
-                    <Idea 
-                        id={id}
-                        key={id}
-                        idea={idea}
-                        notes={notes}
-                        link={link} />
-                ))
-            }
-        </ul>
-    </div>
+    <Section>
+        <Head>
+        <title>Idea List</title>
+        </Head>
+        <Link prefetch href="/"><a>Luke Moderwell</a></Link>
+        <div className="ideas">
+            <ul>
+                {
+                    ideas.map(({ id, idea, notes, link }) => (
+                        <Idea 
+                            id={id}
+                            key={id}
+                            idea={idea}
+                            notes={notes}
+                            link={link} />
+                    ))
+                }
+            </ul>
+        </div>
+    </Section>
   </Marquee>
 )

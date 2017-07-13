@@ -56,6 +56,10 @@ input {
   box-shadow: none;
 }
 
+.ideas {
+  padding: 2rem;
+}
+
 .idea {
   list-style: none;
   text-align: left;

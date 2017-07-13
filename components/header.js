@@ -6,14 +6,13 @@ const HeaderContainer = styled.header`
   display: block;
   max-width: 640px;
   margin: 3rem auto 4rem;
+  text-align: center;
 `
 
 const Header = (props) => {
   return(
     <HeaderContainer>
-      <h1>
-        <Link prefetch href="/" rel="home"><a>Luke Moderwell</a></Link>
-      </h1>
+      <Link prefetch href="/" rel="home"><a>Luke Moderwell</a></Link>
     </HeaderContainer>
   )
 }

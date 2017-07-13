@@ -1,9 +1,13 @@
 import Page from '../../components/page';
 import Content from '../../components/content';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default () => (
   <Page>
+    <Head>
+      <title>Jello World</title>
+    </Head>
     <Content>
       <h1>Jello World</h1>
       <p>For the past few months now I have wanted to start a journal. The reasons for this are to 
