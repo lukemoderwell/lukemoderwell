@@ -18,6 +18,7 @@ export default () => (
         fade beneath the breathe of the Lord and so it is with people. <sup>8</sup>The grass withers 
         and the flowers fade but the word of our God stands forever."
       </Blockquote>
+      <p>Sometimes it can be hard to be humble. Remember that our lives are fragile like grass.</p>
     </Content> 
   </Page>
 )

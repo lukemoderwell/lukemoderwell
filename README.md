@@ -5,8 +5,8 @@
 
 ## To Do
 - [X] add idea list
-- add styled components
-    - [ ] Blockquote
+- [ ] add styled components
+    - [X] Blockquote
     - [ ] Page Heading
     - [ ] Footnotes
 - [ ] make friends
