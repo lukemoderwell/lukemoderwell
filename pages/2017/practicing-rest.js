@@ -17,11 +17,9 @@ export default () => (
       Sending and answering emails late into the night is expected because we now work 24/7. We have a culture of work.</p>
       <p>Recently my family and I have started trying to celebrate Shabbat (שבת) or Sabbath in English.
       Simply put, Shabbat is the idea that human beings should have a weekly rythmn of resting. This concept
-      comes from <a href="https://www.biblegateway.com/passage/?search=Gen.2.2-Gen.2.3&version=NLT">Genesis 2:2-3</a>
-      when God rests after 6 days of creation. Keeping the Sabbath is 
-      <a href="https://www.biblegateway.com/passage/?search=Exodus+20%3A8-11&version=NLT">one of the 10 commandments</a> 
-      and Jesus also <a href="https://www.biblegateway.com/passage/?search=Mark%202:23-27">spoke about it's importance</a>
-      saying it was literally made for us as humans.</p>
+      comes from <a href="https://www.biblegateway.com/passage/?search=Gen.2.2-Gen.2.3&version=NLT">Genesis 2:2-3</a> 
+      when God rests after 6 days of creation. Keeping the Sabbath is <a href="https://www.biblegateway.com/passage/?search=Exodus+20%3A8-11&version=NLT">one of the 10 commandments</a> and
+       Jesus also <a href="https://www.biblegateway.com/passage/?search=Mark%202:23-27">spoke about it's importance</a> saying it was literally made for us as humans.</p>
       <p>Resting and observing Shabbat has been extremely challenging for me.
       Americans, religious and secular alike, don't typically take an entire 24 hours off.
       It's not something that I've ever experienced or practiced. What does rest look like?

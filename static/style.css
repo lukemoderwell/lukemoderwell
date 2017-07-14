@@ -42,6 +42,10 @@ body {
   font-family: "roboto mono", Menlo, "Inconsolata", monospace;
 }
 
+a {
+  color: #FE8019;
+}
+
 p {
   line-height: 1.55;
   margin: 1rem 0;
@@ -76,3 +80,29 @@ ul li:before {
   position: absolute;
   margin-left: -20px;
 }
+
+/* loading progress bar styles */
+      #nprogress {
+        pointer-events: none;
+      }
+
+      #nprogress .bar {
+        background: #FE8019;
+        position: fixed;
+        z-index: 1031;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+
+      #nprogress .peg {
+        display: block;
+        position: absolute;
+        right: 0px;
+        width: 100px;
+        height: 100%;
+        box-shadow: 0 0 10px#FE8019, 0 0 5px #FE8019;
+        opacity: 1.0;
+        transform: rotate(3deg) translate(0px, -4px);
+      }
