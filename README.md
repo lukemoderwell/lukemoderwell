@@ -5,7 +5,9 @@
 
 ## To Do
 - [X] add idea list
-- [ ] add style
-- [ ] build out post components i.e. blockquote, etc.
+- add styled components
+    - [ ] Blockquote
+    - [ ] Page Heading
+    - [ ] Footnotes
 - [ ] make friends
 - [ ] add markdown support

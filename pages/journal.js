@@ -4,7 +4,7 @@ import { posts } from '../posts';
 import Head from 'next/head';
 
 const Post = ({ id, date, title }) => (
-  <div className="post">
+  <div className="entry">
     <span className="date">{ date }</span>
     <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}><a>{ title }</a></Link>
     </div>
@@ -13,9 +13,9 @@ const Post = ({ id, date, title }) => (
 export default () => (
   <Marquee>
     <Head>
-      <title>Thoughts</title>
+      <title>Journal</title>
     </Head>
-    <div className="posts">
+    <div className="entries">
       {
         posts.map(({ id, date, title }) => (
           <Post 

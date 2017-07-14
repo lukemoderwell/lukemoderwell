@@ -38,9 +38,13 @@ body {
                "Segoe UI Symbol"; /* Emojis*/
 }
 
+.mono {
+  font-family: "roboto mono", Menlo, "Inconsolata", monospace;
+}
+
 p {
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 1.55;
+  margin: 1rem 0;
 }
 
 ul {
@@ -56,8 +60,8 @@ input {
   box-shadow: none;
 }
 
-.ideas {
-  padding: 2rem;
+.ideas, .entry {
+  padding: 1rem 0;
 }
 
 .idea {

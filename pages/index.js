@@ -6,9 +6,7 @@ export default () => (
   <Marquee>
     <Section>
       <Link href="/"><h1>Luke Moderwell</h1></Link>
-      <Link prefetch href="/thoughts"><a>Thoughts</a></Link>
-      <hr />
-      <Link prefetch href="/ideas"><a>Ideas</a></Link>
+      <Link prefetch href="/journal"><a>Journal</a></Link>
     </Section>
   </Marquee>
 )
