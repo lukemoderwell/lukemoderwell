@@ -38,17 +38,8 @@ body {
                "Segoe UI Symbol"; /* Emojis*/
 }
 
-.mono {
-  font-family: "roboto mono", Menlo, "Inconsolata", monospace;
-}
-
 a {
   color: #FE8019;
-}
-
-p {
-  line-height: 1.55;
-  margin: 1rem 0;
 }
 
 ul {
@@ -62,23 +53,6 @@ input {
   overflow: auto;
   outline: none;
   box-shadow: none;
-}
-
-.ideas, .entry {
-  padding: 1rem 0;
-}
-
-.idea {
-  list-style: none;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-ul li:before {
-  content: '-';
-  color: #ABABAB;
-  position: absolute;
-  margin-left: -20px;
 }
 
 /* loading progress bar styles */
