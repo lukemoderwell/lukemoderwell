@@ -3,22 +3,33 @@
     {
       "id": "jello-world",
       "date": "July 10, 2017",
-      "title": "Jello World"
+      "title": "Jello World",
+      "tags": []
     },
     {
       "id": "practicing-rest",
       "date": "July 12, 2017",
-      "title": "Practicing Rest"
+      "title": "Practicing Rest",
+      "tags": [
+        "life",
+        "theology"
+      ]
     },
     {
       "id": "people-are-like-grass",
       "date": "July 14, 2017",
-      "title": "People Are Like Grass"
+      "title": "People Are Like Grass",
+      "tags": [
+        "theology"
+      ]
     },
     {
       "id": "the-longest-distance",
       "date": "July 20, 2017",
-      "title": "The Longest Distance"
+      "title": "The Longest Distance",
+      "tags": [
+        "life"
+      ]
     }
   ]
 }

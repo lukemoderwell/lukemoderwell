@@ -22,10 +22,15 @@ const StyledPost = styled.li`
     }
 `
 
-const Post = ({ id, date, title }) => (
+const Tag = styled.span`
+   color: black;
+`
+
+const Post = ({ id, date, title, tags }) => (
   <StyledPost>
     <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}><a>{ title }</a></Link>
     <span className="date">{ date }</span>
+    { tags.length > 0 ? <span className="tag">{tags}</span> : "" }
   </StyledPost>
 )
 
@@ -36,12 +41,13 @@ export default () => (
     </Head>
     <div className="entries">
       {
-        posts.slice(0).reverse().map(({ id, date, title }) => (
+        posts.slice(0).reverse().map(({ id, date, title, tags }) => (
           <Post 
             id={id}
             key={id}
             date={date}
-            title={title} />
+            title={title} 
+            tags={tags} />
         ))
       }
     </div>
