@@ -1,9 +1,18 @@
-import Page from '../../components/page'
-import Content from '../../components/content'
-import P from '../../components/paragraph'
 import Link from 'next/link'
 import Head from 'next/head'
 import { Heading } from 'rebass'
+import md from 'react-markings'
+import Page from '../../components/page'
+import Content from '../../components/content'
+import P from '../../components/paragraph'
+
+
+const markdown = md`
+    # Just Testing
+
+    This content block is using react-markings to render markdown from within a React component.
+    Pretty nice.
+  `;
 
 export default () => (
   <Page>
@@ -20,6 +29,7 @@ export default () => (
       <P>This content may contain but is not limited to: personal life events, spiritual/theology,
       design, philosophy, humor, recipes, programmning, poetry, music, and memories. See <Link href="/ideas" prefetch><a>ideas</a></Link> for a list of possible future topics.
       </P>
+      {markdown}
     </Content>
   </Page>
 )
