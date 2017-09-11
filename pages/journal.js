@@ -1,8 +1,8 @@
-import Marquee from '../components/marquee'
 import Link from 'next/link'
 import { posts } from '../posts'
 import Head from 'next/head'
-import EntryCard from '../components/entry-card'
+import Marquee from '../components/marquee'
+import JournalEntry from '../components/journal-entry'
 
 export default () => (
   <Marquee>
@@ -12,7 +12,7 @@ export default () => (
     <div className="entries">
       {
         posts.slice(0).reverse().map(({ id, date, title, tags }) => (
-          <EntryCard 
+          <JournalEntry 
             id={id}
             key={id}
             date={date}

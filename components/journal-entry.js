@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { Heading } from 'rebass'
 
-const StyledEntryCard = styled.li `
+const Entry = styled.li `
   margin: 1.5rem 0;
   text-align: left;
   list-style: none;
@@ -25,16 +25,15 @@ const StyledEntryCard = styled.li `
     }
 `
 
-const EntryCard = ({id, date, title, tags}) => (
-  <StyledEntryCard>
-    <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}>
+const JournalEntry = ({id, date, title, tags}) => (
+  <Entry>
+    <Link prefetch href={`/journal/${id}`}>
       <a>
-        <span className="date">{date}</span>
         <Heading>{title}</Heading>
-        <span className="tags">{tags}</span>
+        <span className="date">{date}</span>
       </a>
     </Link>
-  </StyledEntryCard>
+  </Entry>
 )
 
-export default EntryCard
+export default JournalEntry

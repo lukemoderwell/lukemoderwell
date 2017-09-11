@@ -6,6 +6,10 @@ import Link from 'next/link'
 
 const StyledMarquee = styled(Marquee)`
     background-color: #e3c16d;
+
+    Link a {
+      display: block;
+    }
 `
 
 export default () => (
@@ -13,6 +17,7 @@ export default () => (
     <Section>
       <Link href="/"><NameTag>Luke Moderwell</NameTag></Link>
       <Link prefetch href="/journal"><a>Journal</a></Link>
+      <Link prefetch href="/ideas"><a>Writing Topics</a></Link>
     </Section>
   </StyledMarquee>
 )
