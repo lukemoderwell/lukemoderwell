@@ -1,0 +1,168 @@
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0} 
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Clearfix */
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*// Typography
+// --*/--------------------------------------------
+
+@font-face {
+    font-family: 'PostGrotesk-Light';
+    src: url("http://lukemoderwell.com/fonts/PostGrotesk-Light.eot");
+    src: url("http://lukemoderwell.com/fonts/PostGrotesk-Light.woff") format("woff"), url("http://lukemoderwell.com/fonts/PostGrotesk-Light.ttf") format("truetype"), url("http://lukemoderwell.com/fonts/PostGrotesk-Light.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'PostGrotesk-Medium';
+    src: url("http://lukemoderwell.com/fonts/PostGrotesk-Medium.eot");
+    src: url("http://lukemoderwell.com/fonts/PostGrotesk-Medium.woff") format("woff"), url("http://lukemoderwell.com/fonts/PostGrotesk-Medium.ttf") format("truetype"), url("http://lukemoderwell.com/fonts/PostGrotesk-Medium.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Base */
+body {
+	font:16px/1 "PostGrotesk-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	color: rgba(0,0,0,.7);
+}
+
+.wrapper {
+	padding: 80px 40px;
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+.header {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+	position: relative;
+}
+
+hr {
+	margin: 3rem 14rem;
+    border: 1px solid #eee;
+}
+
+.text-center {
+	text-align: center;
+}
+
+ul {
+	margin: 1rem 0; 
+	padding-left: 1rem;
+}
+
+.contact {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+ul li {
+	line-height: 1.45; 
+	margin: .5rem 0;
+}
+
+.contact li {
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
+.contact li:last-child {
+	padding-right: 0;
+}
+
+.job {
+	margin-top: 1.875rem;
+}
+
+.company {
+	font-style: italic;
+}
+
+.company a {
+	font-style: normal;
+}
+
+/* Type */
+/* Accent color */
+strong {
+	font-weight: bold;
+}
+
+a {
+	font-family: "PostGrotesk-Medium", sans-serif;
+	text-decoration: none;
+	color: #5CCECE;
+	font-weight: 400;
+}
+
+a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 26px;
+	color: #222;
+}
+
+h2 {
+	font-size: 18px;
+    font-weight: 600;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+h3 {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: rgba(0,0,0,.8);
+	margin-bottom: 1rem;
+}
+
+h4 {
+	font-family: "PostGrotesk-Medium", sans-serif;
+	font-size: 18px;
+	color: rgba(0,0,0,.8);
+	margin-bottom: .5rem;
+}
+
+p {
+	line-height: 1.6;
+	font-size: 16px;
+}
+
+p+p {
+	margin-top: 1rem;
+}
+
+
+@media screen and (max-width: 540px) {
+	#wrapper { padding:40px; }
+	#header { margin-bottom: 40px; }
+	#docs { display: none; }
+	.contact li {float: none;width: 100%;display: block;}
+}
+
+@media screen and (max-width:440px) {
+	#wrapper { padding:20px; }
+	#header { margin-bottom: 20px; }
+}

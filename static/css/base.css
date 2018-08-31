@@ -1,0 +1,197 @@
+/*=========================================
+Reset
+=========================================== */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0} 
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.group:before,
+.group:after { content: ""; display: table;} 
+.group:after { clear: both;}
+.group { zoom: 1;}
+
+/*=========================================
+Base
+=========================================== */
+html,body {
+	min-height:100%;
+}
+
+body {
+	-webkit-font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+	position: relative;
+}
+
+img {
+	max-width:100%;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/*=========================================
+Typography
+=========================================== */
+/*Accent color*/
+
+ul 	{ margin:0; padding:0; }
+li	{ list-style-type:none; }
+
+
+/*=========================================
+Post Page
+=========================================== */
+
+.post {
+	margin-top: 3rem;
+	margin-bottom:60px;
+}
+
+#post-meta {
+	font-size:13px;
+	font-weight:bold;
+	color:#aaa;
+	margin-bottom:40px;
+	line-height:1.4;
+	border-top:1px solid #eee;
+	padding-top:40px;
+	color:#444;
+}
+
+#post-meta div {
+	display:inline-block;
+}
+
+#post-meta div span {
+	color:#666;
+	color:#333;
+	color:#aaa;
+	font-weight:500;
+	display:block;
+	margin-bottom:2px;
+}
+
+#post-meta div.date {
+	float:right;
+	text-align:right;
+	position:relative;
+	top:1px;
+	font:300 20px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
+	color:#aaa;
+}
+
+#sharing {
+	float:right;
+	margin:-2px;
+}
+
+#sharing a {
+	font-size:20px;
+	font-size:23px;
+	margin-left:2px;
+	margin-top:4px;
+	color:#d4d4d4;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#sharing a:hover {
+	color: #444;
+}
+
+/*=========================================
+Post Navigation
+=========================================== */
+#post-nav {
+	border-top:1px solid #eee;
+	text-align:center;
+	padding-top:20px;
+	font-size:13px;
+	font-weight:500;
+}
+
+#post-nav span {
+	-webkit-transition:all 0.1s linear;
+	-moz-transition:all 0.1s linear;
+	-ms-transition:all 0.1s linear;
+	-o-transition:all 0.1s linear;
+	transition:all 0.1s linear;
+	position:relative;
+}
+
+#post-nav span.prev {
+	float:left;
+}
+
+#post-nav span.next {
+	float:right;
+}
+
+#post-nav span .arrow {
+	position:relative;
+	padding:1px;
+}
+
+#post-nav span.prev:hover .arrow {
+	left:-4px;
+}
+
+#post-nav span.next:hover .arrow {
+	right:-4px;
+}
+
+#post-nav span.prev:hover {
+	left:-3px;
+}
+
+#post-nav span.next:hover {
+	right: -3px;
+}
+
+@media screen and (max-width: 540px) {
+#wrapper { padding: 20px 40px; }
+#header { margin-bottom: 40px; }
+h1 { font-size: 17px; }
+#footer { margin-top: 40px; padding-bottom: 20px; }
+}
+
+@media screen and (max-width:440px) {
+#thumbnails a:nth-child(n) {
+width: 100%;
+max-width: 300px;
+margin: 0 auto;
+margin-top: 20px;
+display: inline-block;
+float: none;
+}
+
+a#documentation { display: none; }
+#thumbnails a:first-child { margin-top: 0; }
+#header { text-align: center; margin-bottom: 0; }
+#wrapper { padding:20px 20px 40px 20px; }
+.post { margin-bottom: 40px; }
+#footer { text-align: center; padding-bottom: 15px; }
+}
