@@ -37,6 +37,10 @@
       display: block; 
       margin: 8px;
     }
+
+    .shapes {
+      margin: 0;
+    }
     
     .grid {
       display: grid;
@@ -66,6 +70,16 @@
     .tri.tr {
       border-top: 100px solid red;
       border-left: 100px solid transparent;
+    }
+
+    .tri.br {
+      border-bottom: 100px solid red;
+      border-left: 100px solid transparent;
+    }
+    
+    .tri.bl {
+      border-bottom: 100px solid red;
+      border-right: 100px solid transparent;
     }
 
     .trap {
@@ -110,17 +124,17 @@
 
 <body>
   <div class="shapes grid">
-    <div class="sq"></div>
+    <div class="tri tl"></div>
     <div class="trap"></div>
-    <div class="sq" style="grid-column-start: 4"></div>
-    <div class="sq"></div>
+    <div class="tri tr" style="grid-column-start: 4"></div>
+    <div class="tri bl"></div>
     <div class="trap flip"></div>
-    <div class="sq" style="grid-column-start: 4"></div>
+    <div class="tri br" style="grid-column-start: 4"></div>
   </div>
 
   <main class="main">
     <h1>Luke Moderwell</h1>
-    <p>Hello and welcome to my small slice of internet. Make yourself at home.</p>
+    <p>Hello and welcome to my small slice of internet. Make yourself at home — look around.</p>
   </main>
 </body>
   <!-- GA -->
