@@ -141,7 +141,24 @@
   <!-- GA -->
   <script type="text/javascript">
     const time = new Date();
-    
+    let text;
+    const etOffset = -4;
+    const hours = time.getUTCHours() + etOffset;
+    if (hours >= 17) {
+      text = `night time 🌗`;
+      console.log("night time");
+    } else if (hours >= 14 && hours < 17) {
+      text = `afternoon 🌇`;
+      console.log("afternoon");
+    } else if (hours >= 12 && hours < 14) {
+      text = `midday 🌞`;
+      console.log("afternoon");
+    } else {
+      text = `morning ☕️`;
+      console.log("morning");
+    }
+
+    document.getElementById('time').innerText = text;
   </script>
   <script>
     (function (i, s, o, g, r, a, m) {
