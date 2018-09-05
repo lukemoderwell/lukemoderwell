@@ -25,6 +25,7 @@
 	    padding: 10px;
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
       font-size: 14px;
+      line-height: 1.5;
       color: white;
       background: #121212;
 	    -webkit-font-smoothing: antialiased;
@@ -34,6 +35,15 @@
     body {
       display: block;
       margin: 8px;
+    }
+
+    a {
+      color: fuchsia;
+    }
+
+    .main {
+      margin-top: 2rem;
+      max-width: 500px;
     }
     
     .grid {
@@ -197,6 +207,13 @@
     <div class="sq" data-draggable=""></div>
     <div class="sq" data-draggable=""></div>
   </div>
+  <main class="main">
+    <p style="display: inline;">
+      Hello, my name is <h1 style="display: inline; text-transform: uppercase; font-size: .875rem; letter-spacing: 1px;">Luke Moderwell</h1> and welcome to my small slice of internet. Make yourself at home — look around.
+      You can email me at <a href="mailto:luke.moderwell@gmail.com">luke.moderwell@gmail.com</a>
+      or not. It is <span id="time"></span> right now in beautiful Cincinnati, Ohio.
+    </p>
+  </main>
 </body>
 <script src="./index.js"></script>
 <script type="text/javascript">
