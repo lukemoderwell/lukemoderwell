@@ -1,0 +1,15 @@
+{
+  "name": "lukemoderwell",
+  "version": "0.0.1",
+  "main": "./src/index.js",
+  "repository": "https://github.com/lukemoderwell/lukemoderwell.git",
+  "author": "Luke Moderwell <luke.moderwell@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@shopify/draggable": "^1.0.0-beta.7"
+  },
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  }
+}
