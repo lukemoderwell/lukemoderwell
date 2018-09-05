@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html dir='ltr' lang='en-US'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+  <meta content='https://s3.us-east-2.amazonaws.com/lukemoderwell/v1/portrait-small.jpg' property='og:image'>
+  <meta content='Luke Moderwell' property='og:site_name'>
+  <meta content='Luke Moderwell' properity='og:title'>
+  <meta content='Luke is a digital product designer hailing from Cincinnati, Ohio. Currently building things at Dot Dash'
+    property='og:description'>
+  <meta content='website' property='og:type'>
+  <meta content='https://lukemoderwell.com' property='og:url'>
+  <meta content='summary' name='twitter:card'>
+  <meta content='https://twitter.com/modscwod' name='twitter:url'>
+  <meta content='https://pbs.twimg.com/profile_images/589051382650503168/hFqih13X_400x400.jpg' name='twitter:image'>
+  <meta content='@modscwod' name='twitter:site'>
+
+  <title>Luke Moderwell</title>
+  <style>
+    * {box-sizing: border-box;}
+
+    html {
+	    padding: 10px;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      color: white;
+      background: #121212;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+    }
+    
+    body {
+      display: block;
+      margin: 8px;
+    }
+
+    a {
+      color: fuchsia;
+    }
+
+    .main {
+      margin-top: 2rem;
+      max-width: 500px;
+    }
+    
+    .grid {
+      display: grid;
+    }
+
+    .grid {
+      grid-gap: 1px;
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5, 100px);
+    }
+
+    /* [data-draggable] {
+      border: 1px solid black;
+    } */
+
+    .empty {
+      background: rgba(0,0,0,.25);
+    }
+
+    .tri,
+    .trap {
+      width: 0;
+      height: 0;
+    }
+
+    .tri.up {
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid red;
+    }
+
+    .tri.tl {
+      border-top: 100px solid fuchsia;
+      border-right: 100px solid transparent;
+    }
+
+    .tri.tr {
+      border-top: 100px solid fuchsia;
+      border-left: 100px solid transparent;
+    }
+
+    .tri.br {
+      border-bottom: 100px solid fuchsia;
+      border-left: 100px solid transparent;
+    }
+    
+    .tri.bl {
+      border-bottom: 100px solid fuchsia;
+      border-right: 100px solid transparent;
+    }
+
+    .trap {
+      border-bottom: 50px solid green;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      width: 100px;
+    }
+
+    .para {
+      grid-column: span 2;
+      grid-row: span 1;
+      transform: skew(26deg) translateX(-25px);
+      background: green;
+    }
+
+
+    .octa {
+      width: 100px;
+      height: 100px;
+      background: orange;
+      position: relative;
+    }
+
+    .octa:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-bottom: 29px solid orange;
+      border-left: 29px solid #121212;
+      border-right: 29px solid #121212;
+      width: 42px;
+      height: 0;
+    }
+
+    .octa:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-top: 29px solid orange;
+      border-left: 29px solid #121212;
+      border-right: 29px solid #121212;
+      width: 42px;
+      height: 0;
+    }
+
+    .h-rect {
+      grid-column: span 2;
+      grid-row: span 1;
+      background: blue;
+    }
+
+    .v-rect {
+      grid-column: span 1;
+      grid-row: span 2;
+      background: blue;
+    }
+
+    .sq-big {
+      grid-column: span 2;
+      grid-row: span 2;
+      background: yellow;
+    }
+
+    .sq {
+      grid-column: span 1;
+      grid-row: span 1;
+      background: yellow;
+    }
+
+    @media (min-width: 600px) {
+      html {
+        margin: 2rem;
+      }
+    }
+
+    @media (min-width: 800px) {
+      html {
+        margin: 6rem 4rem;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid" data-draggable-grid="">
+    <div class="tri tr" data-draggable=""></div>
+    <div class="tri br" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="octa" data-draggable=""></div>
+    <div class="tri tl" data-draggable=""></div>
+    <div class="tri bl" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="tri up" data-draggable=""></div>
+    <div class="para" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="v-rect" data-draggable=""></div>
+    <div class="sq" data-draggable=""></div>
+    <div class="sq" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="empty" data-draggable=""></div>
+    <div class="sq" data-draggable=""></div>
+    <div class="sq" data-draggable=""></div>
+  </div>
+  <main class="main">
+    <p style="display: inline;">
+      Hello, my name is <h1 style="display: inline; text-transform: uppercase; font-size: .875rem; letter-spacing: 1px;">Luke Moderwell</h1> and welcome to my small slice of internet. Make yourself at home — look around.
+      You can email me at <a href="mailto:luke.moderwell@gmail.com">luke.moderwell@gmail.com</a>
+      or not. It is <span id="time"></span> right now in beautiful Cincinnati, Ohio.
+    </p>
+  </main>
+</body>
+<script src="./index.js"></script>
+<script type="text/javascript">
+  const time = new Date();
+  let text;
+  const etOffset = -4;
+  const hours = time.getUTCHours() + etOffset;
+  if (hours >= 17 || hours < 0) {
+    text = `night time 🌗`;
+    console.log("night time");
+  } else if (hours >= 14 && hours < 17) {
+    text = `afternoon 🌇`;
+    console.log("afternoon");
+  } else if (hours >= 12 && hours < 14) {
+    text = `midday 🌞`;
+    console.log("afternoon");
+  } else {
+    text = `morning ☕️`;
+    console.log("morning");
+  }
+
+  document.getElementById('time').innerText = text;
+</script>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-38487143-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+
+</html>
