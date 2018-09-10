@@ -35,6 +35,7 @@
     body {
       display: block;
       margin: 8px;
+      max-width: 600px;
     }
 
     a {
@@ -43,127 +44,6 @@
 
     .main {
       margin-top: 2rem;
-      max-width: 500px;
-    }
-    
-    .grid {
-      display: grid;
-    }
-
-    .grid {
-      grid-gap: 1px;
-      grid-template-columns: repeat(5, 100px);
-      grid-template-rows: repeat(5, 100px);
-    }
-
-    /* [data-draggable] {
-      border: 1px solid black;
-    } */
-
-    .empty {
-      background: rgba(0,0,0,.25);
-    }
-
-    .tri,
-    .trap {
-      width: 0;
-      height: 0;
-    }
-
-    .tri.up {
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-bottom: 100px solid red;
-    }
-
-    .tri.tl {
-      border-top: 100px solid fuchsia;
-      border-right: 100px solid transparent;
-    }
-
-    .tri.tr {
-      border-top: 100px solid fuchsia;
-      border-left: 100px solid transparent;
-    }
-
-    .tri.br {
-      border-bottom: 100px solid fuchsia;
-      border-left: 100px solid transparent;
-    }
-    
-    .tri.bl {
-      border-bottom: 100px solid fuchsia;
-      border-right: 100px solid transparent;
-    }
-
-    .trap {
-      border-bottom: 50px solid green;
-      border-left: 25px solid transparent;
-      border-right: 25px solid transparent;
-      width: 100px;
-    }
-
-    .para {
-      grid-column: span 2;
-      grid-row: span 1;
-      transform: skew(26deg) translateX(-25px);
-      background: green;
-    }
-
-
-    .octa {
-      width: 100px;
-      height: 100px;
-      background: orange;
-      position: relative;
-    }
-
-    .octa:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-bottom: 29px solid orange;
-      border-left: 29px solid #121212;
-      border-right: 29px solid #121212;
-      width: 42px;
-      height: 0;
-    }
-
-    .octa:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-top: 29px solid orange;
-      border-left: 29px solid #121212;
-      border-right: 29px solid #121212;
-      width: 42px;
-      height: 0;
-    }
-
-    .h-rect {
-      grid-column: span 2;
-      grid-row: span 1;
-      background: blue;
-    }
-
-    .v-rect {
-      grid-column: span 1;
-      grid-row: span 2;
-      background: blue;
-    }
-
-    .sq-big {
-      grid-column: span 2;
-      grid-row: span 2;
-      background: yellow;
-    }
-
-    .sq {
-      grid-column: span 1;
-      grid-row: span 1;
-      background: yellow;
     }
 
     @media (min-width: 600px) {
@@ -182,57 +62,39 @@
 </head>
 
 <body>
-  <div class="grid" data-draggable-grid="">
-    <div class="tri tr" data-draggable=""></div>
-    <div class="tri br" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="octa" data-draggable=""></div>
-    <div class="tri tl" data-draggable=""></div>
-    <div class="tri bl" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="tri up" data-draggable=""></div>
-    <div class="para" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="v-rect" data-draggable=""></div>
-    <div class="sq" data-draggable=""></div>
-    <div class="sq" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="empty" data-draggable=""></div>
-    <div class="sq" data-draggable=""></div>
-    <div class="sq" data-draggable=""></div>
-  </div>
   <main class="main">
     <p style="display: inline;">
-      Hello, my name is <h1 style="display: inline; text-transform: uppercase; font-size: .875rem; letter-spacing: 1px;">Luke Moderwell</h1> and welcome to my small slice of internet. Make yourself at home — look around.
+      Hello, my name is 
+      <h1 style="display: inline; text-transform: uppercase; font-size: .875rem; letter-spacing: 1px;">Luke
+        Moderwell</h1> 
+      and welcome to my small slice of internet. Make yourself at home — look around.
       You can email me at <a href="mailto:luke.moderwell@gmail.com">luke.moderwell@gmail.com</a>
-      or not. It is <span id="time"></span> right now in beautiful Cincinnati, Ohio.
+      or not.
     </p>
+    <p>Browse some of my internet places:</p>
+    <ul>
+      <li><a href="https://dribbble.com/modscwod" target="_blank">Dribbble</a></li>
+      <li><a href="https://github.com/lukemoderwell" target="_blank">Github</a></li>
+      <li><a href="https://www.linkedin.com/in/luke-moderwell-548a5022/" target="_blank">LinkedIn</a></li>
+    </ul>
+    <p>It is <span id="time"></span> right now in beautiful Cincinnati, Ohio.</p>
+
+    <a href="/experiments/drid/"></a>
   </main>
 </body>
-<script src="./index.js"></script>
 <script type="text/javascript">
   const time = new Date();
   let text;
   const etOffset = -4;
   const hours = time.getUTCHours() + etOffset;
   if (hours >= 17 || hours < 0) {
-    text = `night time 🌗`;
-    console.log("night time");
+    text = `evening 🌗`;
   } else if (hours >= 14 && hours < 17) {
     text = `afternoon 🌇`;
-    console.log("afternoon");
   } else if (hours >= 12 && hours < 14) {
     text = `midday 🌞`;
-    console.log("afternoon");
   } else {
     text = `morning ☕️`;
-    console.log("morning");
   }
 
   document.getElementById('time').innerText = text;
