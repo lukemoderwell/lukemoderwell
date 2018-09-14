@@ -22,7 +22,6 @@
     * {box-sizing: border-box;}
 
     html {
-	    padding: 10px;
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
       font-size: 14px;
       line-height: 1.5;
@@ -31,31 +30,69 @@
 	    -webkit-font-smoothing: antialiased;
 	    -moz-osx-font-smoothing: grayscale;
     }
-    
+
     body {
-      display: block;
-      margin: 8px;
-      max-width: 600px;
+      margin: 0;
     }
 
     a {
       color: fuchsia;
     }
 
+    img {
+      width: 100%;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .align-items-center {
+      align-items: center;
+    }
+
     .main {
-      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 2rem;
     }
 
-    @media (min-width: 600px) {
-      html {
-        margin: 2rem;
-      }
+    .grid-col-2,
+    .grid-col-4 {
+      grid-column: span 6;
     }
 
-    @media (min-width: 800px) {
+    .main-img {
+      height: 40vh;
+      object-fit: cover;
+    }
+
+    .main-content {
+      padding: 1rem;
+    }
+
+    .ttu {
+      display: inline; 
+      text-transform: uppercase; 
+      font-size: .875rem; 
+      letter-spacing: 1px; 
+    }
+
+    @media (min-width: 640px) {
       html {
-        margin: 6rem 4rem;
         font-size: 16px;
+      }
+
+      .main-img {
+        height: 100vh;
+      }
+
+      .grid-col-2 {
+        grid-column: span 2;
+      }
+
+      .grid-col-4 {
+        grid-column: span 4;
       }
     }
   </style>
@@ -63,42 +100,32 @@
 
 <body>
   <main class="main">
-    <p style="display: inline;">
-      Hello, my name is 
-      <h1 style="display: inline; text-transform: uppercase; font-size: .875rem; letter-spacing: 1px;">Luke
-        Moderwell</h1> 
-      and welcome to my small slice of internet. Make yourself at home — look around.
-      You can email me at <a href="mailto:luke.moderwell@gmail.com">luke.moderwell@gmail.com</a>
-      or not.
-    </p>
-    <p>Browse some of my internet places:</p>
-    <ul>
-      <li><a href="https://dribbble.com/modscwod" target="_blank">Dribbble</a></li>
-      <li><a href="https://github.com/lukemoderwell" target="_blank">Github</a></li>
-      <li><a href="https://www.linkedin.com/in/luke-moderwell-548a5022/" target="_blank">LinkedIn</a></li>
-    </ul>
-    <p>It is <span id="time"></span> right now in beautiful Cincinnati, Ohio.</p>
-
-    <a href="experiments/drid/index.html"></a>
+    <div class="grid-col-2">
+      <img class="main-img" src="./assets/img/luke.jpg" />
+    </div>
+    <div class="grid-col-2 d-flex align-items-center">
+      <div class="main-content">
+        <p style="display: inline;">
+          Hello, my name is 
+          <h1 class="ttu">Luke
+            Moderwell</h1> 
+          and welcome to my small slice of internet. Make yourself at home — look around.
+          You can email me at <a href="mailto:luke.moderwell@gmail.com">luke.moderwell@gmail.com</a>
+          or not.
+        </p>
+        <!-- <p>Browse some of my internet places:</p>
+        <ul>
+          <li><a href="https://dribbble.com/modscwod" target="_blank">Dribbble</a></li>
+          <li><a href="https://github.com/lukemoderwell" target="_blank">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/luke-moderwell-548a5022/" target="_blank">LinkedIn</a></li>
+        </ul> -->
+        <p>It is <span id="celestialBody"> ⚪️</span><span id="clock">12:00:00</span> in beautiful Cincinnati, Ohio.</p>
+        <a href="experiments/drid/index.html"></a>
+      </div>
+    </div>
   </main>
 </body>
-<script type="text/javascript">
-  const time = new Date();
-  let text;
-  const etOffset = -4;
-  const hours = time.getUTCHours() + etOffset;
-  if (hours >= 17 || hours < 0) {
-    text = `evening 🌗`;
-  } else if (hours >= 14 && hours < 17) {
-    text = `afternoon 🌇`;
-  } else if (hours >= 12 && hours < 14) {
-    text = `midday 🌞`;
-  } else {
-    text = `morning ☕️`;
-  }
-
-  document.getElementById('time').innerText = text;
-</script>
+<script type="text/javascript" src="assets/js/index.js" />
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;

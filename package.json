@@ -6,7 +6,8 @@
   "author": "Luke Moderwell <luke.moderwell@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@shopify/draggable": "^1.0.0-beta.7",
+    "@shopify/draggable": "^1.0.0-beta.8",
+    "moment-timezone": "^0.5.21",
     "parcel-bundler": "^1.9.7"
   },
   "scripts": {
