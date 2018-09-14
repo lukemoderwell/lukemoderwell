@@ -4,10 +4,10 @@
 <head>
   <meta charset='utf-8'>
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport'>
   <meta content='https://s3.us-east-2.amazonaws.com/lukemoderwell/v1/portrait-small.jpg' property='og:image'>
   <meta content='Luke Moderwell' property='og:site_name'>
-  <meta content='Luke Moderwell' properity='og:title'>
+  <meta content='Luke Moderwell' property='og:title'>
   <meta content='Luke is a digital product designer hailing from Cincinnati, Ohio. Currently building things at Dot Dash'
     property='og:description'>
   <meta content='website' property='og:type'>
@@ -19,16 +19,18 @@
 
   <title>Luke Moderwell</title>
   <style>
-    * {box-sizing: border-box;}
+    * {
+      box-sizing: border-box;
+    }
 
     html {
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
       font-size: 14px;
       line-height: 1.5;
       color: white;
       background: #121212;
-	    -webkit-font-smoothing: antialiased;
-	    -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     body {
@@ -72,10 +74,10 @@
     }
 
     .ttu {
-      display: inline; 
-      text-transform: uppercase; 
-      font-size: .875rem; 
-      letter-spacing: 1px; 
+      display: inline;
+      text-transform: uppercase;
+      font-size: .875rem;
+      letter-spacing: 1px;
     }
 
     @media (min-width: 640px) {
@@ -101,7 +103,7 @@
 <body>
   <main class="main">
     <div class="grid-col-2">
-      <img class="main-img" src="./assets/img/luke.jpg" />
+      <img class="main-img" src="./assets/img/luke.jpg" alt="a picture of Luke Moderwell" />
     </div>
     <div class="grid-col-2 d-flex align-items-center">
       <div class="main-content">
@@ -113,13 +115,13 @@
           You can email me at <a href="mailto:luke.moderwell@gmail.com">luke.moderwell@gmail.com</a>
           or not.
         </p>
-        <p>It is <span id="celestialBody"> ⚪️</span><span id="clock">12:00:00</span> in beautiful Cincinnati, Ohio.</p>
+        <p>It is <span id="clock">12:00:00</span> in beautiful Cincinnati, Ohio.</p>
         <a href="./experiments/drid/index.html"></a>
       </div>
     </div>
   </main>
 </body>
-<script type="text/javascript" src="./assets/js/index.js" />
+<script src="./assets/js/index.js"></script>
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
