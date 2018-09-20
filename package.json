@@ -13,5 +13,8 @@
   "scripts": {
     "start": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3"
   }
 }
