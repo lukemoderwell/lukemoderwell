@@ -6,8 +6,8 @@ I think the fact that there is no standard definition of what these personal sit
 
 This site should:
 
-- [ ] give the viewer an accurate sense of my personality and taste
+- [x] give the viewer an accurate sense of my personality and taste
 - [ ] have a journal-like component where I can quickly post thoughts
 - [ ] showcase past professional work
-- [ ] be a place where I can experiment with new technologies/design patterns
+- [x] be a place where I can experiment with new technologies/design patterns
 - [ ] have some educational value for others
