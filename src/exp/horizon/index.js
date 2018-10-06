@@ -16,18 +16,22 @@ function i() {
   gallery.style = is;
 }
 
-function updateFeatUnit(el) {
-  if (offset < 0) {
-    featUnit = featUnit + 1;  
-  } else {
-    featUnit = featUnit - 1;
-  }
+function updateFeatUnit(amount) {
+  featUnit = featUnit + amount;
+  // can never have negative units
+  featUnit < 0 ? featUnit == 0 : "";
   console.log(units[featUnit]);
 }
 
 function shift(offset) {
+  // handle first shift + padding
   if (featUnit == 0) {
     offset = offset - pad;
+  }
+
+  // handle shift back to first unit
+  if (featUnit == 1 && offset > 0) {
+    offset = offset + pad;
   }
   currentXPosition = currentXPosition + offset;
   gallery.style = `transform: translate3d(${currentXPosition}px, 0px, 0px)`;
@@ -35,13 +39,31 @@ function shift(offset) {
 }
 
 left.addEventListener('click', function() {
-  offset = units[featUnit].offsetWidth;
-  shift(offset);
+ moveLeft();
 });
 
 right.addEventListener('click', function() {
+  moveRight();
+});
+
+function moveLeft() {
+  if (featUnit >= 1) {
+    offset = units[featUnit - 1].offsetWidth;
+    shift(offset);
+    updateFeatUnit(-1);
+  }
+}
+
+function moveRight() {
   offset = units[featUnit].offsetWidth;
   shift(-(offset));
+  updateFeatUnit(1);
+}
+
+window.addEventListener('keydown', function(event) {
+  const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+  key == "ArrowRight" ? moveRight() : '';
+  key == "ArrowLeft" ? moveLeft() : '';
 });
 
 i();
