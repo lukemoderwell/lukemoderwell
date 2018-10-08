@@ -1,4 +1,4 @@
-// js
+import TweenLite from 'gsap';
 const gallery = document.querySelector('[data-gallery]');
 const left = document.querySelector('[data-left]');
 const right = document.querySelector('[data-right]');
@@ -7,13 +7,13 @@ const pad = 15;
 let currentXPosition;
 let featUnit;
 
-function i() {
+function init() {
   currentXPosition = 0;
   featUnit = 0;
 
   const width = gallery.scrollWidth;
-  const is = `transform: translate3d(0px, 0px, 0px);cursor: grab;touch-action: pan-y;user-select: none;width: ${width}px;`
-  gallery.style = is;
+  const baseStyles = `transform: translate3d(0px, 0px, 0px);cursor: grab;touch-action: pan-y;user-select: none;width: ${width}px;`
+  gallery.style = baseStyles;
 }
 
 function updateFeatUnit(amount) {
@@ -34,8 +34,7 @@ function shift(offset) {
     offset = offset + pad;
   }
   currentXPosition = currentXPosition + offset;
-  gallery.style = `transform: translate3d(${currentXPosition}px, 0px, 0px)`;
-  console.log(gallery.style.transform);
+  TweenLite.to(gallery, .25, {x:currentXPosition})
 }
 
 left.addEventListener('click', function() {
@@ -48,14 +47,14 @@ right.addEventListener('click', function() {
 
 function moveLeft() {
   if (featUnit >= 1) {
-    offset = units[featUnit - 1].offsetWidth;
+    let offset = units[featUnit - 1].offsetWidth;
     shift(offset);
     updateFeatUnit(-1);
   }
 }
 
 function moveRight() {
-  offset = units[featUnit].offsetWidth;
+  let offset = units[featUnit].offsetWidth;
   shift(-(offset));
   updateFeatUnit(1);
 }
@@ -66,5 +65,5 @@ window.addEventListener('keydown', function(event) {
   key == "ArrowLeft" ? moveLeft() : '';
 });
 
-i();
+init();
 
