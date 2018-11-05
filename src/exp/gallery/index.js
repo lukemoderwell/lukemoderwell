@@ -47,9 +47,11 @@ function moveLeft() {
 }
 
 function moveRight() {
-  let offset = units[featUnit].offsetWidth;
-  shift(-(offset));
-  updateFeatUnit(1);
+  if (featUnit < units.length - 1) {
+    let offset = units[featUnit].offsetWidth;
+    shift(-(offset));
+    updateFeatUnit(1);
+  }
 }
 
 window.addEventListener('keydown', function(event) {
