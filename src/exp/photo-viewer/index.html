@@ -57,14 +57,20 @@
 
     .unit-wrapper {
       display: flex;
-      align-items: baseline;
+      /* align-items: baseline; */
     }
 
     .unit {
       display: block;
       position: relative;
       width: 100vw;
+      height: 100vh;
       background: black;
+    }
+
+    .unit-content {
+      padding: 1rem;
+      color: white;
     }
 
     .unit:first-child {
@@ -77,7 +83,7 @@
 
     .unit-h,
     .unit-v {
-      height: 100vh;
+     height: 100%; 
     }
 
     .unit-h {
@@ -97,7 +103,13 @@
       <div style="position: relative;overflow: hidden;">
         <div class="gallery" data-gallery>
           <div class="unit-wrapper">
-            <div class="unit"><div class="unit-h" style="background: blue"></div></div>
+            <div class="unit">
+              <div class="unit-h" style="background: blue">
+                <div class="unit-content">
+                  <p>Title</p>
+                </div>
+              </div>
+            </div>
             <div class="unit"><div class="unit-h" style="background: salmon"></div></div>
             <div class="unit"><div class="unit-v" style="background: cornflowerblue"></div></div>
             <div class="unit"><div class="unit-h" style="background: orangered"></div></div>
