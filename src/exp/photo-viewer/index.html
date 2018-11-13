@@ -61,7 +61,8 @@
     }
 
     .unit {
-      display: block;
+      display: flex;
+      align-items: center;
       position: relative;
       width: 100vw;
       height: 100vh;
@@ -81,18 +82,30 @@
       padding-right: 0;
     }
 
-    .unit-h,
-    .unit-v {
-     height: 100%; 
-    }
-
     .unit-h {
       width: 100vw;
+      height: calc(900vw/16);
     }
 
     .unit-v {
-      margin: 0 auto;
       width: calc(900vh/16);
+      height: 100vh;
+    }
+
+    .unit-content {
+      opacity: 0;
+    }
+
+    .fade-in-down {
+      animation-name: fadeInDown;
+      animation-duration: 500ms;
+      animation-delay: 500ms;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInDown {
+      from {transform: translateY(-100%); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
     }
   </style>
 </head>
@@ -106,7 +119,7 @@
             <div class="unit">
               <div class="unit-h" style="background: blue">
                 <div class="unit-content">
-                  <p>Title</p>
+                  <p data-fade-in-down>This is my amazing title.</p>
                 </div>
               </div>
             </div>

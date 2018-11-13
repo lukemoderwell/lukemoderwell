@@ -1,6 +1,7 @@
 import TweenLite from 'gsap';
 const gallery = document.querySelector('[data-gallery]');
 const units = document.querySelectorAll('.unit');
+
 let currentXPosition;
 let featUnit;
 
