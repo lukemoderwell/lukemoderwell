@@ -23,6 +23,12 @@
       box-sizing: border-box;
     }
 
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     html {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
       font-size: 14px;
@@ -84,28 +90,45 @@
 
     .unit-h {
       width: 100vw;
-      height: calc(900vw/16);
+      height: 100%;
     }
 
     .unit-v {
+      margin: 0 auto;
       width: calc(900vh/16);
       height: 100vh;
     }
 
     .unit-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .hide {
       opacity: 0;
+    }
+
+    .animation {
+      animation-duration: 500ms;
+      animation-delay: 800ms;
     }
 
     .fade-in-down {
       animation-name: fadeInDown;
-      animation-duration: 500ms;
-      animation-delay: 500ms;
       animation-fill-mode: forwards;
     }
 
     @keyframes fadeInDown {
-      from {transform: translateY(-100%); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -117,23 +140,56 @@
         <div class="gallery" data-gallery>
           <div class="unit-wrapper">
             <div class="unit">
-              <div class="unit-h" style="background: blue">
+              <div class="unit-h">
+                <img src="assets/moses-01.jpg" />
                 <div class="unit-content">
-                  <p data-fade-in-down>This is my amazing title.</p>
+                  <p class="hide" data-animation="fade-in-down">Picture 1 is amazing.</p>
                 </div>
               </div>
             </div>
-            <div class="unit"><div class="unit-h" style="background: salmon"></div></div>
-            <div class="unit"><div class="unit-v" style="background: cornflowerblue"></div></div>
-            <div class="unit"><div class="unit-h" style="background: orangered"></div></div>
-            <div class="unit"><div class="unit-v" style="background: chartreuse"></div></div>
-            <div class="unit"><div class="unit-v" style="background: khaki"></div></div>
-            <div class="unit"><div class="unit-h" style="background: salmon"></div></div>
+            <div class="unit">
+              <div class="unit-h" style="background: salmon">
+                <img src="assets/moses-02.jpg" />
+                <div class="unit-content">
+                  <p class="hide" data-animation="fade-in-down">This is my amazing title.</p>
+                </div>
+              </div>
+            </div>
+            <div class="unit">
+              <div class="unit-h">
+                <img src="assets/moses-03.jpg" />
+                <div class="unit-content">
+                  <p class="hide" data-animation="fade-in-down">This is my amazing title.</p>
+                </div>
+              </div>
+            </div>
+            <div class="unit">
+              <div class="unit-h">
+                <img src="assets/moses-04.jpg" />
+                <div class="unit-content">
+                  <p class="hide" data-animation="fade-in-down">This is my amazing title.</p>
+                </div>
+              </div>
+            </div>
+            <div class="unit">
+              <div class="unit-h">
+                <img src="assets/moses-05.jpg" />
+                <div class="unit-content">
+                  <p class="hide" data-animation="fade-in-down">This is my amazing title.</p>
+                </div>
+              </div>
+            </div>
+              <div class="unit">
+                <div class="unit-v" style="background: khaki"></div>
+              </div>
+              <div class="unit">
+                <div class="unit-h" style="background: salmon"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
 <script src="./index.js"></script>
 <script src="../../assets/js/analytics.js"></script>

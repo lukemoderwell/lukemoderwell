@@ -8,6 +8,7 @@ let featUnit;
 function init() {
   currentXPosition = 0;
   featUnit = 0;
+  addAnimation(units[featUnit]);
 
   const width = gallery.scrollWidth;
   const baseStyles = `transform: translate3d(0px, 0px, 0px);cursor: grab;touch-action: pan-y;user-select: none;width: ${width}px;`
@@ -18,6 +19,14 @@ function updateFeatUnit(amount) {
   featUnit = featUnit + amount;
   // can never have negative units
   featUnit < 0 ? featUnit == 0 : "";
+  addAnimation(units[featUnit]);
+}
+
+function addAnimation(unit) {
+  var animationReady = unit.querySelectorAll('[data-animation]');
+  for (var i = 0; i < animationReady.length; i += 1) {
+    animationReady[i].classList.add('animation', animationReady[i].dataset.animation);
+  }
 }
 
 function shift(offset) {
