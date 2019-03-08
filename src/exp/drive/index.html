@@ -23,15 +23,29 @@
 
 <body>
   <div class="drive-intro">
+    <div class="intro-content">
+      <h2>CSO "Music Lives In You"</h2>
+      <p>Lorem ipsum dolor</p>
+    </div>
     <div class="loading-wrapper">
-      <img class="loading-logo" src="https://static1.squarespace.com/static/589a6dfdf5e231f4ad099dc0/t/5b0a2efd70a6addca9b16835/1551885747495/?format=1500w" />
+      <img class="loading-logo fade-in" src="https://static1.squarespace.com/static/589a6dfdf5e231f4ad099dc0/t/5b0a2efd70a6addca9b16835/1551885747495/?format=1500w" />
+    </div>
+    <div class="video-wrapper">
+      <video class="video-poster" loop autoplay muted playsinline="true">
+        <source src="https://assets.instrument.com/videos/Studio-Reel/Instrument_Reel_2018_Loop_1920.webm" type="video/webm">
+      </video>
     </div>
   </div>
   <script>
     // custom JS here
-    // setTimeout(function() {;
-    //   document.querySelector('.video-plate').classList.add('masked');
-    // }, 1000);
+    setTimeout(function () {
+      document.querySelector('.loading-logo').classList.remove('fade-in');
+      document.querySelector('.loading-logo').classList.add('fade-out');
+      setTimeout(function () {
+        document.querySelector('.video-wrapper').classList.add('shown');
+        document.querySelector('.loading-wrapper').style.zIndex = '-1';
+      }, 2000);
+    }, 2000);
   </script>
   <script src="../../assets/js/analytics.js"></script>
 </body>
