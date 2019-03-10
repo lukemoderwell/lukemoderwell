@@ -28,7 +28,7 @@
       <p>Lorem ipsum dolor</p>
     </div>
     <div class="loading-wrapper">
-      <img class="loading-logo fade-in" src="https://static1.squarespace.com/static/589a6dfdf5e231f4ad099dc0/t/5b0a2efd70a6addca9b16835/1551885747495/?format=1500w" />
+      <img class="loading-logo" src="https://static1.squarespace.com/static/589a6dfdf5e231f4ad099dc0/t/5b0a2efd70a6addca9b16835/1551885747495/?format=1500w" />
     </div>
     <div class="video-wrapper">
       <video class="video-poster" loop autoplay muted playsinline="true">
@@ -36,17 +36,9 @@
       </video>
     </div>
   </div>
-  <script>
-    // custom JS here
-    setTimeout(function () {
-      document.querySelector('.loading-logo').classList.remove('fade-in');
-      document.querySelector('.loading-logo').classList.add('fade-out');
-      setTimeout(function () {
-        document.querySelector('.video-wrapper').classList.add('shown');
-        document.querySelector('.loading-wrapper').style.zIndex = '-1';
-      }, 2000);
-    }, 2000);
-  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script src="./index.js"></script>
   <script src="../../assets/js/analytics.js"></script>
 </body>
 
