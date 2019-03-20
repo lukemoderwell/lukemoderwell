@@ -5,7 +5,7 @@ function init() {
   wait(loadingFadeIn, 500);
   wait(loadingFadeOut, 2000);
   wait(revealVideo, 3000);
-  // wait(videoFadeOut, 5000);
+  wait(videoTransform, 6000);
 }
 
 function loadingFadeIn() {
@@ -36,10 +36,26 @@ function revealVideo() {
     ease: Power1.easeInOut
   });
 
+  // show video
   TweenMax.to('.video-poster', 0, {
     opacity: 1,
     visibility: 'visible',
     delay: .5
+  });
+
+  // hide loading
+  TweenMax.to('.loading-wrapper', 0, {
+    opacity: 0,
+    visibility: 'hidden',
+    pointerEvents: 'none',
+    delay: .75
+  });
+
+  // show content
+  TweenMax.to('.content-wrapper', 0, {
+    opacity: 1,
+    visibility: 'visible',
+    delay: .75
   });
 
   // swiper down
@@ -51,14 +67,18 @@ function revealVideo() {
   });
 }
 
-function videoFadeOut() {
-  TweenMax.to('.video-wrapper', .75, {opacity: .95});
-  TweenMax.to('.video-poster', .75, {
-    width: 500,
-    height: 500,
-    x: '50%',
-    borderRadius: '50%',
+function videoTransform() {
+  TweenMax.to('.video-wrapper', .75, {
+    x: '50vw',
+    width: '50vw',
     ease: Power1.easeInOut
+  });
+
+  TweenMax.to('.content-title', .75, {
+    opacity: 1,
+    visibility: 'visible',
+    ease: Power1.easeInOut,
+    delay: .5
   });
 }
 

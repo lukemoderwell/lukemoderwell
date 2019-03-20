@@ -8,6 +8,7 @@ $drive-navy: #313744;
 
 * {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -24,6 +25,14 @@ body {
   margin: 0;
 }
 
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
 /* begin styles  */
 .drive-intro {
   position: absolute;
@@ -34,21 +43,25 @@ body {
   overflow: hidden;
 
   .loading-wrapper,
-  .video-wrapper {
+  .video-wrapper,
+  .content-wrapper {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
   }
 
-  .loading-wrapper {
+  .loading-wrapper,
+  .content-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+  }
+
+  .loading-wrapper {
     background-color: $drive-navy;
     opacity: 1;
     z-index: 1;
@@ -61,24 +74,40 @@ body {
     }
   }
 
-  .video-wrapper {
-    transform: translateY(100%);
-    z-index: 2;
-    overflow: hidden;
+  .content-wrapper {
+    background-color: $orange;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
 
-    .video-swiper {
-      position: absolute;
-      width: 100%;
-      height: 10%;
-      background-color: $dark-bg;
-    }
-
-    .video-poster {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .content-title {
       opacity: 0;
       visibility: hidden;
+      text-align: right;
+    }
+
+    .video-wrapper {
+      width: 100vw;
+      height: 100vh;
+      transform: translateY(100%);
+      overflow: hidden;
+
+      .video-swiper {
+        position: absolute;
+        width: 100%;
+        height: 5%;
+        background-color: $dark-bg;
+      }
+
+      .video-poster {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        opacity: 0;
+        visibility: hidden;
+      }
     }
   }
+
+
 }
