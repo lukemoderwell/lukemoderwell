@@ -1,18 +1,55 @@
-import {TweenMax} from "gsap";
+import { TweenMax, Power0, Power1, Power2, Power3, Power4 } from "gsap";
+
+let isLoading = true;
+
+const posterSrc = document.querySelector('.video-poster');
 
 function init() {
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  nextBtn.addEventListener('click', handleNextClick);
+
   // make sure DOM has loaded, etc
-  wait(loadingFadeIn, 500);
-  wait(loadingFadeOut, 2000);
+  loading();
   wait(revealVideo, 3000);
   wait(videoTransform, 6000);
+}
+
+function loading() {
+  if (isLoading) {
+    loadingFadeIn();
+    setTimeout(loadingFadeOut, 3000);
+  }
+}
+
+function handleNextClick() {
+  // swiper up
+  TweenMax.to('.video-swiper', .75, {
+    height: '100%',
+    ease: Power1.easeInOut
+  });
+
+  // set new video
+  setTimeout(function() {
+    console.log(posterSrc);
+    posterSrc.src = 'https://player.vimeo.com/external/323481091.source.mp4?s=69a761d7dd8257a4cc6365edad9fd2bdd931f401&download=1';
+  }, 750);
+  
+  // swiper down
+  TweenMax.to('.video-swiper', .75, {
+    height: 0,
+    top: 0,
+    delay: 1.2,
+    ease: Power1.easeInOut
+  });
 }
 
 function loadingFadeIn() {
   TweenMax.to('.loading-logo', .75, {
     opacity: 1,
     y: '0',
-    ease: Power1.easeInOut
+    ease: Power2.easeInOut,
+    delay: .25
   });
 }
 
@@ -40,7 +77,7 @@ function revealVideo() {
   TweenMax.to('.video-poster', 0, {
     opacity: 1,
     visibility: 'visible',
-    delay: .5
+    delay: .75
   });
 
   // hide loading
@@ -50,6 +87,9 @@ function revealVideo() {
     pointerEvents: 'none',
     delay: .75
   });
+
+  // bg color change
+  bgColorChange('#D8C5AC', .5, .75);
 
   // show content
   TweenMax.to('.content-wrapper', 0, {
@@ -69,17 +109,26 @@ function revealVideo() {
 
 function videoTransform() {
   TweenMax.to('.video-wrapper', .75, {
-    x: '50vw',
-    width: '50vw',
-    ease: Power1.easeInOut
+    x: '30vw',
+    width: '70vw',
+    ease: Power2.easeInOut
   });
 
-  TweenMax.to('.content-title', .75, {
+  TweenMax.to('.content', .75, {
     opacity: 1,
+    y: 0,
     visibility: 'visible',
-    ease: Power1.easeInOut,
+    ease: Power2.easeInOut,
     delay: .5
   });
+}
+
+function bgColorChange(color, time, delay) {
+  TweenMax.to('.drive-intro', time, {
+    backgroundColor: color,
+    ease: Power0.easeInOut,
+    delay: delay || 0
+  })
 }
 
 function wait(f, t) {

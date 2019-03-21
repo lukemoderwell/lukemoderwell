@@ -8,7 +8,8 @@
   <meta content='https://s3.us-east-2.amazonaws.com/lukemoderwell/v1/portrait-small.jpg' property='og:image'>
   <meta content='Luke Moderwell' property='og:site_name'>
   <meta content='Luke Moderwell' properity='og:title'>
-  <meta content='Luke is a digital product designer hailing from Cincinnati, Ohio. Currently building things at Dot Dash'
+  <meta
+    content='Luke is a digital product designer hailing from Cincinnati, Ohio. Currently building things at Dot Dash'
     property='og:description'>
   <meta content='website' property='og:type'>
   <meta content='https://lukemoderwell.com' property='og:url'>
@@ -19,24 +20,34 @@
   <link rel="stylesheet" type="text/css" preload="true" href="./styles.scss">
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
-  <title>Video</title>
+  <title>Drive Intro</title>
 </head>
 
 <body>
   <div class="drive-intro">
     <div class="loading-wrapper">
-      <img class="loading-logo" src="https://static1.squarespace.com/static/589a6dfdf5e231f4ad099dc0/t/5b0a2efd70a6addca9b16835/1551885747495/?format=1500w" />
+      <img class="loading-logo" src="./drive-loader.gif" />
     </div>
     <div class="content-wrapper">
-      <div class="content-title">
+      <div class="content">
         <h2>Drive Demo Reel 2019</h2>
         <a class="d-block">View This Project</a>
+        <div class="d-flex">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
       </div>
       <div class="video-wrapper">
         <div>
           <div class="video-swiper"></div>
           <video class="video-poster" loop autoplay muted playsinline="true">
-            <source src="https://player.vimeo.com/external/323481091.source.mp4?s=69a761d7dd8257a4cc6365edad9fd2bdd931f401&download=1"
+            <source
+              src="http://player.vimeo.com/external/280976062.hd.mp4?s=b7ea0e99c93fb0fb6d71659305f7776d22edda71&profile_id=175&oauth2_token_id=379737128"
+              type="video/mp4">
+          </video>
+          <video class="video-full d-none">
+            <source
+              src="https://player.vimeo.com/external/323481091.source.mp4?s=69a761d7dd8257a4cc6365edad9fd2bdd931f401&download=1"
               type="video/mp4">
           </video>
         </div>
@@ -44,7 +55,6 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="./index.js"></script>
   <script src="../../assets/js/analytics.js"></script>
 </body>
