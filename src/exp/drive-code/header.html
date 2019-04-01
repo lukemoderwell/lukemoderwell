@@ -1,0 +1,107 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" aysnc="true"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js" aysnc="true"></script>
+<script>
+  Y.on('available', function () {
+    Y.one('body').prepend(
+      '<div class="loading-screen"><div><img class="loading-logo" src="https://lukemoderwell.com/drive-loader.212972d5.gif"><p class="loading-text">loading</p></div></div><div class="loading-swiper"></div>'
+    ).setStyle("display", "block");
+
+    function animateSwiper() {
+      TweenMax.to('.loading-swiper', .75, {
+        height: '100%',
+        y: 0,
+        delay: .5,
+        ease: Power1.easeIn
+      });
+
+      TweenMax.to('.loading-screen', 0, {
+        height: 0,
+        pointerEvents: 'none',
+        zIndex: 0,
+        delay: 1.25
+      });
+
+      TweenMax.to('.loading-swiper', .75, {
+        height: 0,
+        top: 0,
+        y: '-100%',
+        zIndex: 0,
+        delay: 1.25,
+        ease: Power1.easeOut
+      });
+
+      TweenMax.to('.video-wrapper', .75, {
+        height: '70vh',
+        delay: 4,
+        ease: Power1.easeOut
+      })
+    }
+
+    function checkVideoState() {
+      var v = document.querySelector('.video-poster');
+      var i = setInterval(function () {
+        console.log('waiting on video load');
+        if (v.readyState > 3) {
+          // logo fade out
+          Y.one(".loading-screen").addClass('loaded');
+          animateSwiper();
+          clearInterval(i);
+        }
+      }, 500);
+    }
+    checkVideoState();
+  }, 'body');
+</script>
+<style>
+  body {
+    display: none;
+  }
+
+  .loading-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #313744;
+    z-index: 100001;
+    transition: .45s all ease-in-out;
+    overflow: hidden;
+  }
+
+  .loading-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .loading-text {
+    text-align: center;
+    font-size: .875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+  }
+
+  .loading-logo,
+  .loading-text {
+    transition: .5s all ease-in-out;
+  }
+
+  .loading-swiper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    transform: translateY(100%);
+    background-color: pink;
+    z-index: 999999;
+  }
+
+  .loaded .loading-logo,
+  .loaded .loading-text {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+</style>
