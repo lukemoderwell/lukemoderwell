@@ -3,10 +3,11 @@
 <script>
   Y.on('available', function () {
     Y.one('body').prepend(
-      '<div class="loading-screen"><div><img class="loading-logo" src="https://lukemoderwell.com/drive-loader.212972d5.gif"><p class="loading-text">loading</p></div></div><div class="loading-swiper"></div>'
+      '<div class="loading-screen"><div><img class="loading-logo" src="https://lukemoderwell.com/drive-loader.b3b24274.gif"><p class="loading-text">loading</p></div></div><div class="loading-swiper"></div>'
     ).setStyle("display", "block");
 
-    function animateSwiper() {
+    function animateIntro() {
+      // swipe in
       TweenMax.to('.loading-swiper', .75, {
         height: '100%',
         y: 0,
@@ -14,13 +15,7 @@
         ease: Power1.easeIn
       });
 
-      TweenMax.to('.loading-screen', 0, {
-        height: 0,
-        pointerEvents: 'none',
-        zIndex: 0,
-        delay: 1.25
-      });
-
+      // swipe out
       TweenMax.to('.loading-swiper', .75, {
         height: 0,
         top: 0,
@@ -30,11 +25,37 @@
         ease: Power1.easeOut
       });
 
-      TweenMax.to('.video-wrapper', .75, {
-        height: '70vh',
-        delay: 4,
+      // remove loading bg
+      TweenMax.to('.loading-screen', 0, {
+        display: 'none',
+        pointerEvents: 'none',
+        zIndex: 0,
+        delay: 1.35
+      });
+
+      // show main text 
+      TweenMax.to('.video-caption', .75, {
+        opacity: 1,
+        y: 0,
+        delay: 2,
         ease: Power1.easeOut
-      })
+      });
+
+      //  header reveal
+      var headerClass = window.innerWidth < 640 ? '.Mobile-bar--top' : '.Header--bottom';
+      TweenMax.to(headerClass, .75, {
+        position: 'absolute',
+        zIndex: 1,
+        delay: 2
+      });
+
+      // spring reveal feat cards
+      TweenMax.to('.video-wrapper', 1, {
+        height: '65vh',
+        overflow: 'hidden',
+        delay: 4,
+        ease: Power2.easeOut
+      });
     }
 
     function checkVideoState() {
@@ -44,7 +65,9 @@
         if (v.readyState > 3) {
           // logo fade out
           Y.one(".loading-screen").addClass('loaded');
-          animateSwiper();
+          // add header classes to get white text
+          Y.one(".Header--bottom").addClass('Header--index-gallery Header--overlay');
+          animateIntro();
           clearInterval(i);
         }
       }, 500);
@@ -53,6 +76,18 @@
   }, 'body');
 </script>
 <style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   body {
     display: none;
   }
@@ -65,23 +100,25 @@
     width: 100%;
     height: 100%;
     top: 0;
-    background-color: #313744;
+    background-color: #303643;
     z-index: 100001;
     transition: .45s all ease-in-out;
     overflow: hidden;
   }
 
   .loading-logo {
-    width: 120px;
-    height: 120px;
+    width: 250px;
+    height: 250px;
   }
 
   .loading-text {
+    margin: 0;
     text-align: center;
-    font-size: .875rem;
+    font-size: .75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: white;
+    transform: translateY(-50px)
   }
 
   .loading-logo,
@@ -95,7 +132,7 @@
     width: 100%;
     height: 0;
     transform: translateY(100%);
-    background-color: pink;
+    background-color: #E49417;
     z-index: 999999;
   }
 

@@ -1,5 +1,10 @@
 <style>
-  .video-wrapper {
+  * {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .drive-intro {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,9 +14,15 @@
     z-index: 0;
   }
 
+  .video-wrapper {
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+  }
+
   .video-poster {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -19,7 +30,7 @@
     position: absolute;
     left: 2.5rem;
     bottom: 5rem;
-    opacity: 1;
+    opacity: 0;
     color: white;
     transform: translateY(15%);
     z-index: 1;
@@ -28,11 +39,56 @@
   .video-caption h2 {
     margin: 0;
     color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .featured {
+    display: inline-flex;
+    width: 100%;
+    height: 35vh;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    background: #303643;
+    z-index: 0;
+    overflow-x: auto;
+  }
+
+  .aspect-box {
+    overflow: hidden;
+    height: 0;
+    padding-top: 56.25%;
+  }
+
+  .feat-card {
+    width: 100%;
+    ;
+    position: relative;
+    margin: 0 .5rem;
+    border-radius: 8px;
+    background-size: cover;
+  }
+
+  .feat-card-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: .5rem;
+    text-align: left;
+    color: white;
+  }
+
+  .new-label {
+    padding: 6px 10px;
+    color: white;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    background: #E49417;
   }
 </style>
-<div class="video-wrapper">
-  <div>
+<div class="drive-intro">
+  <div class="video-wrapper">
     <div class="video-caption">
       <h2>Demo Reel 2019</h2>
       <span>View Details</span>
@@ -42,5 +98,21 @@
         src="https://player.vimeo.com/external/323481091.source.mp4?s=69a761d7dd8257a4cc6365edad9fd2bdd931f401&download=1"
         type="video/mp4">
     </video>
+  </div>
+  <div class="featured">
+    <div class="aspect-box">
+      <div class="feat-card"
+        style="background-image: url('https://static1.squarespace.com/static/589a6dfdf5e231f4ad099dc0/5a7d1402652dea7a0241b38f/5c796ae1e4966b688551f688/1551461250524/A023_C023_1027MH_001.R3D.14_01_27_06.Still001.jpg?format=500w');">
+        <a class="feat-card-title">Cuna <i>"Open Your Eyes"</i></a>
+      </div>
+    </div>
+    <div class="feat-card"
+      style="background-image: url('https://static1.squarespace.com/static/589a6dfdf5e231f4ad099dc0/5a7d1402652dea7a0241b38f/5c4883f30e2e728dfff394e4/1553219962010/V1-0038_A003_C051_01050M.mov.08_45_36_21.Still001.jpg?format=500w');">
+      <a class="feat-card-title">CSO <i>The Music In You</i></a>
+    </div>
+    <div class="feat-card"
+      style="background-image: url('https://static1.squarespace.com/static/589a6dfdf5e231f4ad099dc0/5a7d1402652dea7a0241b38f/5be5deeb2b6a280654c136c1/1541791505499/A007C022_180830_R4Q6.mov.01_33_40_17.Still001.jpg?format=500w');">
+      <a class="feat-card-title">Walmart <i>How Pickup Towers Work</i></a>
+    </div>
   </div>
 </div>
