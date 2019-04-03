@@ -1,93 +1,103 @@
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" aysnc="true"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js" aysnc="true"></script>
 <script>
   Y.on('available', function () {
     Y.one('body').prepend(
-      '<div class="loading-screen"><div><img class="loading-logo" src="https://lukemoderwell.com/drive-loader.b3b24274.gif"><p class="loading-text">loading</p></div></div><div class="loading-swiper"></div>'
+      '<div class="loading-screen"><div><img class="loading-logo" src="https://lukemoderwell.com/drive-loader.b3b24274.gif"></div></div><div class="loading-swiper"></div>'
     ).setStyle("display", "block");
 
-    function animateIntro() {
-      // swipe in
-      TweenMax.to('.loading-swiper', .75, {
-        height: '100%',
-        y: 0,
-        delay: .5,
-        ease: Power1.easeIn
+    function animateSwiper() {
+      var tl = new TimelineLite({
+        delay: 1.5
       });
 
-      // swipe out
-      TweenMax.to('.loading-swiper', .75, {
+      // swipe in
+      tl.to('.loading-swiper', .75, {
+        height: '100%',
+        y: 0,
+        ease: Power2.easeIn
+      }).to('.loading-screen', 0, {
+        display: 'none',
+        pointerEvents: 'none',
+        zIndex: 0,
+      }).to('.loading-swiper', .75, {
         height: 0,
         top: 0,
         y: '-100%',
         zIndex: 0,
-        delay: 1.25,
-        ease: Power1.easeOut
-      });
-
-      // remove loading bg
-      TweenMax.to('.loading-screen', 0, {
-        display: 'none',
-        pointerEvents: 'none',
-        zIndex: 0,
-        delay: 1.35
-      });
-
-      // show main text 
-      TweenMax.to('.video-caption', .75, {
-        opacity: 1,
-        y: 0,
-        delay: 2,
-        ease: Power1.easeOut
-      });
-
-      //  header reveal
-      var headerClass = window.innerWidth < 640 ? '.Mobile-bar--top' : '.Header--bottom';
-      TweenMax.to(headerClass, .75, {
-        position: 'absolute',
-        zIndex: 1,
-        delay: 2
-      });
-
-      // spring reveal feat cards
-      TweenMax.to('.video-wrapper', 1, {
-        height: '65vh',
-        overflow: 'hidden',
-        delay: 4,
         ease: Power2.easeOut
       });
+
+      return tl;
     }
+
+    function videoTransition() {
+      var tl = new TimelineLite({
+        delay: 7
+      });
+
+      tl.to('.video-wrapper', .75, {
+        width: '70vw',
+        x: '30vw',
+        ease: Power2.easeInOut
+      }).to('.video-caption', .75, {
+        opacity: 1,
+        y: 0,
+        ease: Power1.easeInOut
+      });
+
+      return tl;
+    }
+
+    function introScrollable() {
+      var tl = new TimelineLite({
+        delay: 10
+      });
+
+      tl.to('.drive-intro', .75, {
+        scale: .75,
+        padding: '45px',
+        ease: Power1.easeInOut
+      });
+
+      return tl;
+    }
+
+    function fadeInLoader() {
+      TweenMax.to('.loading-logo', .75, {
+        opacity: 1,
+        y: 0,
+        delay: .25,
+        ease: Power1.easeInOut
+      });
+    }
+
+    // var master = new TimelineMax({
+    //   smoothChildTiming: true,
+    //   delay: 1.5
+    // });
+
+    // master.add(animateSwiper(), "swiper");
+    // master.add(videoTranstion(), "videoTransition");
 
     function checkVideoState() {
       var v = document.querySelector('.video-poster');
       var i = setInterval(function () {
-        console.log('waiting on video load');
         if (v.readyState > 3) {
-          // logo fade out
-          Y.one(".loading-screen").addClass('loaded');
+          animateSwiper();
+          videoTransition();
+          introScrollable();
           // add header classes to get white text
-          Y.one(".Header--bottom").addClass('Header--index-gallery Header--overlay');
-          animateIntro();
+          // Y.one(".Header--bottom").addClass('Header--index-gallery Header--overlay');
           clearInterval(i);
         }
       }, 500);
     }
+    fadeInLoader();
     checkVideoState();
   }, 'body');
 </script>
 <style>
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(15%);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   body {
     display: none;
   }
@@ -107,23 +117,10 @@
   }
 
   .loading-logo {
-    width: 250px;
-    height: 250px;
-  }
-
-  .loading-text {
-    margin: 0;
-    text-align: center;
-    font-size: .75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: white;
-    transform: translateY(-50px)
-  }
-
-  .loading-logo,
-  .loading-text {
-    transition: .5s all ease-in-out;
+    opacity: 0;
+    transform: translateY(15%);
+    width: 220px;
+    height: 220px;
   }
 
   .loading-swiper {
@@ -132,13 +129,18 @@
     width: 100%;
     height: 0;
     transform: translateY(100%);
-    background-color: #E49417;
+    background-color: #000;
     z-index: 999999;
   }
 
-  .loaded .loading-logo,
-  .loaded .loading-text {
-    opacity: 0;
-    transform: translateY(15%);
+  /* Make sure SS Gallery content is below intro */
+  .sqs-gallery-container {
+    margin-top: 100vh;
+  }
+
+  /* Eliminate SS top margin */
+  .Main-content {
+    margin-top: 0;
+    padding-top: 0;
   }
 </style>
