@@ -4,16 +4,122 @@
     font-family: 'Raleway', sans-serif;
   }
 
+  /* SS Overides */
+  .Main-content {
+    background-color: #303643;
+    color: white;
+  }
+
+  .sqs-block.code-block.sqs-block-code {
+    margin-bottom: -80px;
+  }
+
+  .Mobile-bar.Mobile-bar--top {
+    position: absolute;
+    z-index: 1;
+    background: transparent !important;
+  }
+
+  .Mobile-bar.Mobile-bar--top .Icon {
+    stroke: white !important;
+  }
+
+  .Footer-inner {
+    background-color: #282D37;
+    color: white;
+    padding: 50px 45px;
+  }
+
+  .Footer-business-info-item {
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .Footer-business-info-item--name,
+  .Footer-business-info-item--phone,
+  .Footer-business-info-item--email {
+    font-family: "Raleway", sans-serif;
+    display: block !important;
+  }
+
+  .Footer-business-info-item--name {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  .Footer-business-info-item--email {
+    margin-bottom: 0;
+  }
+
+  .Footer-business-info-item--email:hover {
+    color: #c75734;
+  }
+
+  .Footer-nav-group a {
+    display: inline-block;
+  }
+
+  /* Gallery Styles */
+  .sqs-gallery-design-grid-slide {
+    margin-bottom: 20px;
+  }
+
+  .image-slide-anchor {
+    border-radius: 8px;
+  }
+
+  .sqs-gallery-design-grid-slide:hover,
+  .thumb-image.loaded:hover,
+  .image-slide-anchor.content-fill:hover,
+  .margin-wrapper:hover {
+    cursor: pointer !important;
+  }
+
+  .thumb-image.loaded {
+    filter: grayscale(0) !important;
+    transition: .25s all ease-in-out;
+  }
+
+  .thumb-image.loaded:hover {
+    filter: grayscale(1) !important;
+  }
+
+  .image-slide-title {
+    position: absolute;
+    top: 35%;
+    opacity: 0;
+    transform: translateY(5%);
+    transition: .25s all ease-in-out;
+    font-size: 19px !important;
+    z-index: 100;
+    /* pass through click to anchor */
+    pointer-events: none;
+  }
+
+  .sqs-gallery-design-grid-slide:hover .image-slide-title {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #block-yui_3_17_2_1_1554343722747_4712 h2 {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  /* Custom Drive Content */
+
   .drive-intro {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    z-index: 1001;
-    background: #D7C4AD;
+    top: -76px;
+    left: -20px;
+    overflow: hidden;
+    z-index: 1000;
   }
 
   .video-wrapper {
@@ -23,38 +129,59 @@
   }
 
   .video-poster {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    z-index: 2;
   }
 
   .video-caption {
     position: absolute;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transform: translateY(15%);
+    color: white;
     z-index: 1;
   }
 
   .video-caption h2 {
     margin: 0;
+    color: white;
+    font-family: 'Raleway';
+  }
+
+  .drive-btn {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: .875rem;
+    padding: .5rem .875rem;
+    border: 1px solid white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(15%);
+  }
+
+  @media (min-width: 640px) {
+
+    /* cancel padding and top nav */
+    .drive-intro {
+      top: -200px;
+      left: -45px;
+      height: calc(100vh + 200px);
+    }
+
+    .sqs-block.code-block.sqs-block-code {
+      margin-bottom: -200px;
+    }
   }
 </style>
-
 <div class="drive-intro">
-  <div class="video-caption">
-    <div>
-      <h2>Demo Reel 2019</h2>
-      <a href="https://drivemediahouse.com/work/drivereel">View Details</a>
-    </div>
-  </div>
   <div class="video-wrapper">
-    <video class="video-poster" loop autoplay muted playsinline="true">
+    <div class="video-caption">
+      <a href="/work/drivereel" class="drive-btn">Watch The Full Reel</a>
+    </div>
+    <video class="video-poster" loop autoplay muted playsinline="true" preload="auto">
       <source
         src="https://player.vimeo.com/external/327732533.source.mp4?s=1c1d99ed7100aabad9c34a761ad42260fd7c1765&download=1"
         type="video/mp4">

@@ -1,4 +1,3 @@
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" aysnc="true"></script>
 <script>
   Y.on('available', function () {
@@ -6,94 +5,112 @@
       '<div class="loading-screen"><div><img class="loading-logo" src="https://lukemoderwell.com/drive-loader.b3b24274.gif"></div></div><div class="loading-swiper"></div>'
     ).setStyle("display", "block");
 
-    function animateSwiper() {
-      var tl = new TimelineLite({
-        delay: 1.5
-      });
-
-      // swipe in
-      tl.to('.loading-swiper', .75, {
-        height: '100%',
-        y: 0,
-        ease: Power2.easeIn
-      }).to('.loading-screen', 0, {
-        display: 'none',
-        pointerEvents: 'none',
-        zIndex: 0,
-      }).to('.loading-swiper', .75, {
-        height: 0,
-        top: 0,
-        y: '-100%',
-        zIndex: 0,
-        ease: Power2.easeOut
-      });
-
-      return tl;
-    }
-
-    function videoTransition() {
-      var tl = new TimelineLite({
-        delay: 7
-      });
-
-      tl.to('.video-wrapper', .75, {
-        width: '70vw',
-        x: '30vw',
-        ease: Power2.easeInOut
-      }).to('.video-caption', .75, {
-        opacity: 1,
-        y: 0,
-        ease: Power1.easeInOut
-      });
-
-      return tl;
-    }
-
-    function introScrollable() {
-      var tl = new TimelineLite({
-        delay: 10
-      });
-
-      tl.to('.drive-intro', .75, {
-        scale: .75,
-        padding: '45px',
-        ease: Power1.easeInOut
-      });
-
-      return tl;
-    }
-
     function fadeInLoader() {
       TweenMax.to('.loading-logo', .75, {
         opacity: 1,
         y: 0,
-        delay: .25,
-        ease: Power1.easeInOut
+        ease: Power1.easeIn,
+        delay: .25
+      })
+    }
+
+    function fadeOutLoader() {
+      TweenMax.to('.loading-logo', .75, {
+        opacity: 0,
+        y: '15%',
+        ease: Power1.easeOut,
+        delay: 1.75
       });
     }
 
-    // var master = new TimelineMax({
-    //   smoothChildTiming: true,
-    //   delay: 1.5
-    // });
 
-    // master.add(animateSwiper(), "swiper");
-    // master.add(videoTranstion(), "videoTransition");
+    function swipeVideoIn() {
+      if (window.innerWidth > 640) {
+        // swipe in
+        TweenMax.to('.loading-swiper', .75, {
+          height: '100%',
+          y: 0,
+          delay: 2,
+          ease: Power1.easeIn
+        });
+
+        // swipe out
+        TweenMax.to('.loading-swiper', .75, {
+          y: '-100%',
+          zIndex: 0,
+          delay: 3.25,
+          ease: Power1.easeOut
+        });
+
+        // remove loading bg
+        TweenMax.to('.loading-screen', 0, {
+          opacity: 0,
+          pointerEvents: 'none',
+          zIndex: -1,
+          delay: 3.25
+        });
+      } else {
+        TweenMax.to('.loading-screen', .75, {
+          opacity: 0,
+          pointerEvents: 'none',
+          zIndex: -1,
+          delay: 2
+        })
+      }
+    }
+
+    function showText() {
+      // show main text
+      TweenMax.to('.drive-btn', .75, {
+        opacity: 1,
+        y: 0,
+        delay: 6,
+        ease: Power2.easeOut
+      });
+    }
+
+    function revealHeader() {
+      TweenMax.to('.drive-intro', .75, {
+        zIndex: 0,
+        delay: 6
+      });
+    }
+
+    function revealFeatured() {
+      if (window.innerWidth > 640) {
+        TweenMax.to('.drive-intro', 1, {
+          height: window.innerHeight * .85,
+          delay: 8,
+          ease: Power2.easeInOut
+        });
+      } else {
+        TweenMax.to('.drive-intro', 1, {
+          height: window.innerHeight * .5,
+          delay: 8,
+          ease: Power2.easeInOut
+        });
+      }
+
+    }
 
     function checkVideoState() {
+      fadeInLoader();
       var v = document.querySelector('.video-poster');
       var i = setInterval(function () {
+        console.log('loading video');
         if (v.readyState > 3) {
-          animateSwiper();
-          videoTransition();
-          introScrollable();
           // add header classes to get white text
-          // Y.one(".Header--bottom").addClass('Header--index-gallery Header--overlay');
+          Y.one(".Header--bottom").addClass('Header--index-gallery Header--overlay');
+          fadeOutLoader();
+          swipeVideoIn();
+          showText();
+          revealHeader();
+          revealFeatured();
           clearInterval(i);
         }
       }, 500);
     }
-    fadeInLoader();
+
     checkVideoState();
   }, 'body');
 </script>
@@ -131,16 +148,5 @@
     transform: translateY(100%);
     background-color: #000;
     z-index: 999999;
-  }
-
-  /* Make sure SS Gallery content is below intro */
-  .sqs-gallery-container {
-    margin-top: 100vh;
-  }
-
-  /* Eliminate SS top margin */
-  .Main-content {
-    margin-top: 0;
-    padding-top: 0;
   }
 </style>
