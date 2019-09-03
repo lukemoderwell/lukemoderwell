@@ -1,0 +1,207 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" aysnc="true"></script>
+<script>
+  function fadeInLoader() {
+    TweenMax.to('.loading-logo', .75, {
+      opacity: 1,
+      y: 0,
+      ease: Power1.easeIn,
+      delay: .25
+    })
+  }
+
+  function fadeOutLoader() {
+    TweenMax.to('.loading-logo', .75, {
+      opacity: 0,
+      y: '15%',
+      ease: Power1.easeOut,
+      delay: 1.75
+    });
+  }
+
+
+  function swipeVideoIn() {
+    if (window.innerWidth > 640) {
+      // swipe in
+      TweenMax.to('.loading-swiper', .75, {
+        height: '100%',
+        y: 0,
+        delay: 2,
+        ease: Power1.easeIn
+      });
+
+      // swipe out
+      TweenMax.to('.loading-swiper', .75, {
+        y: '-100%',
+        zIndex: 0,
+        delay: 3.25,
+        ease: Power1.easeOut
+      });
+
+      // remove loading bg
+      TweenMax.to('.loading-screen', 0, {
+        opacity: 0,
+        pointerEvents: 'none',
+        zIndex: -1,
+        delay: 3.25
+      });
+    } else {
+      TweenMax.to('.loading-screen', .75, {
+        opacity: 0,
+        pointerEvents: 'none',
+        zIndex: -1,
+        delay: 2
+      })
+    }
+  }
+
+  function showText() {
+    // show main text
+    TweenMax.to('.drive-btn', .75, {
+      opacity: 1,
+      y: 0,
+      delay: 6,
+      ease: Power2.easeOut
+    });
+
+    TweenMax.to('.video-subcaption', .75, {
+      opacity: 1,
+      y: 0,
+      delay: 6.5,
+      ease: Power2.easeOut
+    });
+  }
+
+  function revealHeader() {
+    TweenMax.to('.drive-intro', .75, {
+      zIndex: 0,
+      delay: 6
+    });
+  }
+
+  function revealFeatured() {
+    if (window.innerWidth > 640) {
+      TweenMax.to('.drive-intro', 1, {
+        height: window.innerHeight * .85,
+        delay: 8,
+        ease: Power2.easeInOut
+      });
+    } else {
+      TweenMax.to('.drive-intro', 1, {
+        height: window.innerHeight * .75,
+        delay: 8,
+        ease: Power2.easeInOut
+      });
+    }
+  }
+
+  function fadeVideo() {
+    TweenMax.to('.video-poster', 1, {
+      opacity: .85,
+      delay: 8,
+      ease: Power2.easeInOut
+    });
+  }
+
+  function desktopInit() {
+    fadeOutLoader();
+    swipeVideoIn();
+    showText();
+    revealHeader();
+    fadeVideo();
+    // revealFeatured();
+  }
+
+  function mobileInit() {
+    TweenMax.to('.loading-logo', .75, {
+      opacity: 0,
+      ease: Power1.easeOut,
+      delay: 1.75
+    });
+    // remove loading bg
+    TweenMax.to('.loading-screen', .25, {
+      opacity: 0,
+      pointerEvents: 'none',
+      zIndex: -1,
+      delay: 2
+    });
+    showText();
+    revealHeader();
+    fadeVideo();
+    // revealFeatured()
+  }
+
+  Y.on('available', function () {
+    Y.one('body').prepend(
+      '<div class="loading-screen"><div><img class="loading-logo" src="https://static1.squarespace.com/static/589a6dfdf5e231f4ad099dc0/t/5d52f59f930804000123b5bd/1565717920019/Drive_Justin_opt_smaller.gif"></div></div><div class="loading-swiper"></div>'
+    ).setStyle("display", "block");
+
+    function checkVideoState() {
+      fadeInLoader();
+      var v = document.querySelector('.video-poster');
+      var i = setInterval(function () {
+        console.log('loading video');
+        if (v.readyState >= 3) {
+          // add header classes to get white text
+          Y.one('.Header--bottom').addClass('Header--index-gallery Header--overlay');
+          // wait 5s and then allow scrolling
+          setTimeout(function () {
+            Y.one('body').setStyle('overflow', 'auto');
+          }, 5000)
+          if (window.innerWidth > 768) {
+            desktopInit();
+          } else {
+            mobileInit();
+          }
+          clearInterval(i);
+        }
+      }, 500);
+    }
+    checkVideoState();
+  }, 'body');
+</script>
+<style>
+  body {
+    display: none;
+    overflow: hidden;
+  }
+
+  .loading-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #102A45;
+    z-index: 100001;
+    transition: .45s all ease-in-out;
+    overflow: hidden;
+  }
+
+  .loading-logo {
+    opacity: 1;
+    transform: translateY(0);
+    width: 220px;
+    height: 220px;
+  }
+
+  .loading-swiper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    transform: translateY(100%);
+    background-color: #000;
+    z-index: 999999;
+  }
+
+  @media (min-width: 768px) {
+    .loading-logo {
+      opacity: 1;
+      transform: translateY(15%);
+      width: 220px;
+      height: 220px;
+    }
+  }
+</style>
