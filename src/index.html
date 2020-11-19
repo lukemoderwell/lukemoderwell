@@ -27,7 +27,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
       font-size: 16px;
       line-height: 1.55;
-      color: white;
+      color: #f0f0f0;
       background: #1A2B34;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -61,7 +61,7 @@
     .main {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      grid-gap: 2rem;
+      gap: 2rem;
     }
 
     .grid-col-2,
@@ -75,13 +75,13 @@
     }
 
     .main-content {
-      padding: 1rem;
+      padding: 1rem 2rem;
     }
 
     .ttu {
       display: inline;
       text-transform: uppercase;
-      font-size: .875rem;
+      font-size: .75rem;
       letter-spacing: 1px;
     }
 
@@ -114,6 +114,10 @@
       .grid-col-4 {
         grid-column: span 4;
       }
+
+      .mt0 {
+        margin-top: 0;
+      }
     }
   </style>
 </head>
@@ -125,19 +129,27 @@
     </div>
     <div class="grid-col-2 d-flex align-items-center">
       <div class="main-content">
+        <h2 class="flush">🏄‍♂️ Surfs up,</h2>
         <p style="display: inline;">
-          Hello, my name is
+          my name is
           <h1 class="ttu" style="animation: color-change 8s infinite;">Luke
             Moderwell</h1>
           and welcome to my small slice of internet. 
-          I'm a designer and front-end developer focusing on making digital products that matter.
-          Today I work at <a href="https://dotdash.io/" target="_blank">Dot Dash</a> helping 
-          organizations like <a href="https://www.crossroads.net" target="_blank">Crossroads</a>
-          tell their stories and connect with people.
         </p>
-        <h3 class="flush ttu">Contact</h3>
-        <p style="margin-top: .5rem;">Cincinnati, OH <span id="clock">12:00:00</span><br>
-        <a href="mailto:luke.moderwell@gmail.com">luke.moderwell@gmail.com</a></p>
+        <h4 class="ttu">Current</h4>
+        <ul class="mt0">
+          <li>Design/Eng/Founder @ <a href="https://modcorp.biz">Modcorp</a></li>
+        </ul>
+        <h4 class="ttu">Past</h4>
+        <ul class="mt0">
+          <li>Product Design @ <a href="https://dotdash.io/" target="_blank">Dot Dash</a></li>
+          <li>Frontend @ <a href="https://crossroads.net/" target="_blank">Crossroads Church</a></li>
+          <li>Product Design @ <a href="https://krushmedia.com/">Krush Technologies</a> (now Krush Media)</li>
+          <li>Design @ <a href="https://themindbox.co">Mindbox Studios</a></li>
+        </ul>
+        <h4 class="flush ttu">Contact</h4>
+        <p class="flush"><a href="mailto:luke.moderwell@gmail.com">luke.moderwell@gmail.com</a></p>
+        <p class="flush">Cincinnati, OH <span id="clock">12:00:00</span></p>
         <a href="./exp/drid/index.html"></a>
         <a href="./exp/drive/index.html"></a>
         <a href="./exp/horizon/index.html"></a>
