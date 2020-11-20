@@ -1,6 +1,0 @@
-[build]
-  command = '''
-    rm -rf dist &&
-    yarn install &&
-    yarn run build
-  '''
