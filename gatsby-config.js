@@ -5,15 +5,34 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Writing | Luke Moderwell`,
+    description: `Just a place for my thoughts.`,
+    author: `Luke Moderwell`,
+  },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     {
+      resolve: `gatsby-plugin-netlify-cms-paths`,
+      options: {
+        // Path to your Netlify CMS config file
+        cmsConfig: `/static/admin/config.yml`
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/blog`,
+        name: `markdown-pages`,
+        path: `${__dirname}/blog`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
+        ],
+      },
+    },
   ],
 }

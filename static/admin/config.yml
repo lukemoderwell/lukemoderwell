@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: lukemoderwell/lukemoderwell
+  branch: blog
 
 media_folder: static/assets
 public_folder: /assets
@@ -14,7 +15,6 @@ collections:
       preview: true
     fields:
       - { name: path, label: Path }
-      - { name: slug, label: Slug }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: descritption, label: Description }
