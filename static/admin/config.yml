@@ -7,16 +7,16 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: writing
+    label: Writing
+    folder: writing
     create: true
     editor:
       preview: true
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
-      - { name: tags, label: Tags, widget: list, allow_add: true }
+      - { name: tags, label: Tags, widget: list, add_to_top: true }
       - { name: title, label: Title }
       - { name: descritption, label: Description }
       - { name: body, label: Body, widget: markdown }

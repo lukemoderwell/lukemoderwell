@@ -6,6 +6,7 @@ import Header from '../components/Header';
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  console.log(frontmatter);
   return (
     <React.Fragment>
       <Header />
@@ -13,11 +14,11 @@ export default function Template({ data }) {
         <div className="post">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
-          <ul>
+          {/* <ul>
             {frontmatter.tags.map((tag) => (
               <li>{tag}</li>
             ))}
-          </ul>
+          </ul> */}
           <div
             className="post-content"
             dangerouslySetInnerHTML={{ __html: html }}
