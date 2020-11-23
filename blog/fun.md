@@ -4,8 +4,8 @@ date: 2020-11-22T20:30:01.978Z
 tags:
   - work
 title: "Getting A Job In Tech: 5 Lessons I've Learned"
-descritption: 5 things I wish I knew when I was starting out in product design,
-  front-end engineering, and more.
+descritption: 5 things I wish I knew when I was starting out in product design &
+  front-end development.
 ---
 Recently I was helping coach a young developer trying to get their first job in the tech industry. They were breaking in from a non-traditional background (music major, no bootcamp or experience programming at any level) and beginning to get disheartened by the process of constantly putting themselves out there in search of a job. Tech is a competitive field and the attractive benefits of better work-life-balance, high salaries, and freedom to work remotely only amplify people's interest level.
 
