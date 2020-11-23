@@ -16,6 +16,7 @@ collections:
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
+      - { name: tags, label: Tags, widget: list, allow_add: true }
       - { name: title, label: Title }
       - { name: descritption, label: Description }
       - { name: body, label: Body, widget: markdown }

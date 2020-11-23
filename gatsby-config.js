@@ -11,6 +11,7 @@ module.exports = {
     author: `Luke Moderwell`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-netlify-cms-paths`,
