@@ -1,5 +1,7 @@
 backend:
   name: git-gateway
+  repo: lukemoderwell/lukemoderwell
+  branch: blog
 
 media_folder: static/assets
 public_folder: /assets
