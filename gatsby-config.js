@@ -17,23 +17,21 @@ module.exports = {
       resolve: `gatsby-plugin-netlify-cms-paths`,
       options: {
         // Path to your Netlify CMS config file
-        cmsConfig: `/static/admin/config.yml`
-      }
+        cmsConfig: `/static/admin/config.yml`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/blog`,
+        path: `${__dirname}/writing`,
       },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          `gatsby-plugin-netlify-cms-paths`,
-        ],
+        plugins: [`gatsby-plugin-netlify-cms-paths`],
       },
     },
   ],
-}
+};
