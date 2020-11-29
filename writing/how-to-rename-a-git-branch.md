@@ -9,7 +9,7 @@ descritption: Exploring a few ways to git that branch name just how you like it.
 ---
 Sometimes in your git workflow, you may want to rename a branch. One reason to do so might be if you are using [Netlify’s excellent branch sub domains feature](https://docs.netlify.com/domains-https/custom-domains/multiple-domains/#apex-domains-and-www-subdomains) like I do for this very site. Recently I wanted to change from `blog.` to `writing.` just to be a little fancier.
 
-To rename any branch use `git -m <old branch> <new branch>`
+To rename any branch use `git branch -m <old branch> <new branch>`
 
 What you are really doing under the hood is moving the branch (thus -m). One way to make this a bit easier to remember is by making a custom alias like this `git config --global alias.rename 'branch -m'`. 
 
