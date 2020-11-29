@@ -1,33 +1,44 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import cx from 'classnames';
+import moment from 'moment-timezone';
+import styles from './Home.module.scss';
 
 export default function Home() {
+  useEffect(() => {
+    const clock = document.getElementById('clock');
+    function updateClock() {
+      const now = moment.tz('America/New_York').format('H:mm:ss');
+      clock.innerText = now;
+    }
+    setInterval(updateClock, 1000);
+  }, [])
   return (
     <body>
-      <main class="main">
-        <div class="grid-col-4">
+      <main className={styles.main}>
+        <div className={styles.gridCol4}>
           <img
             alt="Luke Moderwell working on something mind-blowing"
-            src="static/img/lm-banner.jpg"
+            src="/images/lm-banner.jpg"
           />
         </div>
-        <div class="grid-col-2 d-flex align-items-center">
-          <div class="main-content">
-            <h2 class="flush">🏄‍♂️ Surfs up,</h2>
-            <p style="display: inline;">
+        <div className={cx(styles.gridCol2, styles.dFlex, styles.alignItemsCenter)}>
+          <div className={styles.mainContent}>
+            <h2 className={styles.flush}>🏄‍♂️ Surfs up,</h2>
+            <p style={{display: 'inline'}}>
               my name is
-              <h1 class="ttu" style="animation: color-change 8s infinite;">
+              <h1 className={styles.ttu} style={{animation: 'color-change 8s infinite'}}>
                 Luke Moderwell
               </h1>
               and welcome to my small slice of internet.
             </p>
-            <h4 class="ttu">Current</h4>
-            <ul class="mt0">
+            <h4 className={styles.ttu}>Current</h4>
+            <ul className={styles.mt0}>
               <li>
                 Design/Eng/Founder @ <a href="https://modcorp.biz">Modcorp</a>
               </li>
             </ul>
-            <h4 class="ttu">Past</h4>
-            <ul class="mt0">
+            <h4 className={styles.ttu}>Past</h4>
+            <ul className={styles.mt0}>
               <li>
                 Product Design @{' '}
                 <a href="https://dotdash.io/" target="_blank">
@@ -49,23 +60,15 @@ export default function Home() {
                 Design @ <a href="https://themindbox.co">Mindbox Studios</a>
               </li>
             </ul>
-            <h4 class="flush ttu">Contact</h4>
-            <p class="flush">
+            <h4 className={cx(styles.flush, styles.ttu)}>Contact</h4>
+            <p className={styles.flush}>
               <a href="mailto:luke.moderwell@gmail.com">
                 luke.moderwell@gmail.com
               </a>
             </p>
-            <p class="flush">
+            <p className={styles.flush}>
               Cincinnati, OH <span id="clock">12:00:00</span>
             </p>
-            <a href="./exp/drid/index.html"></a>
-            <a href="./exp/drive/index.html"></a>
-            <a href="./exp/horizon/index.html"></a>
-            <a href="./exp/gallery/index.html"></a>
-            <a href="./exp/photo-viewer/index.html"></a>
-            <a href="./exp/video/index.html"></a>
-            <a href="./assets/img/about-drive.pdf"></a>
-            <a href="./misc/eb-and-tat/index.html"></a>
           </div>
         </div>
       </main>
