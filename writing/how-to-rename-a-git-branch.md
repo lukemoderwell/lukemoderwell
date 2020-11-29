@@ -5,7 +5,7 @@ tags:
   - git
   - how-to
 title: How To Rename A Git Branch
-descritption: Exploring a few ways to git that branch name just how you like it.
+description: Exploring a few ways to git that branch name just how you like it.
 ---
 Sometimes in your git workflow, you may want to rename a branch. One reason to do so might be if you are using [Netlify’s excellent branch sub domains feature](https://docs.netlify.com/domains-https/custom-domains/multiple-domains/#apex-domains-and-www-subdomains) like I do for this very site. Recently I wanted to change from `blog.` to `writing.` just to be a little fancier.
 

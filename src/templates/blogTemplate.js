@@ -6,7 +6,6 @@ import Header from '../components/Header';
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  console.log(frontmatter);
   return (
     <React.Fragment>
       <Header />

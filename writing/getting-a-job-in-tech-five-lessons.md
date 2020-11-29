@@ -4,7 +4,7 @@ date: 2020-11-22T20:30:01.978Z
 tags:
   - work
 title: "Getting A Job In Tech: 5 Lessons I've Learned"
-descritption: 5 things I wish I knew when I was starting out in product design &
+description: 5 things I wish I knew when I was starting out in product design &
   front-end development.
 ---
 
