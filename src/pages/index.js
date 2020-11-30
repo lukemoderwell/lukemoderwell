@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className={cx(styles.gridCol2, styles.dFlex, styles.alignItemsCenter)}>
           <div className={styles.mainContent}>
-            <h2 className={styles.flush}>🏄‍♂️ Surfs up,</h2>
+            <h2 className={cx(styles.flush, 'f3')}>🏄‍♂️ Surfs up,</h2>
             <p style={{display: 'inline'}}>
               my name is
               <h1 className={styles.ttu} style={{animation: 'color-change 8s infinite'}}>

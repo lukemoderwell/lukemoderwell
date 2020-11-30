@@ -1,5 +1,5 @@
 ---
-path: /journal/one
+path: /journal/one-gatsby
 date: 2020-11-29T20:30:01.978Z
 title: "Day 1: Switching to Gatsby"
 ---
