@@ -13,11 +13,13 @@ export default function Template({ data }) {
         <div className="post">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
-          {/* <ul>
-            {frontmatter.tags.map((tag) => (
-              <li>{tag}</li>
-            ))}
-          </ul> */}
+          {frontmatter.tags !== undefined && (
+            <ul>
+              {frontmatter.tags.map((tag) => (
+                <li>{tag}</li>
+              ))}
+            </ul>
+          )}
           <div
             className="post-content"
             dangerouslySetInnerHTML={{ __html: html }}

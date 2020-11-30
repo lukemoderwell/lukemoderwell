@@ -1,11 +1,37 @@
-body {
+$red: #E75E64;
+$yellow: #FBC95A;
+$green: #98C892;
+$teal: #3AAEB4;
+$blue: #6498CE;
+
+main {
   display: flex;
   font-size: 100% !important;
   margin: 0;
 }
 
 a {
-  color: #fbc95a;
+  color: $yellow;
+}
+
+a:hover {
+  animation: color-change 8s infinite;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h4 {
+  margin-top: 1.25rem;
+  margin-bottom: .25rem;
 }
 
 p {
@@ -45,10 +71,13 @@ img {
 }
 
 .ttu {
-  display: inline;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 1px;
+}
+
+.inline {
+  display: inline;
 }
 
 .flush {
@@ -60,7 +89,7 @@ img {
     font-size: 17px;
   }
 
-  body {
+  main {
     height: 100vh;
     align-items: center;
   }
@@ -80,4 +109,22 @@ img {
   .mt0 {
     margin-top: 0;
   }
+}
+
+.colorChange {
+  animation: color-change 8s infinite;
+}
+
+@keyframes color-change {
+  0% { color: white; }
+  10% { color: $red; }
+  20% { color: $yellow; }
+  30% { color: $green; }
+  40% { color: $teal; }
+  50% { color: $blue; }
+  60% { color: $teal; }
+  70% { color: $green; }
+  80% { color: $yellow; }
+  90% { color: $red; }
+  100% { color: white; }
 }

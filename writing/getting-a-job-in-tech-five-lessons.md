@@ -1,5 +1,5 @@
 ---
-path: /getting-a-job-in-tech-five-lessons
+path: /writing/getting-a-job-in-tech-five-lessons
 date: 2020-11-22T20:30:01.978Z
 tags:
   - work
