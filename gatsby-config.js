@@ -38,16 +38,9 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `writing`,
-        path: `${__dirname}/writing`,
+        name: `journal`,
+        path: `${__dirname}/journal`,
       },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `build-journal`,
-        path: `${__dirname}/build-journal`,
-      }
     },
     {
       resolve: `gatsby-source-filesystem`,
