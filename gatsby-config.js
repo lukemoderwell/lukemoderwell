@@ -37,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `sparkwagon`,
-        path: `${__dirname}/sparkwagon`,
+        name: `writing`,
+        path: `${__dirname}/writing`,
       },
     },
     {

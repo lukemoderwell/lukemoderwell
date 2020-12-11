@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styles from './blogTemplate.module.scss';
-import Header from '../components/Header';
+import Header from '../components/Header/index';
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
@@ -13,6 +13,9 @@ export default function Template({ data }) {
         <div className="post">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
+          {frontmatter.sparkwagon && (
+            <aside className={styles.callout}>This article was originally posted on sparkwagon.com</aside>
+          )}
           {frontmatter.tags !== undefined && (
             <ul>
               {frontmatter.tags.map((tag) => (
@@ -38,6 +41,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        sparkwagon
       }
     }
   }

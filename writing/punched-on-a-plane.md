@@ -2,7 +2,8 @@
 path: /sparkwagon/punched-on-a-plane
 date: 2013-02-16T20:30:01.978Z
 title: Punched On A Plane
-description: Dad meets a rock star and makes a bold move. Will it pay off?
+description: A chance encounter with a rock star.
+sparkwagon: true
 ---
 
 I was flying back from Oklahoma City on one of those little regional jets — 2 seats on one side and one seat on the other. Seating assignments can be a cruel fate in those tight quarters. So I was a little unsure when I found myself sitting next to a guy:
