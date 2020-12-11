@@ -6,8 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Writing | Luke Moderwell`,
-    description: `Just a place for my thoughts.`,
+    title: `Luke Moderwell`,
+    description: `Dad, Designer, Friend.`,
     author: `Luke Moderwell`,
   },
   plugins: [
@@ -31,15 +31,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify-cms-paths`,
       options: {
-        // Path to your Netlify CMS config file
         cmsConfig: `/static/admin/config.yml`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `journal`,
-        path: `${__dirname}/journal`,
+        name: `sparkwagon`,
+        path: `${__dirname}/sparkwagon`,
       },
     },
     {
