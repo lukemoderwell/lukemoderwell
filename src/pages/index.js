@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import cx from 'classnames';
 import moment from 'moment-timezone';
 import styles from './Home.module.scss';
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 export default function Home() {
   useEffect(() => {
@@ -22,46 +22,34 @@ export default function Home() {
         />
       </div>
       <div
-        className={cx(styles.gridCol2, styles.dFlex, styles.alignItemsCenter)}>
+        className={cx(styles.gridCol2, styles.dFlex, styles.alignItemsCenter)}
+      >
         <div className={styles.mainContent}>
           <h2 className={cx(styles.flush)}>🏄‍♂️ Surfs up,</h2>
           <p style={{ display: 'inline' }}>
             my name is
             <h1
               className={cx(styles.ttu, styles.inline, styles.colorChange)}
-              style={{margin: '0 4px'}}>
+              style={{ margin: '0 4px' }}
+            >
               Luke Moderwell
             </h1>
-            and welcome to my small slice of internet where I <a href="/writing/getting-a-job-in-tech-five-lessons">write</a> and keep a <a href="/journal/one-gatsby">build journal</a> of the changes I make on this site.
+            and welcome to my small slice of internet. To get a weekly dose of
+            my takes on software, music, family, and farming consider
+            subscribing to{' '}
+            <OutboundLink rel="noreferrer" href="https://lukemoderwell.substack.com/">
+              my newsletter
+            </OutboundLink>
+            .
           </p>
 
           <h4 className={styles.ttu}>Current</h4>
           <ul className={styles.mt0}>
             <li>
-              Design/Eng/Founder @ <OutboundLink rel="noreferrer" href="https://modcorp.biz">Modcorp</OutboundLink>
-            </li>
-          </ul>
-          <h4 className={styles.ttu}>Past</h4>
-          <ul className={styles.mt0}>
-            <li>
-              Product Design @{' '}
-              <OutboundLink href="https://dotdash.io/" target="_blank">
-                Dot Dash
+              Making Things @{' '}
+              <OutboundLink rel="noreferrer" href="https://modcorp.biz">
+                Modcorp
               </OutboundLink>
-            </li>
-            <li>
-              Frontend @{' '}
-              <OutboundLink href="https://crossroads.net/" target="_blank">
-                Crossroads Church
-              </OutboundLink>
-            </li>
-            <li>
-              Product Design @{' '}
-              <OutboundLink href="https://krushmedia.com/">Krush Technologies</OutboundLink> (now
-              Krush Media)
-            </li>
-            <li>
-              Design @ <OutboundLink href="https://themindbox.co">Mindbox Studios</OutboundLink>
             </li>
           </ul>
           <h4 className={cx(styles.flush, styles.ttu)}>Contact</h4>

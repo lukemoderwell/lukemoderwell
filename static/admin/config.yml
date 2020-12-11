@@ -1,15 +1,15 @@
 backend:
   name: git-gateway
   repo: lukemoderwell/lukemoderwell
-  branch: blog
+  branch: writing
 
 media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: writing
-    label: Writing
-    folder: writing
+  - name: journal
+    label: Journal
+    folder: journal
     create: true
     editor:
       preview: true
@@ -19,15 +19,4 @@ collections:
       - { name: tags, label: Tags, widget: list, add_to_top: true }
       - { name: title, label: Title }
       - { name: description, label: Description }
-      - { name: body, label: Body, widget: markdown }
-  - name: buildJournal
-    label: Build Journal
-    folder: build-journal
-    create: true
-    editor:
-      preview: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
