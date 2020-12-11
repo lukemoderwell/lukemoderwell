@@ -1,0 +1,36 @@
+---
+path: /sparkwagon/punched-on-a-plane
+date: 2013-02-16T20:30:01.978Z
+title: Punched On A Plane
+description: Dad meets a rock star and makes a bold move. Will it pay off?
+---
+
+I was flying back from Oklahoma City on one of those little regional jets — 2 seats on one side and one seat on the other. Seating assignments can be a cruel fate in those tight quarters. So I was a little unsure when I found myself sitting next to a guy:
+
+- Heavily pierced about the head and face
+- A black and white skunk mullet with shaved sides
+- Black bats painted on his fingernails
+- Purple pointy-toed boots that had silver chains and bangles dangling from them
+- His band had the number one rock song on Billboard and the number one rock album for a period of time and had toured with Nickleback
+
+It turns out he was flying back to his hometown, after recording songs for his upcoming solo album with a famous rock band that lives in Ok City. After some awkward first words, we had a great conversation, covering everything from life on the road as a rock star to how to write a song.
+
+I asked him, “So how do you write songs?”
+
+“Well, I never actually sit down and say to myself, I’m going to write a song now. That just doesn’t work for me. It sounds stupid, but I will be talking to someone and they’ll say something like ‘claim to fame’ and I’ll just go write a song called claim to fame. The whole process takes 15-20 minutes,” he explained.
+
+“Do you ever get nervous performing in front of a larger crowd?” I wondered out loud.
+
+“Surprisingly, no. We’ve been playing in front of audiences of 10 to 15,000 and I really never get nervous in those situations. I mean the people are all there having a great time and it’s easy to control them just by being enthusiastic….they love the exaggerated moves,” he confided. “But I do get nervous if I’m playing something for just 4 or 5 people like the record company and my parents or something…that spooks me pretty good.”
+
+“So did you ever consider what you’d be doing right now if you didn’t make it in the music business?” I asked him.
+
+“You know, my parents wanted me to have a back up plan, because they knew it was unlikely that I’d make it. But I never had a back up plan….I just couldn’t think of one,” he shared. And then he got really quiet and whispered, “I really don’t have another option, so I’ve got to make this work.”
+
+We talked about other things like whose music he likes and his favorite cities. He was thoughtful and humble. I tried to dabble into discussions on religion and philosophy, but he wasn’t very open, so I didn’t press him.
+
+When it was time to exit the plane, I told him I’d have to look up his music and I wished him the best of luck. Then I punched him very lightly on his skinny, tattooed arm. He looked at me alarmed, so I explained, ”you just got punched on a plane!”
+
+“I just thought that you may need a new song to write, so why not “punched on a plane,” I explained.
+
+He laughed and he darted ahead to catch his next flight. As he disappeared down the concourse, I saw him reaching into his backpack. Was it for his song notebook and pencil?
