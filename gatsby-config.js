@@ -12,18 +12,14 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "G-B8MQPWFL0R",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        // your google analytics tracking id
+        trackingId: `G-B8MQPWFL0R`,
+        // Puts tracking script in the head instead of the body
         head: false,
-        // Setting this parameter is optional
+        // enable ip anonymization
         anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-        // Defers execution of google analytics script after page load
-        defer: false,
       },
     },
     `gatsby-plugin-sass`,
