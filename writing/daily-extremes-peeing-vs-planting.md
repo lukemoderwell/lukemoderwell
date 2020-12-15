@@ -1,5 +1,5 @@
 ---
-path: /sparkwagon/daily-extemes
+path: /sparkwagon/daily-extremes
 title: "Daily Extremes: Peeing vs Planting"
 date: 2013-02-12T01:45:00.000Z
 description: A strange day
