@@ -34,7 +34,7 @@ export default function Home() {
             >
               Luke Moderwell
             </h1>
-            and welcome to my small slice of internet. To get a weekly dose of
+            and welcome to my small slice of internets. To get a weekly dose of
             my takes on software, music, family, and farming consider
             subscribing to{' '}
             <OutboundLink rel="noreferrer" href="https://lukemoderwell.substack.com/">
@@ -49,6 +49,19 @@ export default function Home() {
               Making Things @{' '}
               <OutboundLink rel="noreferrer" href="https://modcorp.biz">
                 Modcorp
+              </OutboundLink>
+            </li>
+          </ul>
+          <h4 className={cx(styles.flush, styles.ttu)}>Other Places</h4>
+          <ul className={styles.mt0}>
+            <li>
+              <OutboundLink rel="noreferrer" href="https://github.com/lukemoderwell">
+                Github
+              </OutboundLink>
+            </li>
+            <li>
+              <OutboundLink rel="noreferrer" href="https://www.linkedin.com/in/luke-moderwell-548a5022/">
+                LinkedIn
               </OutboundLink>
             </li>
           </ul>
