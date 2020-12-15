@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: lukemoderwell/lukemoderwell
-  branch: writing
+  branch: master
 
 media_folder: static/assets
 public_folder: /assets
