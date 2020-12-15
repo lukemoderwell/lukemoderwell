@@ -7,16 +7,17 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: journal
-    label: Journal
-    folder: journal
+  - name: writing
+    label: Writing
+    folder: writing
     create: true
     editor:
       preview: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: tags, label: Tags, widget: list, add_to_top: true }
       - { name: title, label: Title }
+      - { name: date, label: Date, widget: datetime }
       - { name: description, label: Description }
+      - { name: tags, label: Tags, widget: list, add_to_top: true }
+      - { name: sparkwagong, label: Is Sparkwagon?, widget: boolean, default: false }
       - { name: body, label: Body, widget: markdown }
