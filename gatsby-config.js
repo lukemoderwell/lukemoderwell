@@ -50,5 +50,17 @@ module.exports = {
         plugins: [`gatsby-plugin-netlify-cms-paths`],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Luke Moderwell',
+        short_name: 'lukemoderwell.com',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#da532c',
+        display: 'minimal-ui',
+        icon: 'static/favicon-32x32.png'
+      }
+    }
   ],
 };

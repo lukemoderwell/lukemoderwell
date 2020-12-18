@@ -25,8 +25,8 @@ export default function Home() {
         className={cx(styles.gridCol2, styles.dFlex, styles.alignItemsCenter)}
       >
         <div className={styles.mainContent}>
-          <h2 className={cx(styles.flush)}>🏄‍♂️ Surfs up,</h2>
-          <p style={{ display: 'inline' }}>
+          <h2 className={cx(styles.flush)}><span role="img" aria-label="An emoji of a man surfing">🏄‍♂️</span> Surfs up,</h2>
+          <p style={{ display: 'inline-block', marginBottom: '1rem'}}>
             my name is
             <h1
               className={cx(styles.ttu, styles.inline, styles.colorChange)}
@@ -42,6 +42,7 @@ export default function Home() {
             </OutboundLink>
             .
           </p>
+          <iframe src="https://lukemoderwell.substack.com/embed" height="120" style={{margin: '-12px'}} frameborder="0" scrolling="no"></iframe>
 
           <h4 className={styles.ttu}>Current</h4>
           <ul className={styles.mt0}>
