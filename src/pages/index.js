@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import cx from 'classnames';
 import moment from 'moment-timezone';
 import styles from './Home.module.scss';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 export default function Home() {
   useEffect(() => {
