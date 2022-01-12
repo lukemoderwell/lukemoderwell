@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import cx from 'classnames';
 import moment from 'moment-timezone';
-import styles from './Home.module.scss';
-import { OutboundLink } from "gatsby-plugin-google-gtag";
+import styles from '../src/styles/Home.module.css';
+import Link from "next/link"
 
 export default function Home() {
   useEffect(() => {
@@ -37,9 +37,9 @@ export default function Home() {
             and welcome to my small slice of internets. To get a weekly dose of
             my takes on software, music, family, and farming consider
             subscribing to{' '}
-            <OutboundLink rel="noreferrer" href="https://lukemoderwell.substack.com/">
+            <Link rel="noreferrer" href="https://lukemoderwell.substack.com/">
               my newsletter
-            </OutboundLink>
+            </Link>
             .
           </p>
           <iframe src="https://lukemoderwell.substack.com/embed" height="120" style={{margin: '-12px'}} frameborder="0" scrolling="no"></iframe>
@@ -48,22 +48,22 @@ export default function Home() {
           <ul className={styles.mt0}>
             <li>
               Making Things @{' '}
-              <OutboundLink rel="noreferrer" href="https://modcorp.biz">
+              <Link rel="noreferrer" href="https://modcorp.biz">
                 Modcorp
-              </OutboundLink>
+              </Link>
             </li>
           </ul>
           <h4 className={cx(styles.flush, styles.ttu)}>Other Places</h4>
           <ul className={styles.mt0}>
             <li>
-              <OutboundLink rel="noreferrer" href="https://github.com/lukemoderwell">
+              <Link rel="noreferrer" href="https://github.com/lukemoderwell">
                 Github
-              </OutboundLink>
+              </Link>
             </li>
             <li>
-              <OutboundLink rel="noreferrer" href="https://www.linkedin.com/in/luke-moderwell-548a5022/">
+              <Link rel="noreferrer" href="https://www.linkedin.com/in/luke-moderwell-548a5022/">
                 LinkedIn
-              </OutboundLink>
+              </Link>
             </li>
           </ul>
           <h4 className={cx(styles.flush, styles.ttu)}>Contact</h4>
