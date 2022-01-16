@@ -2,8 +2,11 @@
 2022. This is the year.
 
 - [ ] switch from Gatsby to Next
-- [ ] Netlify => Vercel
-- [ ] Sanity.io integration
+- [ ] Substack Blog?
+- [ ] Book Playlist
+- [ ] Rebrand
+- [ ] Personal APIs
+- [ ] Analytics
 
 ## Getting Started
 First, run the development server:

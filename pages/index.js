@@ -1,37 +1,52 @@
-import React, { useEffect } from "react"
-import cx from "classnames"
-import moment from "moment-timezone"
-import styles from "../src/styles/Home.module.css"
-import Link from "next/link"
+import React, { useState } from 'react'
+import Link from 'next/link'
+import Layout from '../src/components/Layout'
+import { useEffect } from 'react/cjs/react.development'
 
 export default function Home() {
+  const [timeSlept, setTimeSlept] = useState('X')
   useEffect(() => {
-    const clock = document.getElementById("clock")
-    function updateClock() {
-      const now = moment.tz("America/New_York").format("H:mm:ss")
-      clock.innerText = now
+    const getSleepData = () => {
+      fetch('/api/sleep', {})
+        .then((response) => response.json())
+        .then((data) => {
+          const result = data.sleep
+          const totalDuration = result[result.length - 1].total
+          const sleepHours = totalDuration / 60 / 60
+          setTimeSlept(sleepHours)
+        })
     }
-    setInterval(updateClock, 1000)
+    getSleepData()
   }, [])
-  
   return (
-    <main className={styles.main}>
-        <div className={styles.mainContent}>
-          <h2 className={cx(styles.flush)}>
-            <span role="img" aria-label="An emoji of a man surfing">
-              🏄‍♂️
-            </span>
-          </h2>
-          <h4 className={cx(styles.flush, styles.ttu)}>Contact</h4>
-          <p className={styles.flush}>
-            <Link href="mailto:luke.moderwell@gmail.com">
-              luke.moderwell@gmail.com
-            </Link>
-          </p>
-          <p className={styles.flush}>
-            Cincinnati, OH <span id="clock">12:00:00</span>
-          </p>
-        </div>
-    </main>
+    <Layout>
+      <main>
+        <h1>
+          <span role="img" aria-label="An emoji of a man surfing">
+            🏄‍♂️
+          </span>
+        </h1>
+        <h2>Hello there, fren.</h2>
+        <h3>
+          Welcome to my little piece o&apos; web. Why don&apos;t you make
+          yourself at home?
+        </h3>
+
+        <p> Not to brag but last night I slept for {timeSlept} hours.</p>
+        <h4>Contact</h4>
+        <p>
+          <Link href="mailto:luke.moderwell@gmail.com">
+            luke.moderwell@gmail.com
+          </Link>
+        </p>
+      </main>
+    </Layout>
   )
 }
+
+// Nextjs way to get props at build time
+// export async function getStaticProps(context) {
+//   return {
+//     props: {}, // will be passed to the page component as props
+//   }
+// }
