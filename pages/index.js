@@ -13,7 +13,7 @@ export default function Home() {
           const result = data.sleep
           const totalDuration = result[result.length - 1].total
           const sleepHours = totalDuration / 60 / 60
-          setTimeSlept(sleepHours)
+          setTimeSlept(sleepHours.toFixed(2))
         })
     }
     getSleepData()

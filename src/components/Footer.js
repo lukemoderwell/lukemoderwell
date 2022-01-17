@@ -9,7 +9,9 @@ export default function Footer() {
       const now = moment.tz('America/New_York').format('H:mm:ss')
       setTime(now)
     }
-    setInterval(updateClock, 1000)
+
+    const timer = setInterval(() => updateClock(), 1000)
+    return () => clearInterval(timer)
   }, [])
 
   return (
@@ -22,7 +24,9 @@ export default function Footer() {
           <Link href="mailto:lukemoderwell@gmail.com">electronic mail</Link> to
           say hi.
           <p>
-            <small><em>Cincinnati, OH {time}</em></small>
+            <small>
+              <em>Cincinnati, OH {time}</em>
+            </small>
           </p>
         </div>
       </footer>

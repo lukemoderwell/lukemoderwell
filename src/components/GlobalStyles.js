@@ -90,8 +90,8 @@ const GlobalStyles = () => (
           font-variant-alternates: stylistic(ss02);
         }
 
-        h1, h2, h3, h4, h5, p {
-          margin-bottom: 1rem;
+        p {
+          margin-bottom: 1em;
         }
 
         img {

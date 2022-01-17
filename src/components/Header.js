@@ -2,10 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 
 const links = [
-//   {
-//     to: '/api/sleep',
-//     label: 'Sleep Data',
-//   },
+  {
+    to: '/readlist',
+    label: 'Readlist',
+  },
   //   {
   //     to: '/portfolio',
   //     label: 'Portfolio',
