@@ -3,8 +3,12 @@ import Link from 'next/link'
 
 const links = [
   {
+    to: '/writing',
+    label: 'Writing',
+  },
+  {
     to: '/readlist',
-    label: 'Readlist',
+    label: 'Reads',
   },
   //   {
   //     to: '/portfolio',

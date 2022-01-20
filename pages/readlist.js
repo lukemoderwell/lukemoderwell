@@ -6,7 +6,7 @@ const AIRTABLE_URL = 'https://api.airtable.com/v0/appx3tocSCx5kliMc/Library'
 
 export default function Readlist({ entries }) {
   return (
-    <Layout>
+    <Layout frontMatter={{ title: "Reads" }}>
       <h3>2022</h3>
       {entries.map((entry, index) => (
         <Media
@@ -38,7 +38,6 @@ export const getStaticProps = async () => {
     .then((d) =>
       d.map((record) => {
         const { fields } = record
-        console.log(fields)
         return fields
       })
     )

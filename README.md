@@ -1,12 +1,13 @@
 ## New Year, New You
 2022. This is the year.
 
-- [ ] switch from Gatsby to Next
+- [x] switch from Gatsby to Next
 - [ ] Substack Blog?
 - [ ] Book Playlist
+- [ ] Design Portfolio (Figma examples)
 - [ ] Rebrand
 - [ ] Personal APIs
-- [ ] Analytics
+- [ ] Analytics (move to Fathom)
 
 ## Getting Started
 First, run the development server:
