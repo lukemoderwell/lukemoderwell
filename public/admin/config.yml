@@ -1,6 +1,6 @@
 backend:
-  # name: github
-  name: test-repo
+  name: github
+  # name: test-repo
   repo: lukemoderwell/lukemoderwell
   branch: main
 media_folder: public/img
