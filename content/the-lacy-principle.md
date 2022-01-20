@@ -1,5 +1,4 @@
 ---
-path: /writing/the-lacy-principle
 title: The Lacy Principle
 date: 2020-12-07T14:09:39.617Z
 description: What I learned about creativity from a teenage music producer from Compton.

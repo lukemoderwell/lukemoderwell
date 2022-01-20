@@ -1,5 +1,4 @@
 ---
-path: /sparkwagon/punched-on-a-plane
 date: 2013-02-16T20:30:01.978Z
 title: Punched On A Plane
 description: A chance encounter with a rock star.

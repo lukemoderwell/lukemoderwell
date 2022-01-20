@@ -1,5 +1,4 @@
 ---
-path: /writing/git-rename-branch
 date: 2020-11-24T02:00:34.415Z
 tags:
   - git

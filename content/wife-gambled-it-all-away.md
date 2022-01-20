@@ -1,5 +1,4 @@
 ---
-path: /sparkwagon/my-wife-gambled-away-everything
 date: 2013-01-23T20:30:01.978Z
 title: My Wife Gambled Away $2.0MM and I’m Happy
 description: A man reflects on his rich life.
