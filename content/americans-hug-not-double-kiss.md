@@ -1,6 +1,6 @@
 ---
 title: American Hug, Not Double Kiss
-date: 2013-03-02 20:30
+date: 2013-03-02T20:30:20.591Z
 description: A tale of two lives.
 sparkwagon: true
 draft: true
