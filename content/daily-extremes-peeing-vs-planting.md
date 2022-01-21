@@ -3,6 +3,9 @@ title: "Daily Extremes: Peeing vs Planting"
 date: 2013-02-12T01:45:00.000Z
 description: A strange day
 sparkwagong: true
+hidden: true
+categories:
+  - sparkwagon
 ---
 **From Chaplain** **Reflections** 
 
