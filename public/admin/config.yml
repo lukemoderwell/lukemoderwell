@@ -32,11 +32,12 @@ collections: # A list of collections the CMS should be able to edit
           default: ["life"],
         }
       - {
-          label: "Publish Date",
+          label: "Date",
           name: "date",
           widget: "datetime",
           date_format: "YYYY-MM-DD",
           format: "YYYY-MM-DD",
+          timeFormat: false
         }
       - label: "Cover Image"
         name: "image"
