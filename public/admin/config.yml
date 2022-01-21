@@ -3,49 +3,51 @@ backend:
   # name: test-repo
   repo: lukemoderwell/lukemoderwell
   branch: main
-media_folder: public/img
-public_folder: img
+media_folder: "public/img/uploads"
+public_folder: "img/uploads"
 collections: # A list of collections the CMS should be able to edit
-  - name: 'content' # Used in routes, ie.: /admin/collections/:slug/edit
-    label: 'Posts' # Used in the UI
-    label_singular: 'Post' # Used in the UI, ie: "New Post"
+  - name: "content" # Used in routes, ie.: /admin/collections/:slug/edit
+    extension: "mdx"
+    format: "frontmatter"
+    label: "Posts" # Used in the UI
+    label_singular: "Post" # Used in the UI, ie: "New Post"
     description: >
       The description is a great place for tone setting, high level information,
       and editing guidelines that are specific to a collection.
-    folder: 'content'
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+    folder: "content"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Hidden', name: 'hidden', widget: 'boolean', default: true }
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: true }
       - {
-          label: 'Categories',
-          name: 'categories',
-          widget: 'list',
+          label: "Categories",
+          name: "categories",
+          widget: "list",
           collapsed: false,
           allow_add: true,
           max: 3,
           min: 1,
-          default: ['life'],
+          default: ["life"],
         }
       - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'datetime',
-          date_format: 'YYYY-MM-DD',
-          time_format: 'HH:mm',
-          format: 'YYYY-MM-DD HH:mm',
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: "HH:mm",
+          format: "YYYY-MM-DD HH:mm",
         }
-      - label: 'Cover Image'
-        name: 'image'
-        widget: 'image'
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
         required: false
-        tagname: ''
+        tagname: ""
 
       - {
-          label: 'Body',
-          name: 'body',
-          widget: 'markdown',
-          hint: 'Main content goes here.',
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          hint: "Main content goes here.",
         }

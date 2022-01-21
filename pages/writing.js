@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../src/components/Layout'
-import postData from '../src/util/posts'
+import postsMap from '../src/util/posts'
 
 export default function Writing({ posts }) {
   return (
@@ -14,7 +14,8 @@ export default function Writing({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = Array.from(postData.values())
+  console.log(postsMap)
+  const posts = Array.from(postsMap.values())
     .map((post) => post.frontMatter)
     .sort((a, b) => {
       return Number(new Date(b.date || '')) - Number(new Date(a.date || ''))
