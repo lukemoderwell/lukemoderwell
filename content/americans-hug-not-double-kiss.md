@@ -4,6 +4,9 @@ date: 2013-03-02T20:30:20.591Z
 description: A tale of two lives.
 sparkwagon: true
 draft: false
+hidden: true
+categories:
+  - sparkwagon
 ---
 
 I was over at the local Sports Complex at 11PM last night. My sons had a game. While I was there I saw some of my old Russian friends, Uri and Igor, two men I played soccer with for 20 years on a Greek club team that disbanded 2 years ago. Ironically, in the last 5 years of our team’s existence, there were no Greek players on our team. Instead, the team was made up first generation Russians, Mexicans, Hondurans and me.
