@@ -6,8 +6,8 @@ import path from 'path'
 const POSTS_PATH = path.join(process.cwd(), 'content')
 console.log(POSTS_PATH)
 const paths = read(POSTS_PATH)
-
 const postsMap = paths
+  .filter((it) => it.endsWith('.mdx'))
   .map((filePath) => {
     const fullPath = path.join(POSTS_PATH, filePath)
     const source = fs.readFileSync(fullPath)
@@ -40,7 +40,6 @@ export function postsForCategory(category) {
 }
 
 export const allCategories = Array.from(postsMap.values())
-
   .reduce((categories, post) => {
     return post.frontMatter?.categories
       ? [...categories, ...post.frontMatter.categories]

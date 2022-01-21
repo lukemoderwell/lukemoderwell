@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "file-loader": "^6.2.0",
     "fs-readdir-recursive": "^1.1.0",
     "gray-matter": "^4.0.3",
     "moment-timezone": "^0.5.34",
