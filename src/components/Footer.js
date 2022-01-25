@@ -18,11 +18,8 @@ export default function Footer() {
     <>
       <footer>
         <div className="wrapper small">
-          This site was written, designed, and built by Luke Moderwell. Find my
-          code <Link href="https://github.com/lukemoderwell">here</Link>, or
-          send me a{' '}
-          <Link href="mailto:lukemoderwell@gmail.com">electronic mail</Link> to
-          say hi.
+          Feel free to send an{' '}
+          <Link href="mailto:lukemoderwell@gmail.com">electronic mail</Link>
           <p>
             <small>
               <em>Cincinnati, OH {time}</em>

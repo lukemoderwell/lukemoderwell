@@ -1,23 +1,7 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
+import React from 'react'
 import Layout from '../src/components/Layout'
-import { useEffect } from 'react/cjs/react.development'
 
-export default function Home() {
-  const [timeSlept, setTimeSlept] = useState('X')
-  useEffect(() => {
-    const getSleepData = () => {
-      fetch('/api/sleep', {})
-        .then((response) => response.json())
-        .then((data) => {
-          const result = data.sleep
-          const totalDuration = result[result.length - 1].total
-          const sleepHours = totalDuration / 60 / 60
-          setTimeSlept(sleepHours.toFixed(2))
-        })
-    }
-    getSleepData()
-  }, [])
+export default function Home({ timeSlept }) {
   return (
     <Layout>
       <main>
@@ -33,20 +17,23 @@ export default function Home() {
         </h3>
 
         <p> Not to brag but last night I slept for {timeSlept} hours.</p>
-        <h4>Contact</h4>
-        <p>
-          <Link href="mailto:luke.moderwell@gmail.com">
-            luke.moderwell@gmail.com
-          </Link>
-        </p>
       </main>
     </Layout>
   )
 }
 
-// Nextjs way to get props at build time
-// export async function getStaticProps(context) {
-//   return {
-//     props: {}, // will be passed to the page component as props
-//   }
-// }
+export const getStaticProps = async () => {
+  const OURA_SLEEP_URL = `https://api.ouraring.com/v1/sleep?access_token=${process.env.OURA_TOKEN}`
+  const timeSlept = await fetch(OURA_SLEEP_URL, {})
+    .then((response) => response.json())
+    .then((data) => {
+      const result = data.sleep
+      const totalDuration = result[result.length - 1].total
+      const sleepHours = totalDuration / 60 / 60
+      return sleepHours.toFixed(2)
+    })
+
+  return {
+    props: { timeSlept }, // will be passed to the page component as props
+  }
+}

@@ -47,12 +47,12 @@ const GlobalStyles = () => (
           --grid-spec: minmax(0, 1fr) minmax(auto, var(--container-width))
             minmax(0, 1fr);
           --center-column: 2 / 3;
-          --font-mono: 'JetBrains Mono', monospace;
-          --font-sans: 'Soehne', system-ui, -apple-system, sans-serif;
-          --font-sans-extended: 'Soehne Breit', var(--font-sans);
-          --font-serif: 'Tiempos Text', Georgia, serif;
-          --font-body: var(--font-serif);
-          --font-heading: var(--font-serif);
+          --font-mono: 'Inconsolata', monospace;
+          --font-sans: system-ui, -apple-system, sans-serif;
+          --font-sans-extended: var(--font-sans);
+          --font-serif: Georgia, serif;
+          --font-body: var(--font-sans);
+          --font-heading: var(--font-sans);
           --font-caption: var(--font-sans);
         }
 
