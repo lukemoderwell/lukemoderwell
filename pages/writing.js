@@ -7,9 +7,10 @@ export default function Writing({ posts }) {
   return (
     <Layout frontMatter={{ title: 'Selected Writing' }}>
       {posts.map((post, index) => (
-        <PlainLink href={`writing/${post.slug}`} key={index}>{post.title}</PlainLink>
+        <PlainLink href={`writing/${post.slug}`} key={index}>
+          {post.title}
+        </PlainLink>
       ))}
-      Here is where the content will go.
     </Layout>
   )
 }

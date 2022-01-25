@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import PlainLink from './PlainLink'
 import ThemeSwitcher from './ThemeSwitcher'
 
 const links = [
@@ -11,29 +11,22 @@ const links = [
     to: '/readlist',
     label: 'Reads',
   },
-  //   {
-  //     to: '/portfolio',
-  //     label: 'Portfolio',
-  //   },
-  //   {
-  //     to: '/playlist',
-  //     label: 'Playlist',
-  //   },
 ]
 
 const Header = ({ siteTitle }) => {
   return (
     <>
       <header>
-        <Link href="/">{siteTitle}</Link>
+        <PlainLink href="/">{siteTitle}</PlainLink>
 
         <nav>
           {links.map(({ to, label }) => (
-            <Link key={to} href={to}>
+            <PlainLink key={to} href={to}>
               {label}
-            </Link>
+            </PlainLink>
           ))}
         </nav>
+
         <ThemeSwitcher />
       </header>
       <style jsx>{`
@@ -44,10 +37,12 @@ const Header = ({ siteTitle }) => {
           flex-wrap: wrap;
           margin-bottom: var(--sp-s);
         }
-        nav :global(ul) {
+
+        nav {
           display: flex;
           gap: var(--sp-s);
         }
+
         @media (max-width: 64em) {
           header > :global(*) {
             grid-column: var(--center-column);
