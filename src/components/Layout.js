@@ -1,7 +1,7 @@
 import Footer from './Footer'
 import GlobalStyles from './GlobalStyles'
 import Header from './Header'
-import Metatags from './Metatags'
+// import Metatags from './Metatags'
 import Wrapper from './Wrapper'
 import siteConfig from '../data/siteconfig.json'
 
@@ -10,12 +10,12 @@ const Content = ({ frontMatter, children }) => {
   const title = frontMatter?.title || site.title
   const isRoot = title === site.title
   const date = frontMatter?.date
-  const excerpt = frontMatter?.excerpt
+  const excerpt = frontMatter?.excerpt || site.description
   // const ogSlug = frontMatter?.ogSlug
 
   return (
     <>
-      <Metatags
+      {/* <Metatags
         description={excerpt || site.description}
         // thumbnail={
         //   ogSlug
@@ -23,7 +23,7 @@ const Content = ({ frontMatter, children }) => {
         //     : `https://${process.env.VERCEL_URL}/images/og.png`
         // }
         title={title}
-      />
+      /> */}
       <Header siteTitle={site.title} />
       <Wrapper>
         {!isRoot && (
