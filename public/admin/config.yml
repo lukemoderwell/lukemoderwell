@@ -1,0 +1,52 @@
+backend:
+  name: github
+  # name: test-repo
+  repo: lukemoderwell/lukemoderwell
+  branch: main
+media_folder: "public/img/uploads"
+public_folder: "img/uploads"
+collections: # A list of collections the CMS should be able to edit
+  - name: "content" # Used in routes, ie.: /admin/collections/:slug/edit
+    extension: "mdx"
+    format: "frontmatter"
+    label: "Posts" # Used in the UI
+    label_singular: "Post" # Used in the UI, ie: "New Post"
+    description: >
+      The description is a great place for tone setting, high level information,
+      and editing guidelines that are specific to a collection.
+    folder: "content"
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: true }
+      - {
+          label: "Categories",
+          name: "categories",
+          widget: "list",
+          collapsed: false,
+          allow_add: true,
+          max: 3,
+          min: 1,
+          default: ["life"],
+        }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          format: "YYYY-MM-DD",
+          timeFormat: false
+        }
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
+        tagname: ""
+
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+        }

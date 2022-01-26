@@ -19,7 +19,7 @@ export default function Template({ data }) {
           {frontmatter.tags !== undefined && (
             <ul>
               {frontmatter.tags.map((tag) => (
-                <li>{tag}</li>
+                <li key={tag}>{tag}</li>
               ))}
             </ul>
           )}
