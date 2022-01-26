@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import moment from 'moment-timezone'
 import Link from 'next/link'
+import siteConfig from '../data/siteconfig.json'
 
 export default function Footer() {
   const [time, setTime] = useState('12:00:00')
   const [sleep, setSleep] = useState('?')
-  const url = `https://api.ouraring.com/v1/sleep?access_token=${process.env.OURA_TOKEN}`
+  const url =
+    process.env.NODE_ENV === 'production'
+      ? siteConfig.siteUrl
+      : 'http://localhost:3000'
   const getSleep = async () => {
-    await fetch(url, {})
+    await fetch(`${url}/api/sleep`, {})
       .then((response) => response.json())
       .then((data) => {
         const result = data.sleep

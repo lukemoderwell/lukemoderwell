@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import React from 'react'
 import site from '../data/siteconfig.json'
 
 function Metatags({ title, description, url, pathname, thumbnail }) {
@@ -36,7 +35,6 @@ function Metatags({ title, description, url, pathname, thumbnail }) {
       {/* Favicon */}
       <link href="/favicon.ico" rel="icon" type="image/svg+xml" />
       <link color="#888" href="/images/favicon.svg" rel="mask-icon"></link>
-
     </Head>
   )
 }
