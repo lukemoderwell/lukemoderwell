@@ -11,17 +11,17 @@ const Content = ({ frontMatter, children }) => {
   const isRoot = title === site.title
   const date = frontMatter?.date
   const excerpt = frontMatter?.excerpt
-  const ogSlug = frontMatter?.ogSlug
+  // const ogSlug = frontMatter?.ogSlug
 
   return (
     <>
       <Metatags
         description={excerpt || site.description}
-        thumbnail={
-          ogSlug
-            ? `https://${process.env.VERCEL_URL}/og/${ogSlug}`
-            : `https://${process.env.VERCEL_URL}/images/og.png`
-        }
+        // thumbnail={
+        //   ogSlug
+        //     ? `https://${process.env.VERCEL_URL}/og/${ogSlug}`
+        //     : `https://${process.env.VERCEL_URL}/images/og.png`
+        // }
         title={title}
       />
       <Header siteTitle={site.title} />

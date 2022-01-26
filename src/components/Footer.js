@@ -1,26 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import moment from 'moment-timezone'
 import Link from 'next/link'
-import siteConfig from '../data/siteconfig.json'
 
 export default function Footer() {
   const [time, setTime] = useState('12:00:00')
-  const [sleep, setSleep] = useState('?')
-  const url =
-    process.env.NODE_ENV === 'production'
-      ? siteConfig.siteUrl
-      : 'http://localhost:3000'
-  const getSleep = async () => {
-    await fetch(`${url}/api/sleep`, {})
-      .then((response) => response.json())
-      .then((data) => {
-        const result = data.sleep
-        const totalDuration = result[result.length - 1].total
-        const sleepHours = totalDuration / 60 / 60
-        setSleep(sleepHours.toFixed(2))
-      })
-  }
-  getSleep()
   useEffect(() => {
     function updateClock() {
       const now = moment.tz('America/New_York').format('H:mm:ss')
@@ -39,10 +22,7 @@ export default function Footer() {
             <Link href="mailto:lukemoderwell@gmail.com">Get connected</Link>.
           </p>
           <p>
-            <small>
-              Not to brag but I slept {sleep} hours last night. Cincinnati, OH{' '}
-              {time}
-            </small>
+            <small>Cincinnati, OH {time}</small>
           </p>
         </div>
       </footer>
