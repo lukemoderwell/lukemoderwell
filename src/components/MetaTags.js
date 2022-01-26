@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import site from '../data/siteconfig.json'
 
-function Metatags({ title, description, url, pathname, thumbnail }) {
+function Metatags({ title, description }) {
   const pageTitle = title === site.title ? title : `${title} | ${site.title}`
 
   return (
@@ -16,16 +16,6 @@ function Metatags({ title, description, url, pathname, thumbnail }) {
       <meta content={description} name="twitter:description" />
       <meta content={description} property="og:description" />
 
-      {/* {pathname && <meta content={url + pathname} property="og:url" />} */}
-
-      {/* Thumbnail */}
-      {/* {thumbnail && (
-        <>
-          <meta content={thumbnail} property="og:image" />
-          <meta content={thumbnail} property=" og:image:secure_url" />
-          <meta content={thumbnail} name="twitter:image" />
-        </>
-      )} */}
       <meta content="1200" property="og:image:width" />
       <meta content="630" property="og:image:height" />
       <meta content="summary_large_image" name="twitter:card" />
