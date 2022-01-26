@@ -46,6 +46,7 @@ export default function Home() {
               My family currently raises chickens for eggs and meat. We also
               raise rabbits for cuteness.
             </li>
+            <li>This site is a work in progress.</li>
           </ul>
         </main>
       </Layout>
