@@ -21,6 +21,17 @@ export default function PostPage({ source, frontMatter }) {
   )
 }
 
+export const getStaticPaths = async () => {
+  const paths = postData.map((post) => ({
+    params: { slug: post.frontMatter?.slug.split('/') },
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
 export const getStaticProps = async ({ params }) => {
   if (!params) {
     console.error('No parameters passed for static generation')
@@ -36,16 +47,5 @@ export const getStaticProps = async ({ params }) => {
       source: mdxSource,
       frontMatter,
     },
-  }
-}
-
-export const getStaticPaths = async () => {
-  const paths = postData.map((post) => ({
-    params: { slug: post.frontMatter?.slug.split('/') },
-  }))
-
-  return {
-    paths,
-    fallback: false,
   }
 }

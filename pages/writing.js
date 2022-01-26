@@ -3,14 +3,16 @@ import Layout from '../src/components/Layout'
 import PlainLink from '../src/components/PlainLink'
 import postsMap from '../src/util/posts'
 
-export default function Writing({ posts }) {
+export default function Writing({ posts = null }) {
   return (
     <Layout frontMatter={{ title: 'Selected Writing' }}>
-      {posts.map((post, index) => (
-        <PlainLink href={`writing/${post.slug}`} key={index}>
-          {post.title}
-        </PlainLink>
-      ))}
+      {posts.length > 0
+        ? posts.map((post, index) => (
+            <PlainLink href={`writing/${post.slug}`} key={index}>
+              {post.title}
+            </PlainLink>
+          ))
+        : 'Hmmm. Something went wrong here.'}
     </Layout>
   )
 }

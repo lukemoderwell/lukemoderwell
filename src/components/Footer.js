@@ -5,8 +5,9 @@ import Link from 'next/link'
 export default function Footer() {
   const [time, setTime] = useState('12:00:00')
   const [sleep, setSleep] = useState('?')
+  const url = `https://api.ouraring.com/v1/sleep?access_token=${process.env.OURA_TOKEN}`
   const getSleep = async () => {
-    await fetch('/api/sleep', {})
+    await fetch(url, {})
       .then((response) => response.json())
       .then((data) => {
         const result = data.sleep
@@ -35,7 +36,8 @@ export default function Footer() {
           </p>
           <p>
             <small>
-              Not to brag but I slept {sleep} hours last night. Cincinnati, OH {time}
+              Not to brag but I slept {sleep} hours last night. Cincinnati, OH{' '}
+              {time}
             </small>
           </p>
         </div>

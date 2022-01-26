@@ -1,5 +1,5 @@
 import Layout from '../src/components/Layout'
-import Link from 'next/link'
+import PlainLink from '../src/components/PlainLink'
 
 export default function FourOhFourPage() {
   return (
@@ -16,7 +16,7 @@ export default function FourOhFourPage() {
 
         <p>
           The page you tried to access cannot be found. Maybe try going{' '}
-          <Link href="/">home</Link>.
+          <PlainLink href="/">home</PlainLink>.
         </p>
       </>
     </Layout>

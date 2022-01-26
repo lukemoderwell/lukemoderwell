@@ -5,30 +5,34 @@ import widont from '../src/util/widont'
 
 const AIRTABLE_URL = 'https://api.airtable.com/v0/appx3tocSCx5kliMc/Library'
 
-export default function Readlist({ entries }) {
+export default function Readlist({ entries = null }) {
   return (
     <Layout
-      frontMatter={{ title: 'Book List', excerpt: "A list of books I've read." }}
+      frontMatter={{
+        title: 'Book List',
+        excerpt: "A list of books I've read.",
+      }}
     >
       <p>
         {widont(
           "A rough list of books I've read, am curretly reading, or hope to read someday."
         )}
       </p>
-      {entries.map((entry, index) => (
-        <Media
-          key={index}
-          title={entry.title}
-          author={entry.author}
-          url={entry.url}
-          cover={{
-            src: entry.thumbnail[0].thumbnails.large.url,
-            height: entry.thumbnail[0].thumbnails.large.height,
-            width: entry.thumbnail[0].thumbnails.large.width,
-          }}
-          // notes={entry.notes}
-        />
-      ))}
+      {entries.length > 0 &&
+        entries.map((entry, index) => (
+          <Media
+            key={index}
+            title={entry.title}
+            author={entry.author}
+            url={entry.url}
+            cover={{
+              src: entry.thumbnail[0].thumbnails.large.url,
+              height: entry.thumbnail[0].thumbnails.large.height,
+              width: entry.thumbnail[0].thumbnails.large.width,
+            }}
+            // notes={entry.notes}
+          />
+        ))}
     </Layout>
   )
 }
