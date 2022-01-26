@@ -17,7 +17,7 @@ export default function Home() {
             {widont("Hi, I'm Luke. Welcome to my little slice of the web.")}
           </h2>
 
-          <p>Here are a few links to check out while you wait:</p>
+          <p>Here are a few things to look at while you wait:</p>
           <ul>
             <li>
               Currently building design &amp; brand tools at{' '}
