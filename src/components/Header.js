@@ -1,12 +1,11 @@
 import React from 'react'
 import PlainLink from './PlainLink'
-import ThemeSwitcher from './ThemeSwitcher'
 
 const links = [
-  {
-    to: '/writing',
-    label: 'Writing',
-  },
+  // {
+  //   to: '/writing',
+  //   label: 'Writing',
+  // },
   {
     to: '/readlist',
     label: 'Reads',
@@ -27,7 +26,7 @@ const Header = ({ siteTitle }) => {
           ))}
         </nav>
 
-        <ThemeSwitcher />
+        {/* <ThemeSwitcher /> */}
       </header>
       <style jsx>{`
         header {

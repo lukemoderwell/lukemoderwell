@@ -1,13 +1,20 @@
 import React from 'react'
 import Layout from '../src/components/Layout'
 import Media from '../src/components/Media'
+import widont from '../src/util/widont'
 
 const AIRTABLE_URL = 'https://api.airtable.com/v0/appx3tocSCx5kliMc/Library'
 
 export default function Readlist({ entries }) {
   return (
-    <Layout frontMatter={{ title: "Reads" }}>
-      <h3>2022</h3>
+    <Layout
+      frontMatter={{ title: 'Book List', excerpt: "A list of books I've read." }}
+    >
+      <p>
+        {widont(
+          "A rough list of books I've read, am curretly reading, or hope to read someday."
+        )}
+      </p>
       {entries.map((entry, index) => (
         <Media
           key={index}
@@ -19,7 +26,7 @@ export default function Readlist({ entries }) {
             height: entry.thumbnail[0].thumbnails.large.height,
             width: entry.thumbnail[0].thumbnails.large.width,
           }}
-          notes={entry.notes}
+          // notes={entry.notes}
         />
       ))}
     </Layout>
@@ -42,7 +49,7 @@ export const getStaticProps = async () => {
       })
     )
 
-  const entries = rawEntries.sort((a, b) => a.title.localeCompare(b.title))
+  const entries = rawEntries.sort((a, b) => new Date(b.date) - new Date(a.date))
   return {
     props: {
       entries,

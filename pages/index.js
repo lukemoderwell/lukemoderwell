@@ -1,39 +1,64 @@
 import React from 'react'
 import Layout from '../src/components/Layout'
+import PlainLink from '../src/components/PlainLink'
+import widont from '../src/util/widont'
 
-export default function Home({ timeSlept }) {
+export default function Home() {
   return (
-    <Layout>
-      <main>
-        <h1>
-          <span role="img" aria-label="An emoji of a man surfing">
-            🏄‍♂️
-          </span>
-        </h1>
-        <h2>Hello there, fren.</h2>
-        <h3>
-          Welcome to my little piece o&apos; web. Why don&apos;t you make
-          yourself at home?
-        </h3>
+    <>
+      <Layout>
+        <main>
+          <h1>
+            <span role="img" aria-label="An emoji of a man surfing">
+              🏄‍♂️
+            </span>
+          </h1>
+          <h2>
+            {widont("Hi, I'm Luke. Welcome to my little slice of the web.")}
+          </h2>
 
-        <p> Not to brag but last night I slept for {timeSlept} hours.</p>
-      </main>
-    </Layout>
+          <p>Here are a few links to check out while you wait:</p>
+          <ul>
+            <li>
+              Currently building design &amp; brand tools at{' '}
+              <PlainLink
+                href="https://mailchimp.com/create-content/"
+                isExternal
+              >
+                Mailchimp
+              </PlainLink>
+            </li>
+            <li>
+              I like music and play in{' '}
+              <PlainLink href="https://annaandthedeeperwell.com" isExternal>
+                a band
+              </PlainLink>{' '}
+              with my wife.{' '}
+              <PlainLink
+                href="https://en.wikipedia.org/wiki/Fender_Jazz_Bass"
+                isExternal
+              >
+                This
+              </PlainLink>{' '}
+              is my bass of choice.
+            </li>
+            <li>
+              My family currently raises chickens for eggs and meat. We also
+              raise rabbits for cuteness.
+            </li>
+          </ul>
+        </main>
+      </Layout>
+      <style jsx>{`
+        h2,
+        h3 {
+          margin-bottom: 1rem;
+        }
+
+        ul {
+          margin-left: 1rem;
+        }
+      `}</style>
+    </>
   )
-}
-
-export const getStaticProps = async () => {
-  const OURA_SLEEP_URL = `https://api.ouraring.com/v1/sleep?access_token=${process.env.OURA_TOKEN}`
-  const timeSlept = await fetch(OURA_SLEEP_URL, {})
-    .then((response) => response.json())
-    .then((data) => {
-      const result = data.sleep
-      const totalDuration = result[result.length - 1].total
-      const sleepHours = totalDuration / 60 / 60
-      return sleepHours.toFixed(2)
-    })
-
-  return {
-    props: { timeSlept }, // will be passed to the page component as props
-  }
 }
