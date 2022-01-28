@@ -3,7 +3,7 @@ import moment from 'moment-timezone'
 import Link from 'next/link'
 import widont from '../util/widont'
 
-export default function Footer() {
+const Footer = () => {
   const [time, setTime] = useState('12:00:00')
   useEffect(() => {
     function updateClock() {
@@ -19,10 +19,11 @@ export default function Footer() {
       <footer>
         <div className="wrapper small">
           <p>
-            {widont(
-              "Looking to start a new design project? "
-            )}
-            <Link href="mailto:lukemoderwell@gmail.com">Let&apos;s connect</Link>.
+            {widont('Looking to start a new design project? ')}
+            <Link href="mailto:lukemoderwell@gmail.com">
+              Let&apos;s connect
+            </Link>
+            .
           </p>
           <p>
             <small>Cincinnati, OH {time}</small>
@@ -45,3 +46,5 @@ export default function Footer() {
     </>
   )
 }
+
+export default Footer
