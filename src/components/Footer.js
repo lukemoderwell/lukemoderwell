@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import moment from 'moment-timezone'
 import Link from 'next/link'
 import widont from '../util/widont'

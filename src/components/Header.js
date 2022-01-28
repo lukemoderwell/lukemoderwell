@@ -1,4 +1,3 @@
-import React from 'react'
 import PlainLink from './PlainLink'
 
 const links = [
