@@ -8,15 +8,20 @@ function Metatags({ title, description }) {
     <Head>
       {/* Title */}
       <title>{pageTitle}</title>
-      <meta content={pageTitle} name="title" />
-      <meta content={pageTitle} name="twitter:title" />
+      <meta content={pageTitle} name="title" key="title" />
+      <meta content={pageTitle} name="twitter:title" key="title" />
 
       {/* Description */}
-      <meta content={description} name="description" />
-      <meta content={description} name="twitter:description" />
-      <meta content={description} property="og:description" />
+      <meta content={description} name="description" key="description" />
+      <meta
+        content={description}
+        name="twitter:description"
+        key="description"
+      />
+      <meta content={description} property="og:description" key="description" />
 
       <meta content="en" property="og:locale" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
       {/* Favicon */}
       <link href="/favicon.ico" rel="icon" type="image/svg+xml" />
