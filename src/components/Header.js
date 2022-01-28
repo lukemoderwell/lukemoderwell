@@ -2,10 +2,10 @@ import React from 'react'
 import PlainLink from './PlainLink'
 
 const links = [
-  // {
-  //   to: '/writing',
-  //   label: 'Writing',
-  // },
+  {
+    to: '/writing',
+    label: 'Writing',
+  },
   {
     to: '/readlist',
     label: 'Reads',

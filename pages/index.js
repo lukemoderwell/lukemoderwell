@@ -33,20 +33,35 @@ export default function Home() {
               <PlainLink href="https://annaandthedeeperwell.com" isExternal>
                 a band
               </PlainLink>{' '}
-              with my wife.{' '}
+              with my wife.
+            </li>
+            <li>
+              I play{' '}
               <PlainLink
                 href="https://en.wikipedia.org/wiki/Fender_Jazz_Bass"
                 isExternal
               >
-                This
+                this bass
               </PlainLink>{' '}
-              is my bass of choice.
+              and{' '}
+              <PlainLink
+                href="https://en.wikipedia.org/wiki/Fender_Telecaster"
+                isExternal
+              >
+                these
+              </PlainLink>{' '}
+              <PlainLink
+                href="https://www.youtube.com/watch?v=BU13uUJ_VfA˝"
+                isExternal
+              >
+                guitars
+              </PlainLink>
+              .
             </li>
             <li>
               My family currently raises chickens for eggs and meat. We also
               raise rabbits for cuteness.
             </li>
-            <li>This site is a work in progress.</li>
           </ul>
         </main>
       </Layout>

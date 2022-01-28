@@ -35,7 +35,7 @@ const GlobalStyles = () => (
           --content-width: calc(0.25rem + (100vw - var(---page-width)) / 2);
           --breakpoint-narrow: 50em;
           --breakpoint-medium: 64em;
-          --site-color: #dd425c;
+          --site-color: #7d501d;
           --text-color: var(--gray40);
           --meta-color: var(--gray30);
           --wash-color: var(--gray00);
@@ -96,6 +96,10 @@ const GlobalStyles = () => (
 
         img {
           width: 100%;
+        }
+
+        a {
+          color: var(--site-color);
         }
       `}
     </style>
