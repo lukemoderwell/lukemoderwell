@@ -1,5 +1,5 @@
 module.exports = {
-  swcMinify: true,
+  // swcMinify: true,
   reactStrictMode: true,
   images: {
     domains: ['dl.airtable.com'],
