@@ -1,6 +1,5 @@
 module.exports = {
-  // swcMinify: true,
-  reactStrictMode: true,
+  swcMinify: true,
   images: {
     domains: ['dl.airtable.com'],
   },
@@ -12,6 +11,7 @@ module.exports = {
         use: ['babel-loader', '@mdx-js/loader'],
       },
     ]
+
     return config
   },
 }
