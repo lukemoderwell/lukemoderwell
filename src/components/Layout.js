@@ -14,7 +14,7 @@ const Content = ({ frontMatter, children }) => {
 
   return (
     <>
-      <Metatags description={excerpt || site.description} title={title} />
+      {/* <Metatags description={excerpt || site.description} title={title} /> */}
       <Header siteTitle={site.title} />
       <Wrapper>
         {!isRoot && (
