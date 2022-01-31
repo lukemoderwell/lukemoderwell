@@ -30,7 +30,6 @@ export default function Readlist({ entries = null }) {
               height: entry.thumbnail[0].thumbnails.large.height,
               width: entry.thumbnail[0].thumbnails.large.width,
             }}
-            // notes={entry.notes}
           />
         ))}
     </Layout>

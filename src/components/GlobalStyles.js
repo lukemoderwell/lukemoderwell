@@ -97,10 +97,6 @@ const GlobalStyles = () => (
         img {
           width: 100%;
         }
-
-        a {
-          color: var(--site-color);
-        }
       `}
     </style>
   </>

@@ -1,11 +1,11 @@
-// import Head from 'next/head'
+import Head from 'next/head'
 import site from '../data/siteconfig.json'
 
 function Metatags({ title, description }) {
   const pageTitle = title === site.title ? title : `${title} | ${site.title}`
 
   return (
-    <head>
+    <Head>
       {/* Title */}
       <title>{pageTitle}</title>
       <meta content={pageTitle} name="title" key="title" />
@@ -25,7 +25,7 @@ function Metatags({ title, description }) {
 
       {/* Favicon */}
       <link href="/favicon.ico" rel="icon" type="image/svg+xml" />
-    </head>
+    </Head>
   )
 }
 export default Metatags
