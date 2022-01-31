@@ -1,7 +1,7 @@
 import Footer from './Footer'
 import GlobalStyles from './GlobalStyles'
 import Header from './Header'
-import Metatags from './Metatags'
+// import Metatags from './Metatags'
 import Wrapper from './Wrapper'
 import siteConfig from '../data/siteconfig.json'
 
