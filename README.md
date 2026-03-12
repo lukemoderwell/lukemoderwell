@@ -1,3 +1,3 @@
-  # Luke Moderwell
+# Luke Moderwell
 
-  Principal at [Throughput](https://throughput.to) — building compound AI systems to enable company-wide capability.
+Building [Throughput](https://throughput.to) (AI systems & automation) & [Modworks](https://modworks.design) (your speedy partner for design & dev) .
